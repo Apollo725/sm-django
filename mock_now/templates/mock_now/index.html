@@ -1,0 +1,41 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls admin_static admin_modify %}
+
+{% block extrahead %}{{ block.super }}
+    <script type="text/javascript" src="{% url 'mock_now:jsi18n' %}"></script>
+    {{ media }}
+    {{ form.media }}
+{% endblock %}
+
+{% block content_title %}{% endblock %}
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}"/>
+{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+
+{% block breadcrumbs %}
+    <style>
+    .breadcrumbs a {
+        margin-right: 10px;
+    }
+    </style>
+    <div class="breadcrumbs">
+        <a href="/">{% trans 'Home' %}</a>
+        <a href={% url "mock_now:mock_now" %}>Change server time</a>
+
+        <a href={% url "mock_now:reset_data" %}>Reset initial data</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div id="content-main">
+        <h2>Current time: {{ current_time }}</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Change">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "sm/frontend/large_banner_template.html" %}
+
+{% block content %}
+    <div class="container">
+        <h6>Frontend:</h6>
+
+        <ul>
+            {% for url in urls.frontend %}
+                <li>
+                    {% with "frontend:"|add:url.name as url_name %}
+                        <a href="{% url url_name %}">{{ url.name }}</a>
+                    {% endwith %}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h6>GSC:</h6>
+        <ul>
+
+            {% for url in urls.gsc %}
+                <li>
+                    {% with "gsc:"|add:url.name as url_name %}
+                        <a href="{% url url_name %}">{{ url.name }}</a>
+                    {% endwith %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

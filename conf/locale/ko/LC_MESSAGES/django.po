@@ -1,0 +1,815 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SM 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-02 10:45+0000\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+
+msgid "English"
+msgstr "영어"
+
+msgid "French"
+msgstr "프랑스어"
+
+msgid "German"
+msgstr "독일어"
+
+msgid "Spanish"
+msgstr "스페인어"
+
+msgid "Italian"
+msgstr "이탈리아어"
+
+msgid "Russian"
+msgstr "러시아어"
+
+msgid "Portuguese"
+msgstr "포르투갈"
+
+msgid "Korean"
+msgstr "한국어"
+
+msgid "Japanese"
+msgstr "일본어"
+
+msgid "Home"
+msgstr "홈"
+
+msgid "Customer"
+msgstr "고객"
+
+msgid "Resold customer"
+msgstr "재판매 고객"
+
+msgid "Google customer"
+msgstr "Google 고객"
+
+msgid "Reseller"
+msgstr "리셀러"
+
+msgid "Buyer"
+msgstr "구매자"
+
+msgid "Admin"
+msgstr "관리자"
+
+msgid "User"
+msgstr "사용자"
+
+msgid "Free version"
+msgstr "무료 버전"
+
+msgid "Basic version"
+msgstr "기본 버전"
+
+msgid "Professional version"
+msgstr "전문가 버전"
+
+msgid "Enterprise version"
+msgstr "기업 버전"
+
+msgid "Subscription"
+msgstr "구독"
+
+msgid "One-shot"
+msgstr "원 샷"
+
+msgid "1 year"
+msgstr "1년"
+
+msgid "1 month"
+msgstr "1개월"
+
+msgid "Paypal auto"
+msgstr "페이팔 자동"
+
+msgid "Paypal preapproved"
+msgstr "페이팔 사전 승인"
+
+msgid "Paypal manual"
+msgstr "페이팔 매뉴얼"
+
+msgid "Offline"
+msgstr "오프라인"
+
+msgid "Active"
+msgstr "활성"
+
+msgid "Inactive"
+msgstr "비활성"
+
+msgid "Open"
+msgstr "오픈"
+
+msgid "Paid"
+msgstr "결제 완료"
+
+msgid "Cancelled"
+msgstr "취소됨"
+
+msgid "OVERDUE"
+msgstr "연체"
+
+msgid "Partially paid"
+msgstr "부분 결제됨"
+
+msgid "Delivered"
+msgstr "배송됨"
+
+msgid "Approved"
+msgstr "승인됨"
+
+msgid "Invoice sent"
+msgstr "청구서 전송됨"
+
+msgid "Renew"
+msgstr "갱신"
+
+msgid "Flex"
+msgstr "플렉스"
+
+msgid "Reduce"
+msgstr "감소"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Subscription Manager"
+msgstr "구독 관리자"
+
+msgid "sign in"
+msgstr "로그인"
+
+msgid "Sign in"
+msgstr "로그인"
+
+msgid "name"
+msgstr "이름"
+
+msgid "full name"
+msgstr "성명"
+
+msgid "MY SUBSCRIPTIONS"
+msgstr "내 구독"
+
+msgid "Need assistance?"
+msgstr "도움이 필요하십니까?"
+
+msgid "If you need help with your subscription please contact our support team at <a href=\"%(mail_to)s\">%(mail)s</a>."
+msgstr "구독과 관련하여 도움이 필요한 경우 당사의 지원 팀 이메일 <a href=\"%(mail_to)s\">%(mail)s</a>(으)로 문의하시기 바랍니다."
+
+msgid "Full name"
+msgstr "성명"
+
+msgid "Email address"
+msgstr "이메일 주소"
+
+msgid "Phone number"
+msgstr "전화 번호"
+
+msgid "Shared Contacts for Gmail"
+msgstr "Shared Contacts for Gmail"
+
+msgid "Thank you"
+msgstr "감사합니다"
+
+msgid "Thank you for trusting Shared Contacts for Gmail®."
+msgstr "Shared Contacts for Gmail®을 신뢰해주셔서 감사합니다."
+
+msgid "Your account has been successfully upgraded."
+msgstr "귀하의 계정이 성공적으로 업그레이드되었습니다."
+
+msgid "Your account has subscribed to Shared Contacts for Gmail® successfully."
+msgstr "계정을 생성하고 <br> Shared Contacts for Gmail®을 사용하여 시작하세요"
+
+msgid "You can now enjoy all the features and options of the full version, and find at any time all the details of your subscription: expiration date, next payment, number of licenses and more."
+msgstr "이제 풀 버전의 모든 기능과 옵션을 마음껏 이용할 수 있으며, 언제든지 구독에 대한 세부 정보를 확인할 수 있습니다: 만료일, 다음 결제일, 라이선스 수 등."
+
+msgid "LAUNCH APP"
+msgstr "앱 실행"
+
+msgid "See my subscriptions"
+msgstr "내 구독 참조"
+
+msgid "Connect with us"
+msgstr "접속하기"
+
+msgid "Checkout"
+msgstr "결제하기"
+
+msgid "CHECKOUT"
+msgstr "결제하기"
+
+msgid "edition"
+msgstr "등록"
+
+msgid "Billed"
+msgstr "청구 방법"
+
+msgid "1 year commitment"
+msgstr "약정"
+
+msgid "Enter how many licences you need"
+msgstr "필요한 라이선스의 수를 입력하세요"
+
+msgid "Licenses"
+msgstr "라이선스"
+
+msgid "Total to pay"
+msgstr "총 비용"
+
+msgid "You have"
+msgstr "소지"
+
+msgid "You add"
+msgstr "추가"
+
+msgid "You will have now"
+msgstr "소지 예정"
+
+msgid "New"
+msgstr "신규"
+
+msgid "Billing contact"
+msgstr "청구 문의"
+
+msgid "This contact will receive all the communication relative to the payment"
+msgstr "본 연락처로 모든 결제 관련 안내를 수신합니다"
+
+msgid "Change"
+msgstr "변경"
+
+msgid "Billing details"
+msgstr "청구 세부 내역"
+
+msgid "Country"
+msgstr "국가"
+
+msgid "State"
+msgstr "주/도"
+
+msgid "City"
+msgstr "시"
+
+msgid "Zip code"
+msgstr "우편 번호"
+
+msgid "Address"
+msgstr "주소"
+
+msgid "YOUR ORDER"
+msgstr "주문 내역"
+
+msgid "Shared Contacts For Gmail"
+msgstr "Shared Contacts For Gmail"
+
+msgid "Number of licenses:"
+msgstr "라이선스 수: %(license_numer)"
+
+msgid "Domain users: %(domain_users)s"
+msgstr "도메인 사용자: %(domain_users)"
+
+msgid "Domain name"
+msgstr "도메인 이름"
+
+msgid "Plan"
+msgstr "요금제"
+
+msgid "Billing method"
+msgstr "청구 방법"
+
+msgid "Annual"
+msgstr "연간"
+
+msgid "Monthly"
+msgstr "개월"
+
+msgid "Currency"
+msgstr "통화"
+
+msgid "Expiration date"
+msgstr "만료일"
+
+msgid "Add promotion code"
+msgstr "프로모션 코드 추가"
+
+msgid "Enter promotion code"
+msgstr "프로모션 코드 입력"
+
+msgid "APPLY"
+msgstr "신청"
+
+msgid "Total cost "
+msgstr "총 비용"
+
+msgid "Per month"
+msgstr "1개월"
+
+msgid "Per year"
+msgstr "1년"
+
+msgid "Total cost"
+msgstr "총 비용"
+
+msgid "\n                            from now to %(expiry_date)s\n"
+msgstr "\n 지금부터 %(expiry_date)s까지\n"
+
+msgid "Select your method of payment"
+msgstr "지불 수단을 선택하세요"
+
+msgid "Card Number"
+msgstr "카드 번호"
+
+msgid "Expiration Date"
+msgstr "만료일"
+
+msgid "CVV"
+msgstr "CVV"
+
+msgid "Terms and conditions"
+msgstr "이용 약관"
+
+msgid "You are subscribing to a %(commitment)s subscription with Shared Contacts for Gmail®."
+msgstr "귀하는 Shared Contacts for Gmail® %(commitment) 구독에 가입되어 있습니다."
+
+msgid "Gapps Experts will renew your commitment for an additional %(commitment)s for all licenses at the then-current price, exactly %(commitment)s after your payment."
+msgstr "Gapps Experts는 결제 당시 가격으로 모든 라이선스에 대한 추가 %(commitment)의 약정을 갱신합니다(결제 후 정확히 %(commitment))."
+
+msgid "Yes, I have read and accept Gapps Experts terms and conditions. "
+msgstr "예, 저는 Gapps Experts의 이용 약관을 읽었으며 이 약관에 동의합니다."
+
+msgid "PROCEED TO CHECKOUT"
+msgstr "결제 진행"
+
+msgid "Credit card"
+msgstr "신용 카드"
+
+msgid "Paypal"
+msgstr "페이팔"
+
+msgid "PAY"
+msgstr "결제"
+
+msgid "Sorry, the promotion code you entered is either wrong or expired. Please contact or Cloud consultants at to get assistance."
+msgstr "죄송합니다. 입력한 프로모션 코드가 잘못되었거나 만료되었습니다. 문의하거나 클라우드 컨설턴트의 도움을 받으십시오."
+
+msgid "Send us an email at %(contact_email)s or chat with us through our website."
+msgstr "%(contact_email)(으)로 이메일을 보내거나 웹사이트에서 저희와 채팅 상담을 할 수 있습니다."
+
+msgid "OK"
+msgstr "확인"
+
+msgid "Pricing"
+msgstr "요금"
+
+msgid "Choose the plan that fits your business"
+msgstr "귀하의 비즈니스에 맞는 요금제를 선택하세요"
+
+msgid "THANK YOU"
+msgstr "감사합니다"
+
+msgid "Thank you for installing Shared Contacts for Gmail®."
+msgstr "Shared Contacts for Gmail®을 설치해주셔서 감사합니다."
+
+msgid "Your data has been saved and you can start now using the application."
+msgstr "귀하의 데이터가 저장되었으며 이제 응용프로그램을 사용하여 시작할 수 있습니다."
+
+msgid "Registration"
+msgstr "등록"
+
+msgid "YOUR ARE INSTALLING <br> SHARED CONTACTS FOR GMAIL®"
+msgstr "<br> SHARED CONTACTS FOR GMAIL®을 설치하고 있습니다"
+
+msgid "Welcome to"
+msgstr "환영합니다"
+
+msgid "Create an account and start using <br> Shared Contacts for Gmail®"
+msgstr "계정을 생성하고 <br> Shared Contacts for Gmail®을 사용하여 시작하세요"
+
+msgid "How do you buy your Google Apps licenses?"
+msgstr "어떻게 Google 앱 라이선스를 구입할 수 있나요?"
+
+msgid "Directly from Google"
+msgstr "Google에서 직접"
+
+msgid "Through a Reseller"
+msgstr "리셀러를 통해"
+
+msgid "Register"
+msgstr "등록"
+
+msgid "Uninstalled"
+msgstr "제거됨"
+
+msgid "It seems Shared Contacts for Gmail® was uninstalled from your domain."
+msgstr "Shared Contacts for Gmail®이 귀하의 도메인에서 제거된 것 같습니다."
+
+msgid "Please install the application again to enjoy sharing your contacts."
+msgstr "응용프로그램을 재설치하여 연락처를 마음껏 공유하십시오."
+
+msgid "Install now"
+msgstr "지금 설치"
+
+msgid "Need assistance"
+msgstr "도움이 필요하십니까?"
+
+msgid "If you need help with your subscription please contact our support team at %(email_link)s."
+msgstr "구독과 관련하여 도움이 필요한 경우 당사 지원 팀 이메일 %(email_link)(으)로 문의하십시오."
+
+msgid "month"
+msgstr "개월"
+
+msgid "Or"
+msgstr "또는"
+
+msgid "/user"
+msgstr "/사용자"
+
+msgid "with monthly billing"
+msgstr "연간 청구"
+
+msgid "upgrade"
+msgstr "확장/업그레이드"
+
+msgid "Buy"
+msgstr "구입"
+
+msgid "UP to %(tier_high)s USERS"
+msgstr "최대 %(tier_high) 사용자"
+
+msgid "Billed annually"
+msgstr "연별 결제"
+
+msgid "year"
+msgstr "년(年)"
+
+msgid "BASIC"
+msgstr "기본"
+
+msgid "24/7 technical support"
+msgstr "연중 무휴 24시간 기술 지원"
+
+msgid "Mobile/Tablet & Outlook sync"
+msgstr "모바일/태블릿 & 아웃룩 동기화"
+
+msgid "Permission delegation"
+msgstr "권한 위임"
+
+msgid "Sharing with users"
+msgstr "사용자들과 공유"
+
+msgid "Up to 10 shared contact groups"
+msgstr "최대 10개의 연락처 공유 그룹"
+
+msgid "Up to 250 shared Contacts per groups"
+msgstr "그룹당 최대 250개의 연락처 공유"
+
+msgid "PER USER"
+msgstr "사용자당"
+
+msgid "FOR YOUR WHOLE DOMAIN"
+msgstr "전체 도메인에 대해"
+
+msgid "user"
+msgstr "사용자"
+
+msgid "ENTERPRISE"
+msgstr "기업"
+
+msgid "Unlimited # of shared contact groups"
+msgstr "#개의 연락처 공유 그룹 무제한"
+
+msgid "Unlimited # of shared contacts"
+msgstr "#개의 연락처 공유 무제한"
+
+msgid "Sharing with users AND users groups"
+msgstr "사용자 및 사용자 그룹과 공유"
+
+msgid "Sharing with external domain users and @gmail.com addresses"
+msgstr "외부 도메인 사용자 및 @gmail.com 주소와 공유"
+
+msgid "Most popular"
+msgstr "인기 상품"
+
+msgid "PRO"
+msgstr "프로"
+
+msgid "Shared Contacts for Gmail®"
+msgstr "Shared Contacts for Gmail®"
+
+msgid "Number of licenses: %(license_numer)s"
+msgstr "라이선스 수: %(license_numer)"
+
+msgid "buy more"
+msgstr "더 구매하기"
+
+msgid "Upgrade"
+msgstr "업그레이드"
+
+msgid "Renewal date"
+msgstr "갱신일"
+
+msgid "Expiry date"
+msgstr "만료일"
+
+msgid "Renewal option"
+msgstr "갱신 옵션"
+
+msgid "Auto-renew on %(renewal_date)s"
+msgstr "%(renewal_date)s에 자동 갱신"
+
+msgid "Order #"
+msgstr "주문 #"
+
+msgid "Order date"
+msgstr "주문일"
+
+msgid "Version"
+msgstr "무료 버전"
+
+msgid "Evalution"
+msgstr "평가"
+
+msgid "Start date"
+msgstr "주문일"
+
+msgid "Renewal options"
+msgstr "갱신 옵션"
+
+msgid "Auto-renew my contract"
+msgstr "연락처 자동 갱신"
+
+msgid "Renew my commitment on %(renewal_date)s for all licenses at the current price. (Currently %(license_number)s licenses)"
+msgstr "Gapps Experts는 결제 당시 가격으로 모든 라이선스에 대한 추가 %(commitment)의 약정을 갱신합니다(결제 후 정확히 %(commitment))."
+
+msgid "Cancel my service at the end of my term"
+msgstr "기간 종료 시 서비스를 취소합니다"
+
+msgid "Service will be suspended on %(renewal_date)s, when my existing commitment ends."
+msgstr "기존 계약이 종료되는 %(renewal_date)s에 서비스가 중단됩니다."
+
+msgid "Save"
+msgstr "저장"
+
+msgid "Error happens when you pay, please try again or try with another credit card."
+msgstr "결제 시 오류가 발생했습니다. 다시 시도하거나 다른 신용 카드로 결제하십시오."
+
+msgid "pack"
+msgstr "패키지"
+
+msgid "Billed monthly"
+msgstr "월간 청구"
+
+msgid "%(tier_high)s USERS PACK"
+msgstr "%(tier_high)s 사용자 패키지"
+
+msgid "UNLIMITED SHARES"
+msgstr "무제한 공유"
+
+msgid "FOR MULTIPLE DOMAINS"
+msgstr "여러 도메인용"
+
+msgid "Please enter your credit card information"
+msgstr "신용 카드 정보를 입력하세요"
+
+msgid "Yes, I have read and accept Shared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>"
+msgstr "네, Gmail®용 공유 연락처 <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">약관</a>을 읽고 동의했습니다."
+
+msgid "Unit cost"
+msgstr "단가"
+
+msgid "Launch"
+msgstr "시작"
+
+msgid "Domain users"
+msgstr "도메인 사용자"
+
+msgid "for %(customer_name)s"
+msgstr "%(customer_name)s"
+
+msgid "My subscription"
+msgstr "내 구독"
+
+msgid "Payment method"
+msgstr "결제 수단"
+
+msgid "Started on"
+msgstr "시작일"
+
+msgid "Billing frequency"
+msgstr "청구 주기"
+
+msgid "Renews on"
+msgstr "갱신일"
+
+msgid "Next invoice"
+msgstr "다음 청구서"
+
+msgid "Add licences"
+msgstr "라이선스 추가"
+
+msgid "Annual billing"
+msgstr "연간 청구"
+
+msgid "Monthly billing"
+msgstr "월간 청구"
+
+msgid "domain"
+msgstr "도메인"
+
+msgid "Number of licenses"
+msgstr "라이선스 수"
+
+msgid "Total licences"
+msgstr "전체 라이선스"
+
+msgid "My payment information"
+msgstr "내 결제 정보"
+
+msgid "Add a payment method"
+msgstr "결제 수단 추가"
+
+msgid "Which kind of payment?"
+msgstr "어떤 유형의 결제입니까?"
+
+msgid "Validate"
+msgstr "인증"
+
+msgid "Credit card information"
+msgstr "신용 카드 정보"
+
+msgid "Profile"
+msgstr "프로필"
+
+msgid "Payment information"
+msgstr "결제 정보"
+
+msgid "Yearly commitment"
+msgstr "연간 계약"
+
+msgid "Monthly commitment"
+msgstr "월간 계약"
+
+msgid "Enterprise Edition"
+msgstr "엔터프라이즈 에디션"
+
+msgid "Professional Edition"
+msgstr "프로 에디션"
+
+msgid "Basic Edition"
+msgstr "기본 에디션"
+
+msgid "Share contacts"
+msgstr "연락처 공유"
+
+msgid "Pending"
+msgstr "보류"
+
+msgid "Advanced logging and security features"
+msgstr "고급 로그 및 보안 기능"
+
+msgid "Click on \"Proceed to checkout\" to pay with your Paypal account"
+msgstr "\"결제 진행\"을 클릭하고 Paypal 계정으로 결제하세요"
+
+msgid "You will be charged by Paypal account %(email)s"
+msgstr "Paypal 계정 %(email)s으로 청구됩니다"
+
+msgid "Update"
+msgstr "업데이트"
+
+msgid "Saved successfully"
+msgstr "성공적으로 저장되었습니다"
+
+msgid "Contact us at <a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>"
+msgstr "<a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>으로 저희에게 문의하세요"
+
+msgid "You cannot purchase less than %(minimum_licenses_to_upgrade)s licenses"
+msgstr "%(minimum_licenses_to_upgrade)s 라이선스 미만으로는 구매하실 수 없습니다"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "Expires on"
+msgstr "만료일"
+
+msgid "Econsulting Customer"
+msgstr "E컨설팅 고객"
+
+msgid "Econsulting Partner"
+msgstr "E컨설팅 파트너"
+
+msgid "Econsulting Prospect"
+msgstr "E컨설팅 잠재 고객"
+
+msgid "Prospect"
+msgstr "잠재 고객"
+
+msgid "Please contact your reseller for any new orders."
+msgstr "모든 새 주문에 대해서는 리셀러에게 문의하시기 바랍니다."
+
+msgid "from now to %(expiry_date)s"
+msgstr "지금부터 %(expiry_date)s까지"
+
+msgid "Valid until"
+msgstr "유효 기간"
+
+msgid "Until your renewal date"
+msgstr "갱신일까지"
+
+msgid "Prorated price from now to"
+msgstr "지금부터 다음까지 비례 배분 가격"
+
+msgid "users"
+msgstr "사용자"
+
+msgid "contact us"
+msgstr "문의하기"
+
+msgid "unlimited backup"
+msgstr "무제한 백업"
+
+msgid "corporate"
+msgstr "법인"
+
+msgid "advanced admin capabilities"
+msgstr "고급 관리 기능"
+
+msgid "Corporate Version"
+msgstr "법인용 버전"
+
+msgid "Up to 250 contacts per group"
+msgstr "그룹당 공유 연락처 최대 250개"
+
+msgid "Sharing with same domain users"
+msgstr "동일한 도메인 사용자와 공유"
+
+msgid "Permissions Management"
+msgstr "권한 관리"
+
+msgid "Live Support"
+msgstr "실시간 지원"
+
+msgid "Unlimited Contact Backup"
+msgstr "연락처 백업 무제한"
+
+msgid "Instant Synchronization (Chrome users)"
+msgstr "순간 동기화 (Chrome 확장 프로그램)"
+
+msgid "Email support"
+msgstr "이메일 지원"
+
+msgid "(from 5 users)"
+msgstr "(5명의 사용자로부터)"
+
+msgid "Try for free"
+msgstr "무료 시험 사용"
+
+msgid "Total"
+msgstr "총"
+
+msgid "Features"
+msgstr "풍모"
+
+msgid "Shared contacts groups"
+msgstr "개의 연락처 공유 그룹"
+
+msgid "Shared contacts"
+msgstr "개의 연락처 공유"
+
+msgid "Unlimited"
+msgstr "제한 없는"
+
+msgid "Instant Synchronization"
+msgstr "순간 동기화"
+
+msgid "Invoices"
+msgstr "송장"
+
+msgid "Chrome extension"
+msgstr "Chrome 확장 프로그램"
+
+msgid "1 Pack of 5 licenses"
+msgstr "1 라이센스 5 팩"
+
+msgid "for one year"
+msgstr "1 년 동안"
+
+msgid "for one month"
+msgstr "1 달 동안"
+
+msgid "Wrong license number"
+msgstr "잘못된 라이센스 번호"
+
+msgid "Wrong promotion code"
+msgstr "잘못된 프로모션 코드"
+
+msgid "Chrome users"
+msgstr "Chrome 사용자"
+
+msgid "We are sorry but your payment could not be processed. Please try again or contact us on support@gmailsharedcontacts.com"
+msgstr "죄송합니다만 해당 결제를 처리할 수 없습니다. 다시 시도하시거나 support@gmailsharedcontacts.com으로 연락 부탁드립니다."
+

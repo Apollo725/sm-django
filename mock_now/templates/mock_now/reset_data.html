@@ -1,0 +1,11 @@
+{% extends "mock_now/index.html" %}
+
+{% block content %}
+    <div id="content-main">
+        <h2>Reset data</h2>
+        <form action="{% url "mock_now:reset_data" %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Reset Now" onclick="return confirm('Sure to reset data?')">
+        </form>
+    </div>
+{% endblock %}

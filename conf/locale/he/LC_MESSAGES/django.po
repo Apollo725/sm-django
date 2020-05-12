@@ -1,0 +1,815 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SM 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-02 10:45+0000\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+
+msgid "English"
+msgstr "אנגלית"
+
+msgid "French"
+msgstr "צרפתית"
+
+msgid "German"
+msgstr "גרצנית"
+
+msgid "Spanish"
+msgstr "ספרדית"
+
+msgid "Italian"
+msgstr "איטלקית"
+
+msgid "Russian"
+msgstr "רוסית"
+
+msgid "Portuguese"
+msgstr "פורטוגזית"
+
+msgid "Korean"
+msgstr "קוראנית"
+
+msgid "Japanese"
+msgstr "יפנית"
+
+msgid "Home"
+msgstr "דף הבית"
+
+msgid "Customer"
+msgstr "לקוח"
+
+msgid "Resold customer"
+msgstr "לקוח מוכר"
+
+msgid "Google customer"
+msgstr "לקוח גוגל"
+
+msgid "Reseller"
+msgstr "מוכר"
+
+msgid "Buyer"
+msgstr "לקוח"
+
+msgid "Admin"
+msgstr "מנהל"
+
+msgid "User"
+msgstr "משתמש"
+
+msgid "Free version"
+msgstr "גרסת חינם"
+
+msgid "Basic version"
+msgstr "גרסה בסיסית"
+
+msgid "Professional version"
+msgstr "גרסה מקצועית"
+
+msgid "Enterprise version"
+msgstr "גרסה יזמתית"
+
+msgid "Subscription"
+msgstr "הרשמה"
+
+msgid "One-shot"
+msgstr "ירייה אחת"
+
+msgid "1 year"
+msgstr "שנה אחת"
+
+msgid "1 month"
+msgstr "חודש אחד"
+
+msgid "Paypal auto"
+msgstr "PayPal אוטומתי"
+
+msgid "Paypal preapproved"
+msgstr "Paypal מאושר מלפני"
+
+msgid "Paypal manual"
+msgstr "PayPal ידני"
+
+msgid "Offline"
+msgstr "לא מחובר"
+
+msgid "Active"
+msgstr "פעיל"
+
+msgid "Inactive"
+msgstr "אינו פעיל"
+
+msgid "Open"
+msgstr "פתוח"
+
+msgid "Paid"
+msgstr "שולם"
+
+msgid "Cancelled"
+msgstr "מבוטל"
+
+msgid "OVERDUE"
+msgstr "מאחר"
+
+msgid "Partially paid"
+msgstr "חלק משולם"
+
+msgid "Delivered"
+msgstr "נמסר"
+
+msgid "Approved"
+msgstr "מאושר"
+
+msgid "Invoice sent"
+msgstr "חשבונית נשלחה"
+
+msgid "Renew"
+msgstr "לחדש"
+
+msgid "Flex"
+msgstr "גמישות"
+
+msgid "Reduce"
+msgstr "להקטין"
+
+msgid "Cancel"
+msgstr "לבטל"
+
+msgid "Subscription Manager"
+msgstr "ניהוך הרשמה"
+
+msgid "sign in"
+msgstr "להיכנס"
+
+msgid "Sign in"
+msgstr "להיכנס"
+
+msgid "name"
+msgstr "שם"
+
+msgid "full name"
+msgstr "שם מלא"
+
+msgid "MY SUBSCRIPTIONS"
+msgstr "הרשמות שלי"
+
+msgid "Need assistance?"
+msgstr "צריך/כה עזרה?"
+
+msgid "If you need help with your subscription please contact our support team at <a href=\"%(mail_to)s\">%(mail)s</a>."
+msgstr "אם צריכים עזרה ברישום שלך נא ליצור קשר עם קבוצת העזרה שלנו ב <a href=\"%(mail_to)s\">%(mail)s</a>."
+
+msgid "Full name"
+msgstr "שם מלא"
+
+msgid "Email address"
+msgstr "כתובת מייל"
+
+msgid "Phone number"
+msgstr "מספר טלפון"
+
+msgid "Shared Contacts for Gmail"
+msgstr "אנשי קשר Gmail משותפים"
+
+msgid "Thank you"
+msgstr "תודה רבה"
+
+msgid "Thank you for trusting Shared Contacts for Gmail®."
+msgstr "תודה בלאמין באנשי קשר משותפים לGmail"
+
+msgid "Your account has been successfully upgraded."
+msgstr "חשבונך נתקדמה בהצלחה"
+
+msgid "Your account has subscribed to Shared Contacts for Gmail® successfully."
+msgstr "חשבונך נרשמה לאנשי קשר משותפים לGmail בהצלחה"
+
+msgid "You can now enjoy all the features and options of the full version, and find at any time all the details of your subscription: expiration date, next payment, number of licenses and more."
+msgstr "עכשיו אתה יכול ליהנות מכל המאפיינים והאפשרויות של הגרסה המלאה, ולמצוא בכל עת את כל הפרטים של המנוי שלך: תאריך התפוגה, התשלום הבא, מספר הרישיונות ועוד."
+
+msgid "LAUNCH APP"
+msgstr "לפתוח אפליקציה"
+
+msgid "See my subscriptions"
+msgstr "לראות את ההרשמות שלי"
+
+msgid "Connect with us"
+msgstr "לחבר איתנו"
+
+msgid "Checkout"
+msgstr "צ'ק אאוט"
+
+msgid "CHECKOUT"
+msgstr "צ'ק אאוט"
+
+msgid "edition"
+msgstr "הוצאה"
+
+msgid "Billed"
+msgstr "הגיש חשבון"
+
+msgid "1 year commitment"
+msgstr "התחיבות"
+
+msgid "Enter how many licences you need"
+msgstr "להכניס כמה רשיונות אתה צריך/את צריכה"
+
+msgid "Licenses"
+msgstr "רשיונות"
+
+msgid "Total to pay"
+msgstr "סך הכל לתשלום"
+
+msgid "You have"
+msgstr "יש לך"
+
+msgid "You add"
+msgstr "הוספת"
+
+msgid "You will have now"
+msgstr "יש לך עכשיו"
+
+msgid "New"
+msgstr "חדש"
+
+msgid "Billing contact"
+msgstr "קשר על חשבון"
+
+msgid "This contact will receive all the communication relative to the payment"
+msgstr "איש קשר הזה יקבל קשר על התשלום"
+
+msgid "Change"
+msgstr "לשנות"
+
+msgid "Billing details"
+msgstr "פרטים על חשבון"
+
+msgid "Country"
+msgstr "ארץ"
+
+msgid "State"
+msgstr "מדינה"
+
+msgid "City"
+msgstr "עיר"
+
+msgid "Zip code"
+msgstr "מיקוד"
+
+msgid "Address"
+msgstr "כתובת"
+
+msgid "YOUR ORDER"
+msgstr "הזמנתך"
+
+msgid "Shared Contacts For Gmail"
+msgstr "אנשי קשר משותפים מGmail"
+
+msgid "Number of licenses:"
+msgstr "מספר רשיונות"
+
+msgid "Domain users: %(domain_users)s"
+msgstr "משתמשי תחום: %(domain_users)s"
+
+msgid "Domain name"
+msgstr "שם התחום"
+
+msgid "Plan"
+msgstr "מערכת"
+
+msgid "Billing method"
+msgstr "שיטת תשלום"
+
+msgid "Annual"
+msgstr "שנתי"
+
+msgid "Monthly"
+msgstr "חודשי"
+
+msgid "Currency"
+msgstr "מטבע"
+
+msgid "Expiration date"
+msgstr "בתוקף עד"
+
+msgid "Add promotion code"
+msgstr "להוסיף קוד אופטימי"
+
+msgid "Enter promotion code"
+msgstr "להכניס קוד אופטימי"
+
+msgid "APPLY"
+msgstr "להגיש"
+
+msgid "Total cost "
+msgstr "סך הכל"
+
+msgid "Per month"
+msgstr "לחודש"
+
+msgid "Per year"
+msgstr "לשנה"
+
+msgid "Total cost"
+msgstr "סך הכל"
+
+msgid "\n                            from now to %(expiry_date)s\n"
+msgstr "\n מעכשיו ועד %(expiry_date)s\n"
+
+msgid "Select your method of payment"
+msgstr "נא לבחור את אופן התשלום"
+
+msgid "Card Number"
+msgstr "מספר אשראי"
+
+msgid "Expiration Date"
+msgstr "בתוקף עד"
+
+msgid "CVV"
+msgstr "קוד CVV"
+
+msgid "Terms and conditions"
+msgstr "תנאים"
+
+msgid "You are subscribing to a %(commitment)s subscription with Shared Contacts for Gmail®."
+msgstr "אתה רשום ל%(commitment)s הרשמה עם אנשי קשר משותפים לGmail"
+
+msgid "Gapps Experts will renew your commitment for an additional %(commitment)s for all licenses at the then-current price, exactly %(commitment)s after your payment."
+msgstr "מומחי גאפס יחדשו את ההתחייבות שלך ל%(commitment)s נוסף לרישיונות במחיר הנוכחי, מיד %(commitment)s לאחר התשלום"
+
+msgid "Yes, I have read and accept Gapps Experts terms and conditions. "
+msgstr "כן, קראתי וקיבלתי את תנאי מומחי גאפס"
+
+msgid "PROCEED TO CHECKOUT"
+msgstr "להמשיך לביקורת"
+
+msgid "Credit card"
+msgstr "כרטיס אשראי"
+
+msgid "Paypal"
+msgstr "פאייפאל"
+
+msgid "PAY"
+msgstr "פאיי"
+
+msgid "Sorry, the promotion code you entered is either wrong or expired. Please contact or Cloud consultants at to get assistance."
+msgstr "סליחה, הקוד אופטימי שהוספת טועה או עבר תוקף. נא ליצור קשר או יועצי עצה כדי לקבל עזרה"
+
+msgid "Send us an email at %(contact_email)s or chat with us through our website."
+msgstr "נא לשלוח לנו מייל ב%(contact_email)s או לדבר בצ'אט באתר שלנו"
+
+msgid "OK"
+msgstr "אוקיי"
+
+msgid "Pricing"
+msgstr "מחירון"
+
+msgid "Choose the plan that fits your business"
+msgstr "לבחור את המערכת מתאימה לעסקיך"
+
+msgid "THANK YOU"
+msgstr "תודה רבה"
+
+msgid "Thank you for installing Shared Contacts for Gmail®."
+msgstr "תודה שהתקנת אנשי קשר משותשפים לGmail"
+
+msgid "Your data has been saved and you can start now using the application."
+msgstr "הפרטים שלך נשמרו ואפשר להתחיל להשתמש באפליקציה"
+
+msgid "Registration"
+msgstr "הרשמה"
+
+msgid "YOUR ARE INSTALLING <br> SHARED CONTACTS FOR GMAIL®"
+msgstr "מתקין <br> אנשי קשר משותשפים לGmail"
+
+msgid "Welcome to"
+msgstr "ברוך/ה הבא/ה ל"
+
+msgid "Create an account and start using <br> Shared Contacts for Gmail®"
+msgstr "לפתוח חשבון ולהתחיל להשתמש <br> אנשי קשר משותשפים לGmail"
+
+msgid "How do you buy your Google Apps licenses?"
+msgstr "איך את/ה קונה רישויים לאפליקציות של גוגל?"
+
+msgid "Directly from Google"
+msgstr "ישר מגוגל"
+
+msgid "Through a Reseller"
+msgstr "דרך מוכר"
+
+msgid "Register"
+msgstr "להירשם"
+
+msgid "Uninstalled"
+msgstr "לא מותקן"
+
+msgid "It seems Shared Contacts for Gmail® was uninstalled from your domain."
+msgstr "רואים שאנשי קשר משותשפים לGmail לא מותקן בתחום שלך"
+
+msgid "Please install the application again to enjoy sharing your contacts."
+msgstr "נא להתקין את האפליקציה שוב ולהשתתף לשיתוף אנשי קשר שלך"
+
+msgid "Install now"
+msgstr "להתקין עכשיו"
+
+msgid "Need assistance"
+msgstr "צריך/ה עזרה"
+
+msgid "If you need help with your subscription please contact our support team at %(email_link)s."
+msgstr "אם צריכים עזרה ברישום שלך נא ליצור קשר עם קבוצת העזרה שלנו ב %(email_link)s"
+
+msgid "month"
+msgstr "חודש"
+
+msgid "Or"
+msgstr "או"
+
+msgid "/user"
+msgstr "/user"
+
+msgid "with monthly billing"
+msgstr "עם תשלום חודשי"
+
+msgid "upgrade"
+msgstr "שדרוג"
+
+msgid "Buy"
+msgstr "לקנות"
+
+msgid "UP to %(tier_high)s USERS"
+msgstr "עד %(tier_high)s משתמשים"
+
+msgid "Billed annually"
+msgstr "תשלום שנתי"
+
+msgid "year"
+msgstr "שנה"
+
+msgid "BASIC"
+msgstr "בסיסי"
+
+msgid "24/7 technical support"
+msgstr "תמיכה טכנית 24/7"
+
+msgid "Mobile/Tablet & Outlook sync"
+msgstr "סינכרון עם ניד/טבלט וOutlook"
+
+msgid "Permission delegation"
+msgstr "משלחת הרשאה"
+
+msgid "Sharing with users"
+msgstr "בשיתוף עם משתמשים"
+
+msgid "Up to 10 shared contact groups"
+msgstr "עד 10 אנשי קשר משתתפיף"
+
+msgid "Up to 250 shared Contacts per groups"
+msgstr "עד 250 אנשי קשר בקבוצה"
+
+msgid "PER USER"
+msgstr "לכל משתמש"
+
+msgid "FOR YOUR WHOLE DOMAIN"
+msgstr "לכל התחום שלך"
+
+msgid "user"
+msgstr "משתמש"
+
+msgid "ENTERPRISE"
+msgstr "יזמה"
+
+msgid "Unlimited # of shared contact groups"
+msgstr "מס' קבוצות שותפות אי-סופי"
+
+msgid "Unlimited # of shared contacts"
+msgstr "מס' אנשי קשר אי-סופי"
+
+msgid "Sharing with users AND users groups"
+msgstr "לשתף עם משתמשים וקבוצות משתמשים"
+
+msgid "Sharing with external domain users and @gmail.com addresses"
+msgstr "לשתף עם תחומים חיצוניים וכתובות @gmail.com"
+
+msgid "Most popular"
+msgstr "הפופולשרי ביותר"
+
+msgid "PRO"
+msgstr "פרו"
+
+msgid "Shared Contacts for Gmail®"
+msgstr "אנשי קשר משותפים לGmail"
+
+msgid "Number of licenses: %(license_numer)s"
+msgstr "מספר רישיונות"
+
+msgid "buy more"
+msgstr "לקנות יותר"
+
+msgid "Upgrade"
+msgstr "שדרוג"
+
+msgid "Renewal date"
+msgstr "תאריך חידוש"
+
+msgid "Expiry date"
+msgstr "בתוקף עד"
+
+msgid "Renewal option"
+msgstr "אפשרות חידוש"
+
+msgid "Auto-renew on %(renewal_date)s"
+msgstr "חידוש אוטומתי ב%(renewal_date)s"
+
+msgid "Order #"
+msgstr "מס' הזמנה"
+
+msgid "Order date"
+msgstr "תאריך הזמנה"
+
+msgid "Version"
+msgstr "גרסה"
+
+msgid "Evalution"
+msgstr "הערכה"
+
+msgid "Start date"
+msgstr "תארית התחלה"
+
+msgid "Renewal options"
+msgstr "אפשרות חידוש"
+
+msgid "Auto-renew my contract"
+msgstr "חידוש אוטומתי על החוזה שלי"
+
+msgid "Renew my commitment on %(renewal_date)s for all licenses at the current price. (Currently %(license_number)s licenses)"
+msgstr "לחדש את ההתחיבות שלי ב%(renewal_date)s לכל הרישיונות במחיר הנוכחי (Currently %(license_number)s licenses)"
+
+msgid "Cancel my service at the end of my term"
+msgstr "לבטל את המערכת בסוף התקופה"
+
+msgid "Service will be suspended on %(renewal_date)s, when my existing commitment ends."
+msgstr "המערכת תיהיה מבוטלת ב%(renewal_date)s, בסוף ההתחיבות שלי"
+
+msgid "Save"
+msgstr "לשמור"
+
+msgid "Error happens when you pay, please try again or try with another credit card."
+msgstr "שגיעה בתשלומך, לא להכניס כרטיס אשראי שונה"
+
+msgid "pack"
+msgstr "חבילה"
+
+msgid "Billed monthly"
+msgstr "תשלום חודשי"
+
+msgid "%(tier_high)s USERS PACK"
+msgstr "%(tier_high)s חבילה משתמש"
+
+msgid "UNLIMITED SHARES"
+msgstr "חילקים אינסופיים"
+
+msgid "FOR MULTIPLE DOMAINS"
+msgstr "לתחומים רבים"
+
+msgid "Please enter your credit card information"
+msgstr "לא להכניס פרטי כרטיס אשראי"
+
+msgid "Yes, I have read and accept Shared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>"
+msgstr "כן, קראתי וקיבלתי את תנאי אנשי קשר משותפים לGmail <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>"
+
+msgid "Unit cost"
+msgstr "מחיר יחידי"
+
+msgid "Launch"
+msgstr "לשלוח"
+
+msgid "Domain users"
+msgstr "תחומי משתמשים"
+
+msgid "for %(customer_name)s"
+msgstr "ל%(customer_name)s"
+
+msgid "My subscription"
+msgstr "הרשמה שלי"
+
+msgid "Payment method"
+msgstr "שיטת תשלום"
+
+msgid "Started on"
+msgstr "התחלת ב"
+
+msgid "Billing frequency"
+msgstr "תדירות תשלום"
+
+msgid "Renews on"
+msgstr "לחדש ב"
+
+msgid "Next invoice"
+msgstr "החשבונית הבאה"
+
+msgid "Add licences"
+msgstr "להוסיף רישיונות"
+
+msgid "Annual billing"
+msgstr "תשלום שנתי"
+
+msgid "Monthly billing"
+msgstr "תשלום חודשי"
+
+msgid "domain"
+msgstr "תחום"
+
+msgid "Number of licenses"
+msgstr "מספר רשיונות"
+
+msgid "Total licences"
+msgstr "סך הכל רשיונות"
+
+msgid "My payment information"
+msgstr "פרטים תשלום שלי"
+
+msgid "Add a payment method"
+msgstr "להוסיף שיטת תשלום"
+
+msgid "Which kind of payment?"
+msgstr "סוג תשלום?"
+
+msgid "Validate"
+msgstr "לתקף"
+
+msgid "Credit card information"
+msgstr "פרטים כרטיס אשראי"
+
+msgid "Profile"
+msgstr "פרופיל"
+
+msgid "Payment information"
+msgstr "פרטים תשלום"
+
+msgid "Yearly commitment"
+msgstr "התחיבות שנתית"
+
+msgid "Monthly commitment"
+msgstr "התחיבות חודשית"
+
+msgid "Enterprise Edition"
+msgstr "הוצאה יזמתית"
+
+msgid "Professional Edition"
+msgstr "הוצאה מקצועית"
+
+msgid "Basic Edition"
+msgstr "הוצאה בסיסית"
+
+msgid "Share contacts"
+msgstr "לשתף אנשי קשר"
+
+msgid "Pending"
+msgstr "ממתין"
+
+msgid "Advanced logging and security features"
+msgstr "תכונות מתקדמות של כניסה ואבטחה"
+
+msgid "Click on \"Proceed to checkout\" to pay with your Paypal account"
+msgstr "לחץ על \"המשך לקופה\" כדי לשלם עם חשבון Paypal שלך"
+
+msgid "You will be charged by Paypal account %(email)s"
+msgstr "תחויב על ידי חשבון Paypal %(email)s"
+
+msgid "Update"
+msgstr "עדכון"
+
+msgid "Saved successfully"
+msgstr "נשמר בהצלחה"
+
+msgid "Contact us at <a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>"
+msgstr "צור קשר בכתובת <a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>"
+
+msgid "You cannot purchase less than %(minimum_licenses_to_upgrade)s licenses"
+msgstr "לא ניתן לרכוש פחות מ license_licenses_to_upgrade)s)% רישיונות"
+
+msgid "Close"
+msgstr "סגור"
+
+msgid "Expires on"
+msgstr "פג תוקף בתאריך"
+
+msgid "Econsulting Customer"
+msgstr "לקוח איקונסלטינג"
+
+msgid "Econsulting Partner"
+msgstr "שותף איקונסלטינג"
+
+msgid "Econsulting Prospect"
+msgstr "פוטנציאל איקונסלטינג"
+
+msgid "Prospect"
+msgstr "פוטנציאל"
+
+msgid "Please contact your reseller for any new orders."
+msgstr "צור קשר עם המפיץ שלך לגבי הזמנות חדשות."
+
+msgid "from now to %(expiry_date)s"
+msgstr "מעתה ועד %(expiry_date)s"
+
+msgid "Valid until"
+msgstr "בתוקף עד"
+
+msgid "Until your renewal date"
+msgstr "עד תאריך החידוש שלך"
+
+msgid "Prorated price from now to"
+msgstr "מחיר פרופורציה מעכשיו ל"
+
+msgid "users"
+msgstr "משתמשים"
+
+msgid "contact us"
+msgstr "תיצור איתנו קשר"
+
+msgid "unlimited backup"
+msgstr "גיבוי בלתי מוגבל"
+
+msgid "corporate"
+msgstr "הארגונית"
+
+msgid "advanced admin capabilities"
+msgstr "יכולות ניהול מתקדמות"
+
+msgid "Corporate Version"
+msgstr "הגרסה הארגונית"
+
+msgid "Up to 250 contacts per group"
+msgstr "עד 250 אנשי קשר בקבוצה"
+
+msgid "Sharing with same domain users"
+msgstr "משתף עם משתמשים באותו דומיין"
+
+msgid "Permissions Management"
+msgstr "משלחת רשות"
+
+msgid "Live Support"
+msgstr "תמיכה בזמן אמת"
+
+msgid "Unlimited Contact Backup"
+msgstr "גיבוי אנשי קשר בלתי מוגבל "
+
+msgid "Instant Synchronization (Chrome users)"
+msgstr "סינכרון מיידי (תוסף Chrome)"
+
+msgid "Email support"
+msgstr "תמיכה במייל"
+
+msgid "(from 5 users)"
+msgstr "(מ 5 משתמשים)"
+
+msgid "Try for free"
+msgstr "נסה/י בחינם"
+
+msgid "Total"
+msgstr "סה”כ"
+
+msgid "Features"
+msgstr "מאפיינים"
+
+msgid "Shared contacts groups"
+msgstr "מס’ קבוצות שותפות אי-סופי"
+
+msgid "Shared contacts"
+msgstr "מס’ אנשי קשר אי-סופי"
+
+msgid "Unlimited"
+msgstr "ללא הגבלה"
+
+msgid "Instant Synchronization"
+msgstr "סינכרון מיידי*"
+
+msgid "Invoices"
+msgstr "חשבוניות"
+
+msgid "Chrome extension"
+msgstr "תוסף Chrome"
+
+msgid "1 Pack of 5 licenses"
+msgstr "1 חבילה של 5 רישיונות"
+
+msgid "for one year"
+msgstr "במשך שנה אחת"
+
+msgid "for one month"
+msgstr "לחודש אחד"
+
+msgid "Wrong license number"
+msgstr "מספר רישיון שגוי"
+
+msgid "Wrong promotion code"
+msgstr "קוד קידום שגוי"
+
+msgid "Chrome users"
+msgstr "משתמשי Chrome"
+
+msgid "We are sorry but your payment could not be processed. Please try again or contact us on support@gmailsharedcontacts.com"
+msgstr "מצטערים, לא אושר את התשלום. נסה שוב או צור איתנו קשר בכתובת support@gmailsharedcontacts.com"
+

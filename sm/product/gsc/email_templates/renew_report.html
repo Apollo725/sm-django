@@ -1,0 +1,78 @@
+<body>
+{% if renew_errors %}
+    <h3>Failed to renew:</h3>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>customer</th>
+            <th>reason</th>
+            <th>detail</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for domain, error, detail in renew_errors %}
+            <tr>
+                <td>
+                    {{ domain }}
+                </td>
+                <td>
+                    {{ error }}
+                </td>
+                <td>
+                    {{ detail }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+{% if renew_renews %}
+    <h3>Succeed to renew:</h3>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>customer</th>
+            <th>info</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key, value in renew_renews %}
+            <tr>
+                <td>
+                    {{ key }}
+                </td>
+                <td>
+                    {{ value }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+{% if expires %}
+    <h3>Expires: </h3>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>customer</th>
+            <th>info</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key, value in expires %}
+            <tr>
+                <td>
+                    {{ key }}
+                </td>
+                <td>
+                    {{ value }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+</body>

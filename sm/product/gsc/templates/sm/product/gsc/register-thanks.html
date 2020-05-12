@@ -1,0 +1,39 @@
+{% extends "sm/product/gsc/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Thank you" %} - {{ block.super }}
+{% endblock %}
+
+{% block large-banner-text %}
+    {% trans "THANK YOU" %}
+{% endblock %}
+
+{% block content %}
+<div class="wrapper wrapper-grey">
+    <div class="center-align container">
+        <div class="row">
+            <img src="{% static "sm/product/gsc/img/Confirmation.png" %}" alt="confirmation"/>
+        </div>
+
+        <div class="row raleway">
+            <h5>
+                {% trans "Thank you for installing Shared Contacts for Gmail®." %}
+            </h5>
+            <h5>
+                {% trans "Your data has been saved and you can start now using the application." %}
+            </h5>
+        </div>
+
+        <form action="{{ referer_page }}">
+            <div class="row center-align">
+                <input type="hidden" name="registered" value="true">
+                <button class="btn-grey-lowkey radius" type="submit" name="action">
+                    {% trans "LAUNCH APP" %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>    
+{% endblock %}

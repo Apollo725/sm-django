@@ -1,0 +1,11 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_modify %}
+
+{% block submit_buttons_bottom %}
+    {% submit_row %}
+    <div class="submit-row">
+        <a href="{% url 'admin:edit_product_display_options' product_id=original.pk action_type='NEW' %}" class="changelink">{% trans "Edit 'NEW' display options" %}</a>
+        <a href="{% url 'admin:edit_product_display_options' product_id=original.pk action_type='ADD' %}" class="changelink">{% trans "Edit 'ADD' display options" %}</a>
+        <a href="{% url 'admin:edit_product_display_options' product_id=original.pk action_type='UPGRADE' %}" class="changelink">{% trans "Edit 'UPGRADE' display options" %}</a>
+    </div>
+{% endblock %}

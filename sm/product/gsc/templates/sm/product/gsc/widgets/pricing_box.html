@@ -1,0 +1,40 @@
+{% load i18n %}
+{% load sm %}
+{% load mathfilters %}
+
+{% with month_price=yearly.price|div:12|floatformat:2 month_price_monthly=monthly.price %}
+    {% with year_price=yearly.price year_price_monthly=month_price_monthly|mul:12 %}
+        {% with year_per_user=yearly.per_user month_per_user=monthly.per_user %}
+                <div class="basic pricing-box white {% if not inactive %}hoverable z-depth-1{% else %}inactive z-depth-0{% endif %}">
+                    {% block pricing_box_prefix %}
+                    {% endblock %}
+                    <div class="title {% if monthly_pricing == "true" %}monthly{% endif %} {{ btn_color_class }}">
+                        {% block price_title %}
+                        {% endblock %}
+                        
+    
+                        <div class="feature">
+                            {% block feature_title %}
+                            {% endblock %}
+                        </div>
+    
+                        {% block billed_annualy %}
+                        {% endblock %}
+                        <br/>
+                    </div>
+                    <div class="name">
+                        {% block version_name %}
+                        {% endblock %}
+                    </div>
+                    <div class="features">
+                        {% block feature_list %}
+                        {% endblock %}
+                    </div>
+                    
+                   
+                    {% block buy_button %}   
+                    {% endblock %}
+                </div>
+        {% endwith %}
+    {% endwith %}
+{% endwith %}

@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+htmlcov/
+# Django stuff:
+*.log
+
+.venv/
+_data/
+docker-compose.override.yml
+app/local_settings.py
+
+# Sphinx documentation
+docs/_build/
+/static/CACHE
+/static
+/uploads
+sm.egg-info/
+
+# test data
+/*.json
+log.txt
+
+#.*
+.env

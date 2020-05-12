@@ -1,0 +1,51 @@
+[
+  {
+    "model": "sm.core.Vendor",
+    "pk": 2,
+    "fields": {
+      "name": "Google"
+    }
+  },
+  {
+    "model": "sm.core.Customer",
+    "pk": 1,
+    "fields": {
+      "name": "foo.com"
+    }
+  },
+  {
+    "model": "sm.core.Product",
+    "pk": 1,
+    "fields": {
+      "name": "GSuite"
+    }
+  },
+  {
+    "model": "sm.core.Product",
+    "pk": 1,
+    "fields": {
+      "name": "GSC",
+      "vendor_id": 2
+    }
+  },
+  {
+    "model": "sm.core.SKU",
+    "pk": 1,
+    "fields": {
+      "name": "GSuite Basic",
+
+      "product_id": 1
+    }
+  },
+  {
+    "model": "sm.core.Subscription",
+    "pk": 1,
+    "fields": {
+      "name": "Mark's GSuite",
+      "customer_id": 1,
+      "product_id": 1,
+      "SKU_id": 10
+    }
+  }
+]
+

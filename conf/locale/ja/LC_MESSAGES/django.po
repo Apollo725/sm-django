@@ -1,0 +1,815 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SM 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-02 10:45+0000\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+
+msgid "English"
+msgstr "英語"
+
+msgid "French"
+msgstr "フランス語"
+
+msgid "German"
+msgstr "ドイツ語"
+
+msgid "Spanish"
+msgstr "スペイン語"
+
+msgid "Italian"
+msgstr "イタリア語"
+
+msgid "Russian"
+msgstr "ロシア語"
+
+msgid "Portuguese"
+msgstr "ポルトガル語"
+
+msgid "Korean"
+msgstr "韓国語"
+
+msgid "Japanese"
+msgstr "日本語"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "Customer"
+msgstr "顧客"
+
+msgid "Resold customer"
+msgstr "再販顧客"
+
+msgid "Google customer"
+msgstr "Google カスタマー"
+
+msgid "Reseller"
+msgstr "再販業者"
+
+msgid "Buyer"
+msgstr "バイヤー"
+
+msgid "Admin"
+msgstr "管理者"
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "Free version"
+msgstr "無料版"
+
+msgid "Basic version"
+msgstr "基本版"
+
+msgid "Professional version"
+msgstr "プロ版"
+
+msgid "Enterprise version"
+msgstr "エンタープライズ版"
+
+msgid "Subscription"
+msgstr "サブスクリプション"
+
+msgid "One-shot"
+msgstr "ワンショット"
+
+msgid "1 year"
+msgstr "1 年"
+
+msgid "1 month"
+msgstr "1 ヶ月"
+
+msgid "Paypal auto"
+msgstr "PayPal 自動"
+
+msgid "Paypal preapproved"
+msgstr "PayPal 事前承認"
+
+msgid "Paypal manual"
+msgstr "PayPal 手動"
+
+msgid "Offline"
+msgstr "オフライン"
+
+msgid "Active"
+msgstr "アクティブ"
+
+msgid "Inactive"
+msgstr "非アクティブ"
+
+msgid "Open"
+msgstr "オープン"
+
+msgid "Paid"
+msgstr "支払済み"
+
+msgid "Cancelled"
+msgstr "キャンセルしました"
+
+msgid "OVERDUE"
+msgstr "期限切れ"
+
+msgid "Partially paid"
+msgstr "一部支払い済み"
+
+msgid "Delivered"
+msgstr "発送済み"
+
+msgid "Approved"
+msgstr "承認済み"
+
+msgid "Invoice sent"
+msgstr "請求書を送信しました"
+
+msgid "Renew"
+msgstr "更新"
+
+msgid "Flex"
+msgstr "フレックス"
+
+msgid "Reduce"
+msgstr "減少"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Subscription Manager"
+msgstr "サブスクリプションマネージャー"
+
+msgid "sign in"
+msgstr "サインイン"
+
+msgid "Sign in"
+msgstr "サインイン"
+
+msgid "name"
+msgstr "名前"
+
+msgid "full name"
+msgstr "姓名"
+
+msgid "MY SUBSCRIPTIONS"
+msgstr "マイ サブスクリプション"
+
+msgid "Need assistance?"
+msgstr "お困りですか？"
+
+msgid "If you need help with your subscription please contact our support team at <a href=\"%(mail_to)s\">%(mail)s</a>."
+msgstr "サブスクリプションに関してお困りの場合、弊社サポートチーム (<a href=\"%(mail_to)s\">%(mail)s</a>) までお問い合わせください。"
+
+msgid "Full name"
+msgstr "姓名"
+
+msgid "Email address"
+msgstr "メールアドレス"
+
+msgid "Phone number"
+msgstr "電話番号"
+
+msgid "Shared Contacts for Gmail"
+msgstr "Shared Contacts For Gmail (Gmailの共有連絡先)"
+
+msgid "Thank you"
+msgstr "ありがとうございます"
+
+msgid "Thank you for trusting Shared Contacts for Gmail®."
+msgstr "Shared Contacts for Gmail® (Gmail®の共有連絡先)を信頼いただき、ありがとうございます。"
+
+msgid "Your account has been successfully upgraded."
+msgstr "お使いのアカウントをアップグレードしました。"
+
+msgid "Your account has subscribed to Shared Contacts for Gmail® successfully."
+msgstr "アカウントを作成して、<br>Shared Contacts for Gmail®(Gmail®の共有連絡先)を開始しましょう"
+
+msgid "You can now enjoy all the features and options of the full version, and find at any time all the details of your subscription: expiration date, next payment, number of licenses and more."
+msgstr "これで完全版の機能およびオプションのすべてをお楽しみいただき、有効期限、次回支払日、所有ライセンスといったサブスクリプションの詳細をいつでもご確認いただけます。"
+
+msgid "LAUNCH APP"
+msgstr "アプリの起動"
+
+msgid "See my subscriptions"
+msgstr "サブスクリプションの詳細を見る"
+
+msgid "Connect with us"
+msgstr "私達と繋がりましょう"
+
+msgid "Checkout"
+msgstr "チェックアウト"
+
+msgid "CHECKOUT"
+msgstr "チェックアウト"
+
+msgid "edition"
+msgstr "登録"
+
+msgid "Billed"
+msgstr "請求方法"
+
+msgid "1 year commitment"
+msgstr "契約"
+
+msgid "Enter how many licences you need"
+msgstr "必要なライセンス数を入力"
+
+msgid "Licenses"
+msgstr "ライセンス"
+
+msgid "Total to pay"
+msgstr "合計金額"
+
+msgid "You have"
+msgstr "所有"
+
+msgid "You add"
+msgstr "追加"
+
+msgid "You will have now"
+msgstr "これからの所有"
+
+msgid "New"
+msgstr "新しい"
+
+msgid "Billing contact"
+msgstr "請求先情報"
+
+msgid "This contact will receive all the communication relative to the payment"
+msgstr "この連絡先で、支払いに関係するすべての連絡を受け取ります"
+
+msgid "Change"
+msgstr "変更"
+
+msgid "Billing details"
+msgstr "請求先詳細"
+
+msgid "Country"
+msgstr "国"
+
+msgid "State"
+msgstr "州・都道府県"
+
+msgid "City"
+msgstr "市区町村"
+
+msgid "Zip code"
+msgstr "郵便番号"
+
+msgid "Address"
+msgstr "住所"
+
+msgid "YOUR ORDER"
+msgstr "注文情報"
+
+msgid "Shared Contacts For Gmail"
+msgstr "Shared Contacts For Gmail (Gmailの共有連絡先)"
+
+msgid "Number of licenses:"
+msgstr "ライセンス数： %(license_numer)s"
+
+msgid "Domain users: %(domain_users)s"
+msgstr "ドメインユーザー： %(domain_users)s"
+
+msgid "Domain name"
+msgstr "ドメイン名"
+
+msgid "Plan"
+msgstr "プラン"
+
+msgid "Billing method"
+msgstr "請求方法"
+
+msgid "Annual"
+msgstr "年次"
+
+msgid "Monthly"
+msgstr "月"
+
+msgid "Currency"
+msgstr "通貨"
+
+msgid "Expiration date"
+msgstr "有効期限"
+
+msgid "Add promotion code"
+msgstr "プロモーションコードを追加"
+
+msgid "Enter promotion code"
+msgstr "プロモーションコードを入力"
+
+msgid "APPLY"
+msgstr "適用"
+
+msgid "Total cost "
+msgstr "合計金額"
+
+msgid "Per month"
+msgstr "1 ヶ月"
+
+msgid "Per year"
+msgstr "1 年"
+
+msgid "Total cost"
+msgstr "合計金額"
+
+msgid "\n                            from now to %(expiry_date)s\n"
+msgstr "\n                           今から %(expiry_date)sまで\n"
+
+msgid "Select your method of payment"
+msgstr "お支払いの方法を選択してください"
+
+msgid "Card Number"
+msgstr "カード番号"
+
+msgid "Expiration Date"
+msgstr "有効期限"
+
+msgid "CVV"
+msgstr "CVV"
+
+msgid "Terms and conditions"
+msgstr "利用規約"
+
+msgid "You are subscribing to a %(commitment)s subscription with Shared Contacts for Gmail®."
+msgstr "Shared Contacts for Gmail® (Gmail®の共有連絡先) の %(commitment)s サブスクリプションに登録いただいています。"
+
+msgid "Gapps Experts will renew your commitment for an additional %(commitment)s for all licenses at the then-current price, exactly %(commitment)s after your payment."
+msgstr "Gapps Experts は、お支払後 %(commitment)s で、すべてのライセンスの追加 %(commitment)s を当時の価格にて、お使いの契約を更新いたします。"
+
+msgid "Yes, I have read and accept Gapps Experts terms and conditions. "
+msgstr "Gapps Experts の利用規約を読み、同意します。"
+
+msgid "PROCEED TO CHECKOUT"
+msgstr "チェックアウトへ進む"
+
+msgid "Credit card"
+msgstr "クレジットカード"
+
+msgid "Paypal"
+msgstr "PayPal"
+
+msgid "PAY"
+msgstr "支払"
+
+msgid "Sorry, the promotion code you entered is either wrong or expired. Please contact or Cloud consultants at to get assistance."
+msgstr "入力いただいたプロモーションコードが間違っているか、有効期限が切れています。 詳しくは、Cloud コンサルタントまでお問い合わせください。"
+
+msgid "Send us an email at %(contact_email)s or chat with us through our website."
+msgstr "%(contact_email)s までメールをお送りいただくか、弊社 Web サイトからチャットにてお問い合わせください。"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Pricing"
+msgstr "価格設定"
+
+msgid "Choose the plan that fits your business"
+msgstr "皆様のビジネスに適したプランを選択してください"
+
+msgid "THANK YOU"
+msgstr "ありがとうございます"
+
+msgid "Thank you for installing Shared Contacts for Gmail®."
+msgstr "Shared Contacts for Gmail® (Gmail®の共有連絡先)をインストールしていただき、ありがとうございます。"
+
+msgid "Your data has been saved and you can start now using the application."
+msgstr "データを保存しました。今すぐアプリケーションの利用を開始いただけます。"
+
+msgid "Registration"
+msgstr "登録"
+
+msgid "YOUR ARE INSTALLING <br> SHARED CONTACTS FOR GMAIL®"
+msgstr "SHARED CONTACTS FOR GMAIL®を<br>インストールしています"
+
+msgid "Welcome to"
+msgstr "…へようこそ"
+
+msgid "Create an account and start using <br> Shared Contacts for Gmail®"
+msgstr "アカウントを作成して、<br>Shared Contacts for Gmail®(Gmail®の共有連絡先)を開始しましょう"
+
+msgid "How do you buy your Google Apps licenses?"
+msgstr "Google Apps ライセンスの購入方法"
+
+msgid "Directly from Google"
+msgstr "Google から直接購入"
+
+msgid "Through a Reseller"
+msgstr "販売代理店を通じて購入"
+
+msgid "Register"
+msgstr "登録"
+
+msgid "Uninstalled"
+msgstr "アンインストールしました"
+
+msgid "It seems Shared Contacts for Gmail® was uninstalled from your domain."
+msgstr "Shared Contacts for Gmail® (Gmail®の共有連絡先)をお使いのドメインからアンインストールしました。"
+
+msgid "Please install the application again to enjoy sharing your contacts."
+msgstr "連絡先を共有いただくには、もう一度アプリケーションをインストールしてください。"
+
+msgid "Install now"
+msgstr "今すぐインストール"
+
+msgid "Need assistance"
+msgstr "お困りの場合"
+
+msgid "If you need help with your subscription please contact our support team at %(email_link)s."
+msgstr "サブスクリプションに関してお困りの場合、弊社サポートチーム (%(email_link)s) までお問い合わせください。"
+
+msgid "month"
+msgstr "月"
+
+msgid "Or"
+msgstr "または"
+
+msgid "/user"
+msgstr "/ユーザー"
+
+msgid "with monthly billing"
+msgstr "月締め支払いで"
+
+msgid "upgrade"
+msgstr "拡張/アップグレード"
+
+msgid "Buy"
+msgstr "購入"
+
+msgid "UP to %(tier_high)s USERS"
+msgstr "最大 %(tier_high)s ユーザー"
+
+msgid "Billed annually"
+msgstr "年間請求額"
+
+msgid "year"
+msgstr "年"
+
+msgid "BASIC"
+msgstr "基本"
+
+msgid "24/7 technical support"
+msgstr "24時間年中無休の技術サポート"
+
+msgid "Mobile/Tablet & Outlook sync"
+msgstr "モバイル/タブレットおよび Outlook の同期"
+
+msgid "Permission delegation"
+msgstr "権限の委譲"
+
+msgid "Sharing with users"
+msgstr "ユーザーと共有"
+
+msgid "Up to 10 shared contact groups"
+msgstr "最大 10 の共有連絡先グループ"
+
+msgid "Up to 250 shared Contacts per groups"
+msgstr "グループあたり最大 250 の共有連絡先"
+
+msgid "PER USER"
+msgstr "ユーザー毎"
+
+msgid "FOR YOUR WHOLE DOMAIN"
+msgstr "ドメイン全体に対して有効"
+
+msgid "user"
+msgstr "ユーザー"
+
+msgid "ENTERPRISE"
+msgstr "エンタープライズ"
+
+msgid "Unlimited # of shared contact groups"
+msgstr "利用できる共有連絡先グループの数が無制限に"
+
+msgid "Unlimited # of shared contacts"
+msgstr "共有連絡先の数が無制限に"
+
+msgid "Sharing with users AND users groups"
+msgstr "ユーザーとユーザーグループと共有"
+
+msgid "Sharing with external domain users and @gmail.com addresses"
+msgstr "外部ドメインのユーザーおよび @gmail.com のアドレスと共有"
+
+msgid "Most popular"
+msgstr "最も一般的な選択です"
+
+msgid "PRO"
+msgstr "プロ"
+
+msgid "Shared Contacts for Gmail®"
+msgstr "Shared Contacts for Gmail® (Gmail®の共有連絡先)"
+
+msgid "Number of licenses: %(license_numer)s"
+msgstr "ライセンス数： %(license_numer)s"
+
+msgid "buy more"
+msgstr "さらに購入する"
+
+msgid "Upgrade"
+msgstr "アップグレード"
+
+msgid "Renewal date"
+msgstr "更新日"
+
+msgid "Expiry date"
+msgstr "有効期限"
+
+msgid "Renewal option"
+msgstr "更新オプション"
+
+msgid "Auto-renew on %(renewal_date)s"
+msgstr " %(renewal_date)sに自動更新"
+
+msgid "Order #"
+msgstr "注文番号"
+
+msgid "Order date"
+msgstr "注文日"
+
+msgid "Version"
+msgstr "無料版"
+
+msgid "Evalution"
+msgstr "評価"
+
+msgid "Start date"
+msgstr "注文日"
+
+msgid "Renewal options"
+msgstr "更新オプション"
+
+msgid "Auto-renew my contract"
+msgstr "契約を自動更新"
+
+msgid "Renew my commitment on %(renewal_date)s for all licenses at the current price. (Currently %(license_number)s licenses)"
+msgstr "Gapps Experts は、お支払後 %(commitment)s で、すべてのライセンスの追加 %(commitment)s を当時の価格にて、お使いの契約を更新いたします。"
+
+msgid "Cancel my service at the end of my term"
+msgstr "本期間の終わりにサービスをキャンセル"
+
+msgid "Service will be suspended on %(renewal_date)s, when my existing commitment ends."
+msgstr "既存のコミットメントが終了した際、%(renewal_date)sをもってサービスを停止"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Error happens when you pay, please try again or try with another credit card."
+msgstr "支払時にエラーが発生しました。もう一度お試しいただくか、別のクレジットカードでお支払ください。"
+
+msgid "pack"
+msgstr "パック"
+
+msgid "Billed monthly"
+msgstr "毎月請求"
+
+msgid "%(tier_high)s USERS PACK"
+msgstr "%(tier_high)s ユーザーパック"
+
+msgid "UNLIMITED SHARES"
+msgstr "無限に共有"
+
+msgid "FOR MULTIPLE DOMAINS"
+msgstr "複数ドメインに"
+
+msgid "Please enter your credit card information"
+msgstr "クレジットカード情報を入力してください"
+
+msgid "Yes, I have read and accept Shared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>"
+msgstr "はい、私はShared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">の利用規約を読んで、承諾しました。</a>"
+
+msgid "Unit cost"
+msgstr "ユニットコスト"
+
+msgid "Launch"
+msgstr "起動"
+
+msgid "Domain users"
+msgstr "ドメインユーザー"
+
+msgid "for %(customer_name)s"
+msgstr "%(customer_name)s用"
+
+msgid "My subscription"
+msgstr "マイ サブスクリプション"
+
+msgid "Payment method"
+msgstr "支払い方法"
+
+msgid "Started on"
+msgstr "開始日"
+
+msgid "Billing frequency"
+msgstr "請求の頻度"
+
+msgid "Renews on"
+msgstr "更新"
+
+msgid "Next invoice"
+msgstr "次の請求書"
+
+msgid "Add licences"
+msgstr "ライセンスを追加"
+
+msgid "Annual billing"
+msgstr "毎年恒例の請求"
+
+msgid "Monthly billing"
+msgstr "毎月請求"
+
+msgid "domain"
+msgstr "ドメイン"
+
+msgid "Number of licenses"
+msgstr "ライセンス数"
+
+msgid "Total licences"
+msgstr "合計ライセンス数"
+
+msgid "My payment information"
+msgstr "支払い情報"
+
+msgid "Add a payment method"
+msgstr "支払い方法を追加"
+
+msgid "Which kind of payment?"
+msgstr "どのような支払いですか？"
+
+msgid "Validate"
+msgstr "確認"
+
+msgid "Credit card information"
+msgstr "クレジットカード情報"
+
+msgid "Profile"
+msgstr "プロフィール"
+
+msgid "Payment information"
+msgstr "支払い情報"
+
+msgid "Yearly commitment"
+msgstr "年次コミットメント"
+
+msgid "Monthly commitment"
+msgstr "月次コミットメント"
+
+msgid "Enterprise Edition"
+msgstr "エンタープライズ版"
+
+msgid "Professional Edition"
+msgstr "プロフェッショナル版"
+
+msgid "Basic Edition"
+msgstr "ベーシック版"
+
+msgid "Share contacts"
+msgstr "連絡先を共有"
+
+msgid "Pending"
+msgstr "保留中"
+
+msgid "Advanced logging and security features"
+msgstr "高度なログとセキュリティ機能"
+
+msgid "Click on \"Proceed to checkout\" to pay with your Paypal account"
+msgstr "「チェックアウトに進む」をクリックしてPaypalアカウントでお支払いください"
+
+msgid "You will be charged by Paypal account %(email)s"
+msgstr "Paypalアカウント %(email)s によって課金されます"
+
+msgid "Update"
+msgstr "アップデート"
+
+msgid "Saved successfully"
+msgstr "正常に保存されました"
+
+msgid "Contact us at <a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>"
+msgstr "<a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a> までお問い合わせください"
+
+msgid "You cannot purchase less than %(minimum_licenses_to_upgrade)s licenses"
+msgstr "%(minimum_licenses_to_upgrade)sライセンス未満は購入できません"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Expires on"
+msgstr "期限切れ"
+
+msgid "Econsulting Customer"
+msgstr "Eコンサルティング顧客"
+
+msgid "Econsulting Partner"
+msgstr "Eコンサルティングパートナー"
+
+msgid "Econsulting Prospect"
+msgstr "Eコンサルティング見込み客"
+
+msgid "Prospect"
+msgstr "見込み客"
+
+msgid "Please contact your reseller for any new orders."
+msgstr "新規の注文については、リセラーにお問い合わせください。"
+
+msgid "from now to %(expiry_date)s"
+msgstr "今から %(expiry_date)sまで"
+
+msgid "Valid until"
+msgstr "有効期限"
+
+msgid "Until your renewal date"
+msgstr "更新日まで"
+
+msgid "Prorated price from now to"
+msgstr "今後は、按分された価格は"
+
+msgid "users"
+msgstr "ユーザー"
+
+msgid "contact us"
+msgstr "ご連絡下さい"
+
+msgid "unlimited backup"
+msgstr "無制限バックアップ"
+
+msgid "corporate"
+msgstr "企業"
+
+msgid "advanced admin capabilities"
+msgstr "高度な管理能力"
+
+msgid "Corporate Version"
+msgstr "企業版"
+
+msgid "Up to 250 contacts per group"
+msgstr "最高250件の共有連絡先グループ"
+
+msgid "Sharing with same domain users"
+msgstr "同一ドメインのユーザーとの共有"
+
+msgid "Permissions Management"
+msgstr "権限管理"
+
+msgid "Live Support"
+msgstr "ライブサポート"
+
+msgid "Unlimited Contact Backup"
+msgstr "連絡先バックアップが無制限"
+
+msgid "Instant Synchronization (Chrome users)"
+msgstr "インスタント同期 (Chrome拡張機能)"
+
+msgid "Email support"
+msgstr "電子メール対応"
+
+msgid "(from 5 users)"
+msgstr "(5名のユーザーから)"
+
+msgid "Try for free"
+msgstr "無料でトライアル"
+
+msgid "Total"
+msgstr "合計"
+
+msgid "Features"
+msgstr "特徴"
+
+msgid "Shared contacts groups"
+msgstr "共有連絡先グループ"
+
+msgid "Shared contacts"
+msgstr "共有の連絡先"
+
+msgid "Unlimited"
+msgstr "無制限"
+
+msgid "Instant Synchronization"
+msgstr "インスタント同期"
+
+msgid "Invoices"
+msgstr "請求書"
+
+msgid "Chrome extension"
+msgstr "Chrome拡張機能"
+
+msgid "1 Pack of 5 licenses"
+msgstr "1パックの5ライセンス"
+
+msgid "for one year"
+msgstr "1年間"
+
+msgid "for one month"
+msgstr "1ヶ月間"
+
+msgid "Wrong license number"
+msgstr "間違ったライセンス番号"
+
+msgid "Wrong promotion code"
+msgstr "間違ったプロモーションコード"
+
+msgid "Chrome users"
+msgstr "Chrome ユーザー"
+
+msgid "We are sorry but your payment could not be processed. Please try again or contact us on support@gmailsharedcontacts.com"
+msgstr "申し訳ありませんが、お支払いを処理することができませんでした。もう一度お試しいただくか、support@gmailsharedcontacts.com までお問い合わせください。"
+

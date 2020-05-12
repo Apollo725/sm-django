@@ -1,0 +1,1298 @@
+{% extends "sm/frontend/menu.html" %}
+{% load static %}
+{% load i18n %}
+{% load sm %}
+
+{% block title %}
+    {% trans "Checkout" %} - {{ block.super }}
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "sm/frontend/bower_components/angular/angular.min.js" %}"></script>
+    <script src="{% static "sm/frontend/bower_components/parsleyjs/dist/parsley.js" %}"></script>
+    {% with "sm/frontend/bower_components/parsleyjs/src/i18n/"|add:lang_code|add:".js" as parsley_i18n_js %}
+        <script src="{% static parsley_i18n_js %}"></script>
+    {% endwith %}
+    <script src="{% static "sm/frontend/bower_components/moment/min/moment.min.js" %}"></script>
+{% endblock %}
+
+{% block large-banner-text %}
+    {% trans "CHECKOUT" %}
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="titlepage">{% trans "Checkout" %}</h1>
+    <form class="gsc-checkout" method="post" id="gsc-checkout-form">
+        <div class="row">
+            <div class="user-detail">
+                <div class="row">
+                    <div class="col s12 BillingContactCard">
+                        <div class="whitebox">
+                            <fieldset>
+                                <div class="greybox">
+                                    <legend class="card-title">
+                                        {% trans "Billing contact" %}
+                                    </legend>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label id="label_email" for="email">{% trans "Email address" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ contact_form.contact_email }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label id="label_name" class="disableable" for="name">{% trans "Full name" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ contact_form.name }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label id="label_phone" for="id_phone_number">{% trans "Phone number" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ contact_form.phone_number }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="greybox nomarbot">
+                                    <legend class="card-title">
+                                        {% trans "Billing details" %}
+                                    </legend>
+                                    <div class="row inline-form">
+                                        <div id="country" class="col s3">
+                                            <label for="country">{% trans "Country" %}*</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.country }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div id="state" class="col s3">
+                                            <label for="state">{% trans "State" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+	                                        {{ billing_form.state }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label for="city">{% trans "City" %}*</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.city }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label for="zip_code">{% trans "Zip code" %}*</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.zip_code }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label for="address">{% trans "Address" %}*</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.address }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="order-detail">
+                
+                <div class="row">
+                    <div class="col s12">
+                        
+                        <h1 class="row whitebox nobdbot teal lighten-3 text-white center-align">
+                            {% trans "YOUR ORDER" %}
+                        </h1>
+                
+                        <div class="whitebox">
+                            <div class="row whitebox valign-wrapper nobdbot">
+                                <div class="col s2 valign center-align">
+                                    <img class="app-img" src="{% static "sm/product/gsc/img/gsc-app.png" %}" alt="GSC Logo" class="product-icon">
+                                </div>
+                                <div class="col s10 valign">
+                                    <span class="order-title uppercase">Shared Contacts for Gmail &reg;</span><br />
+                                    <span class="order-plan uppercase">{{ product.version }} {% trans "edition" %}</span>
+                                </div>
+                            </div>
+
+                            <div class="row greybox order-chips">
+
+                                {% if "gmail.com" in user.sm.email %}
+                                <div class="col s10 offset-s1" id="order-summary">
+                                    <dl class="row">
+                                        <dt class="col m6 l3 uppercase">{% trans "Plan" %}</dt>
+                                        <dd class="col m6 l3">{{ order_detail.product.version }}
+                                        {% if checkout_type == 'first' or checkout_type == 'upgrade' %}
+                                            {% if order_detail.product.version != 'ENTERPRISE' %}
+                                                <a href="{% url "gsc:pricing" %}{% if upgrade %}?upgrade=true{% endif %}">
+                                                    {% trans "Change" %}
+                                                </a>
+                                            {% endif %}
+                                        {% endif %}
+                                        </dd>
+                                        {% if checkout_type == 'first' or checkout_type == 'add' %}
+                                            <dt class="col m6 l3 uppercase">{% trans "Expiration date" %}</dt>
+                                            <dd class="col m6 l3">{{ expiration_date|date:'SHORT_DATE_FORMAT' }}</dd>
+                                        {% else %}
+                                            <dt class="col m6 l3 uppercase">{% trans "Expiration date" %}</dt>
+                                            <script id="extended-expiration-date-template" type="text/html">
+                                                [[expirationDate]]
+                                                <div class="green-details" ng-if="extendedDays > 0">
+                                                (including [[extendedDays]] days extension for your credit balance)
+                                            </div>
+
+                                            </script>
+                                            <dd class="col m6 l3" extended-expiration-date expiration-timestamp="{{ expiration_date|date:'U' }}">
+                                            </dd>
+                                        {% endif %}
+                                    </dl>
+                                    <dl class="row">
+                                        <dt class="col m6 l3 uppercase">{% trans "Unit cost" %}</dt>
+                                        {% if checkout_type == 'first' and order_detail.product.version == 'BASIC' %}
+                                        <dd class="col m6 l9"> {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{ tier.price }}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %} {{ product.unit }} /{% trans "domain" %}/{{ product.commitment | lower }} </dd>
+                                        {% else %}
+                                            {% if arg_order and checkout_type == 'first' or checkout_type == 'upgradePack'   %}
+                                                <dd class="col m6 l9"> {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}<span tier-price></span>{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %} {{ product.unit }} {% trans "/user" %}/{{ product.commitment | lower }} </dd>
+                                            {% else %}
+                                                <dd class="col m6 l9"> {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{ tier.price }}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %} {{ product.unit }} {% trans "/user" %}/{{ product.commitment | lower }} </dd>
+                                            {% endif %}
+                                        {% endif %}
+                                    </dl>
+                                </div>
+                                {% else %}
+                                <div class="col s10 offset-s1" id="order-summary">
+                                    <dl class="row">
+                                        <dt class="col m6 l3 uppercase">{% trans "Domain name" %}</dt>
+                                        <dd class="col m6 l3">{{ customer.name }} </dd>
+                                        {% if checkout_type == 'first' or checkout_type == 'add' %}
+                                            <dt class="col m6 l3 uppercase">{% trans "Expiration date" %}</dt>
+                                            <dd class="col m6 l3">{{ expiration_date|date:'SHORT_DATE_FORMAT' }}</dd>
+                                        {% else %}
+                                            <dt class="col m6 l3 uppercase">{% trans "Expiration date" %}</dt>
+                                            <script id="extended-expiration-date-template" type="text/html">
+                                                [[expirationDate]]
+                                                <div class="green-details" ng-if="extendedDays > 0">
+                                                    (including [[extendedDays]] days extension for your credit balance)
+                                                </div>
+
+                                            </script>
+                                            <dd class="col m6 l3" extended-expiration-date expiration-timestamp="{{ expiration_date|date:'U' }}">
+                                            </dd>
+                                        {% endif %}
+                                    </dl>
+                                    <dl class="row">
+                                        <dt class="col m6 l3 uppercase">{% trans "Plan" %}</dt>
+                                        <dd class="col m6 l3">{{ order_detail.product.version }}
+                                            {% if checkout_type == 'first' or checkout_type == 'upgrade' %}
+                                                {% if order_detail.product.version != 'ENTERPRISE' %}
+                                                    <a href="{% url "gsc:pricing" %}{% if upgrade %}?upgrade=true{% endif %}">
+                                                        {% trans "Change" %}
+                                                    </a>
+                                                {% endif %}
+                                            {% endif %}
+                                        </dd>
+                                        <dt class="col m6 l3 uppercase">{% trans "Unit cost" %}</dt>
+                                        {% if checkout_type == 'first' and order_detail.product.version == 'BASIC' %}
+                                        <dd class="col m6 l3"> {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{ tier.price }}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %} {{ product.unit }} {% trans "/domain" %}/{{ product.commitment | lower }} </dd>
+                                        {% else %}
+                                            {% if is_tier_based %}
+                                                <dd class="col m6 l3"> $<span tier-price></span> {{ product.unit }} {% trans "/user" %}/{{ product.commitment | lower }} </dd>
+                                            {% else %}
+                                                <dd class="col m6 l3"> {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{ tier.price }}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %} {{ product.unit }} {% trans "/user" %}/{{ product.commitment | lower }} </dd>
+                                            {% endif %}
+                                        {% endif %}
+                                    </dl>
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            {% if checkout_type != 'add' %}
+                    
+                            <div class="row greybox uppercase nobdbot">
+                                {% trans "Licences" %}
+                            </div>
+
+                            {% endif %}
+
+                                {% if checkout_type == 'add' %}
+                                
+                                <div class="row greybox uppercase nobdbot">
+                                    New Licenses
+                                </div>
+
+                                {% endif %}
+
+                            {% if order_detail.product.version != 'BASIC' %}
+                                
+                            <div class="row whitebox nomarbot">
+                                
+                            <!-- Licences Editor -->
+
+                                    {% if is_tier_based %}
+                                        <script type="text/template" id="package-chooser-template">
+                                            <div class="row">
+                                                <div class="col s12">
+                                                    <div class="row">
+                                                        <div class="col s12 quadran MBCTRL">
+                                                            <div class="row  nomarbot">
+                                                                <div class="col s9">
+                                                                    <div class="row">
+                                                                        <div class="col s12 uppercase">{% trans "Enter how many licences you need" %}</div>
+                                                                    </div>
+                                                                    <div class="row flex-container">
+                                                                        <div class="col s12 maincolRow">
+                                                                            <select class="nbLicenseSelector" ng-model="tier" ng-change="tier_updated()" ng-options="tier as tier.desc for tier in tiers track by tier.id"></select>
+                                                                        </div>
+                                                                        <div class="col s5 offset-s1 uppercase">{% trans "Licenses" %}</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col s3 right-align">
+                                                                    <div class="row">
+                                                                        <div class="col s12 uppercase">{% trans "Total to pay" %}</div>
+                                                                    </div>
+                                                                    <div class="row flex-container right-align">
+                                                                        <div class="col s7 maincolRow totalPrice value nomar center" style="line-height: 60px;">
+                                                                            {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}[[tier.price]]{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}</div>
+                                                                            <div class="row right-align oxygen uppercase white credit lighten-3 total-cost" style="padding-bottom: 10px" ng-if="(balance > 0 && checkoutType == 'add')">
+                                                                                {% blocktrans with expiry_date=expiration_date|date:'SHORT_DATE_FORMAT' %}
+                                                                                from now to <span style="font-weight:bold">{{ expiry_date }}</span>
+                                                                                {% endblocktrans %}
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="licenseAmount" value="[[tier.number]]">
+                                            </div>
+                                        </script>
+                                        <div package-chooser package-tiers="{{ available_tiers }}"
+                                                frequency-verbose="{{ product.frequency_verbose }}"
+                                        ></div>
+                                    {% else %}
+                                        {% if checkout_type == 'first' and order_detail.product.version == 'BASIC' %}
+                                            <!--Can't edit the license number-->
+                                            <div basic-plan price="{{ tier.price }}"></div>
+                                            <input type="hidden" name="licenseAmount" value="{{ tier.high }}">
+                                        {% elif checkout_type == 'first' or checkout_type == 'upgrade' %}
+                                            <script type="text/template" id="license-editor-template">
+                                                <div class="row order-advantanges flex-container">
+                                                    <div class="col s3 flex-item top">
+
+
+                                                        <div class="row">
+                                                            <label class="nomar center col s12 uppercase">{% trans "Number of licenses" %}:</label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p ng-model="nbLicenceLb" ng-hide="editNbLicence" class="value center">[[number]]{% if is_tier_based %}  {% endif %} <a class="edit-field" ng-click="nbLicenceEditModeOn()"><i class="tiny material-icons">mode_edit</i></a></p>
+
+                                                            <input type="text" name="licenses" class="value nbrchoice center nbLicenseInput" ng-model="nbLicenceVal" ng-show="nbLicenceIsBeingEdited" ng-blur="nbLicenceEditModeOff()" ng-model-options="{ updateOn: 'default blur',  debounce: { 'default': 500, 'blur': 0 } }">
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="col s1 center-align flex-item">
+                                                        <div class="row">
+                                                            <div class="operator">×</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col s3 flex-item top">
+                                                        <div class="row">
+                                                            <p class="nomar center col s12 uppercase">{% trans "Unit cost" %}</p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p class="value center">{% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{tier.price}}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col s1 center-align flex-item">
+                                                        <div class="row">
+                                                            <div class="operator">=</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div  class="col s4 flex-item top">
+                                                        <div class="row">
+                                                            <p class="nomar center col s12 uppercase">{% trans "Total licences" %}<br><span style="font-size:x-small">({% trans "Until your renewal date" %})</span></p>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col s12 maincolRow totalPrice value center">{% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}[[totalPrice|number:2]]{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}</div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <input type="hidden" name="licenseAmount" value="[[totalNumber]]">
+                                            </script>
+                                            <div license-editor class="row quadran MBCTRL"
+                                                    licence-userNumber = "2"
+                                                    license-number="{{ order_detail.amount }}"
+                                                    license-price="{{ tier.price|stringformat:"f" }}"
+                                                    license-package="{% if product.tier_number > 0 %}true{% endif %}"
+                                                    {% if order_detail.minimal_quantity %}
+                                                        {% if subscription.billable_licenses < 5 %}
+                                                        minimum-license-number="5"
+                                                        {% else %}
+                                                        minimum-license-number="{{ minimum_licenses_to_upgrade }}"
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if subscription.billable_licenses < 1 %}
+                                                        minimum-license-number="1"
+                                                        {% else %}
+                                                        minimum-license-number="{{ minimum_licenses_to_upgrade }}"
+                                                        {% endif %}
+                                                    {% endif %}
+                                                    frequency-verbose="{{ product.frequency_verbose }}"
+                                            >
+                                            </div>
+                                        {% elif checkout_type == 'add' %}
+                                            <script type="text/template" id="license-editor-template">
+
+                                                <div class="row order-advantanges flex-container">
+                                                    <div class="col s3 flex-item top">
+                                                        {% blocktrans trimmed with license_number=subscription.vendor_licenses %}
+
+                                                        <div class="row">
+                                                            <label class="nomar center col s12 uppercase">Number of licenses:</label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p class="value center">[[currentNumber || 0]]</p>
+                                                        </div>
+
+                                                        {% endblocktrans %}
+                                                    </div>
+                                                    <div class="col s1 center-align flex-item">
+                                                        <div class="row">
+                                                            <div class="operator">+</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col s3 flex-item top">
+                                                        <div class="row">
+                                                            <label class="nomar center col s12 uppercase">You add:</label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <input class="value nbrchoice center nbLicenseInput" type="text" name="licenses" ng-model="number" ng-model-options="{ updateOn: 'default blur',  debounce: { 'default': 500, 'blur': 0 } }"/>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col s1 center-align flex-item">
+                                                        <div class="row">
+                                                            <div class="operator">=</div>
+                                                        </div>
+                                                    </div>
+                                                    <div  class="col s4 flex-item top">
+                                                        <div class="row">
+                                                            <p class="nomar center col s12 uppercase">{% trans "Total licences" %}<br><span style="font-size:x-small">({% trans "Until your renewal date" %})</span></p>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col s12 maincolRow totalPrice value center">[[totalNumber]]
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="licenseAmount" value="[[getTotalNumber()]]">
+
+                                                <div style="margin: 25px 0 0; position: relative;" class="row whitebox nomarbot flex-container" class="license-editor-template">
+                                                    <div class="col s3 flex-item">
+                                                        <p class="center nomar">{% trans "Licenses" %}</p>
+                                                        <p class="value center">[[number]]</p>
+                                                    </div>
+                                                    <div class="col s1 center-align flex-item">
+                                                        <div class="operator">×</div>
+                                                    </div>
+                                                    <div class="col s4 flex-item">
+                                                        <p class="center nomar">Unit cost</p>
+                                                        <p class="value center">{% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{tier.price}}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}</p>
+                                                    </div>
+                                                    <div class="col s1 center-align flex-item">
+                                                        <div class="operator">=</div>
+                                                    </div>
+                                                    <div class="col s3 flex-item" style="position:relative">
+                                                        <p class="center nomar">Total</p>
+                                                        <p class="value center">
+                                                            <span class="value center">{% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}[[ totalToPay|number:2 ]]{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}</span>
+                                                        </p>
+                                                        <p class="uppercase" style="text-align: center; font-size: 11px; color: green; position: absolute; width: 100%; top: 64px">
+                                                            {% trans 'Prorated price from now to' %}<br>
+                                                            {% blocktrans with expiry_date=expiration_date|date:'SHORT_DATE_FORMAT' %}
+                                                            <span style="font-weight:bold">{{ expiry_date }}</span>
+                                                            {% endblocktrans %}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="licenseAmount" value="[[totalNumber]]">
+
+                                            </script>
+                                            <div license-editor class="row quadran MBCTRL"
+                                                    current-license-number="{{ subscription.vendor_licenses }}"
+                                                    license-number="{{ order_detail.amount }}"
+                                                    minimum-license-number="1"
+                                                    license-price="{{ tier.price|stringformat:'f' }}"
+                                                    frequency-verbose="{{ product.frequency_verbose }}">
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                
+                            <!-- !Licences Editor -->
+                            </div>
+                            {% else %}
+                            <div class="row whitebox nomarbot uppercase right-align">
+                                {% trans "1 Pack of 5 licenses" %} = <span class="value">{% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{tier.price}}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}</span>
+                            </div>
+                            {% endif %}
+                            
+                            {% if checkout_type == 'first' or checkout_type == 'upgrade' %}
+                                <div class="row">
+                                    <div class="col offset-s7 s5 add_promo_code">
+                                        <div class="greybox center nomarbot nobdtop">
+                                            <a href="javascript:void(0)">
+                                                {% blocktrans trimmed %}
+                                                    Add promotion code
+                                                {% endblocktrans %}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row white promo-block" id="promo-block" style="display: none;" ng-controller="promotionCode">
+                                    <div class="col s9">
+                                        <input type="text" name="promotion_code" id="promotion_code" ng-model="code"
+                                                placeholder="{% trans "Enter promotion code" %}">
+                                    </div>
+                                    <div class="col s3 right-align">
+                                        <a id="apply_for_promo" class="waves-effect waves-light btn" name="apply_promotion_code" ng-disabled="!code.trim()" ng-click="check()">
+                                            {% trans "APPLY" %}
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            
+                            <!-- Total Calculator -->
+                    
+                            <script id="total-calculator-template" type="text/template">
+                                <div class="row right-align oxygen uppercase teal lighten-3 total-cost" ng-if="!(balance > 0 && checkoutType == 'add')"> 
+                                    {% trans "Total cost " %}
+                                    {% if order_detail.product.version == 'BASIC' %}
+                                        {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}{{ tier.price }}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}
+                                    {% else %}
+                                        {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}[[total|number:2]]{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}
+                                    {% endif %}
+                                    {% if monthly %}
+                                       {% trans "for one month" %}
+                                    {% else %}
+                                        {% trans "for one year" %}
+                                    {% endif %}
+                                    
+                                </div>
+                               
+                                <h4 class="center" ng-if="discount">
+                                    {% trans "Total to pay" %}
+                                    {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}[[discountedTotal|number:2]]{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}
+                                </h4>
+                                
+                                <div class="row right-align oxygen uppercase teal lighten-3 total-cost" ng-if="balance > 0 && checkoutType == 'add'">
+                                    {% trans "Total cost" %}
+
+                                    {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}[[totalToPay|number:2]]{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{% endif %}
+                                </div>
+                            </script>
+                            <div total-calculator></div>
+                            {% csrf_token %}
+                            
+                            <!-- !Total Calculator -->
+                            
+                            <div class="row noborder">
+                                <div class="row greybox uppercase nobdbot">{% trans "Select your method of payment" %}</div>
+                                <ul class="tabs" id="payment-method-selector">
+                                    <li class="tab col s3">
+                                        <a class="active" data-payment_method='credit-card' href="#creditcarddiv">{% trans "Credit card" %}</a>
+                                    </li>
+                                    <li class="tab col s3">
+                                        <a href="#paypal" data-payment_method='paypal'>
+                                            <img style="width:120px; margin-top: 0;" src="{% static "sm/frontend/img/paypalnothover.png" %}">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div id="creditcarddiv">
+                                    <div class="payment-method checked row">
+                                        {% if payment_method %}
+                                            <input type="hidden" name="payment_method_token" value="{{ payment_method.pk }}">
+                                        {% endif %}
+                                        {% if payment_method_type == 'credit_card' %}
+                                            <div id="currentCard">
+                                                <p class="center-align nomartop introducePayment">You will be charged with the following card:</p>
+                                                <div class="ccard" style="margin:auto">
+                                                    <div class="ccard">
+                                                        <div class="card-panel">
+                                                            <p class="card-title">Credit card</p>
+
+                                                            <div class="row">
+                                                                <div class="col s7">
+                                                                    <p class="data number">{{ payment_method.card_type }} **** {{ payment_method.last_4_digits }}</p>
+                                                                </div>
+                                                                <div class="col s4 offset-s1 valign validityDate">
+                                                                    <p class="label center">{% trans "Valid until" %}</p>
+                                                                    <p class="data center">{{ payment_method.expiration_date }}</p>
+                                                                </div>
+                                                                <div class="col s12 footer">
+                                                                    <p class="card-state valid">
+                                                                        <i class="fa fa-check-circle" aria-hidden="true"></i> Valid
+                                                                    </p>
+                                                                    <button class="changeCard">Change</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        <div id="checkout-credit-card" class="col s10 offset-s1" {% if payment_method_type == 'credit_card' %}style="display:none"{% endif %}>
+                                            <p class="center-align nomartop introducePayment">{% trans "Please enter your credit card information" %}</p>
+                                            <div class="row">
+                                                <div class="col m5 s12">
+                                                    <label class="hosted-fields--label" for="card-number">{% trans "Card Number" %}</label>
+                                                </div>
+                                                <div class="col m7 s12">
+                                                    <div id="card-number" class="hosted-field"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col m5 s12">
+                                                    <label class="hosted-fields--label" for="expiration-date">{% trans "Expiration Date" %}
+                                                        <span style="font-size:xx-small">(MM/YYYY)</span></label>
+                                                </div>
+                                                <div class="col m7 s12">
+                                                    <div id="expiration-date" class="hosted-field"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col m5 s12">
+                                                    <label class="hosted-fields--label" for="cvv">{% trans "CVV" %}
+                                                        <i class="material-icons cvv-tooltip">info</i></label>
+                                                </div>
+                                                <div class="col m7 s12">
+                                                    <div id="cvv" class="hosted-field"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="paypal">
+                                    <div class="payment-method checked row ppal">
+                                        <div class="center">
+                                            {% if payment_method_type == 'paypal' %}
+                                                <div class="currentPaypal">
+                                                    {% blocktrans with email=payment_method.email_address %}
+                                                        You will be charged by Paypal account <b>{{ email }}</b>
+                                                    {% endblocktrans %}
+                                                    <a href="javascript:void(0)" class="change">{% trans "Change" %}</a>
+                                                </div>
+                                            {% endif %}
+                                            <div class="checkout-paypal" {% if payment_method_type == 'paypal' %}style="display:none"{% endif %}>
+                                            {% blocktrans %}Click on "Proceed to checkout" to pay with your Paypal account{% endblocktrans %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row greybox">
+                                <div class="col s12">
+                                    <div class="agreement right-align">
+                                        <input type="checkbox" class="filled-in" name="accept_term" id="accept_term">
+                                        <label for="accept_term">{% trans "Yes, I have read and accept Shared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>" %}</label>
+                                    </div>
+                                </div>
+                                <!--Terms and conditions end-->
+                            </div>
+                            
+                            <div class="row checkoutProceed">
+                                <button type="button" class="btn checkout waves-effect right" disabled>
+                                    {% trans "PROCEED TO CHECKOUT" %}
+                                </button>
+                            </div>
+                
+
+                        
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="modal" id="bt-checkout">
+        <div class="modal-content">
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col s12">
+                    <!--
+                    -->
+
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">{% trans "Cancel" %}</a>
+                    <button type="submit" class="btn green pay"> {% trans "PAY" %} </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal Structure -->
+    <div id="promotion-code-error-modal" class="modal">
+        <div class="modal-content">
+            <img src="{% static "sm/product/gsc/img/coupon.png" %}" alt="Paypal-verified"/>
+            <span class="modal_title wrong_promo">{% trans "Wrong promotion code" %}</span>
+            <img src="{% static "sm/product/gsc/img/close.png" %}" alt="Paypal-verified"
+                    class="modal-close close_button"/>
+
+            <p>
+                {% blocktrans trimmed %}
+                    Sorry, the promotion code you entered is either wrong or expired. Please contact or Cloud
+                    consultants at to get assistance.
+                {% endblocktrans %}
+                <br>
+                <br>
+                {% with contact_email='support@gmailsharedcontacts.com' %}
+                    {% blocktrans trimmed with contact_email='<a href="'|add:contact_email|add:'">'|add:contact_email|add:'</a>' %}
+                        Send us an email at {{ contact_email }} or chat with us through our website.
+                    {% endblocktrans %}
+                {% endwith %}
+                <br>
+                <br>
+                Tel: + 1 (646) 583 2663
+            </p>
+        </div>
+        <div class="modal-footer center-align">
+            <button class="btn-grey-lowkey btn-lowkey-wide radius modal-action modal-close waves-effect waves-green"
+                    type="button">
+                {% trans "OK" %}
+            </button>
+        </div>
+    </div>
+    
+    <!-- Modal Licences -->
+    <div id="licences-error-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal_title wrong_promo">{% trans "Wrong license number" %}</span>
+            <img src="{% static "sm/product/gsc/img/close.png" %}" alt="Paypal-verified"
+                    class="modal-close close_button"/>
+            {% if subscription.billable_licenses < 5 %}
+            <p>
+                {% blocktrans trimmed %}
+                    You cannot purchase less than 5 licences
+                {% endblocktrans %}
+                <br>
+                <br>
+            </p>
+            {% else %}
+            <p>{% blocktrans trimmed %}You cannot purchase less than {{minimum_licenses_to_upgrade}} licenses{% endblocktrans %}</p>
+            {% endif %}
+        </div>
+        <div class="modal-footer center-align">
+            <button class="btn-grey-lowkey btn-lowkey-wide radius modal-action modal-close waves-effect waves-green"
+                    type="button">
+                {% trans "Close" %}
+            </button>
+        </div>
+    </div>
+
+    <form action="{% url "gsc:pricing" %}{% if checkout_type != 'first' %}?upgrade=true{% endif %}"
+            method="post" style="display: none" id="change-billing-method-form">
+        <input type="hidden" name="amount" value="{{ order_detail.product.tier_number }}">
+        <input type="hidden" name="version" value="{{ order_detail.product.version }}">
+        <input type="hidden" name="plan" value="{{ order_detail.product.plan }}">
+        {% csrf_token %}
+    </form>
+
+
+{% endblock %}
+
+{% block app %}
+    <!-- form validation -->
+    <script>
+        $(function () {
+            $('#accept_term').on('change', function () {
+                $('.btn.checkout').prop('disabled', !$(this).prop('checked'));
+            });
+        });
+    </script>
+    <!-- payment UI -->
+    <script src="https://js.braintreegateway.com/web/3.5.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.5.0/js/paypal.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.5.0/js/hosted-fields.min.js"></script>
+    <script>
+        var paymentMethodType = "{{ payment_method_type }}";
+
+        $(function () {
+            var removePaymentToken = function () {
+                $('[name=payment_method_token]').remove();
+            };
+
+            var getPaymentToken = function () {
+                return $('[name=payment_method_token]').val();
+            };
+
+            $('#licences-error-modal .close_button, #licences-error-modal button').click(function(){
+                $('#licences-error-modal').hide();
+            });
+
+            if (paymentMethodType == 'paypal') {
+                $('[href=#paypal]').trigger('click');
+            }
+
+            $('.currentPaypal .change').click(function (e) {
+                $('.currentPaypal').remove();
+                $('.checkout-paypal').show();
+                removePaymentToken();
+            });
+
+            $('.changeCard').on('click', function(e){
+                e.preventDefault();
+                $('#currentCard').hide();
+                removePaymentToken();
+                $('#checkout-credit-card').show();
+            });
+
+            var checkout = function (nonce) {
+                var form = $('#gsc-checkout-form');
+                $('[name=payment_method_nonce]').remove();
+                if (nonce) {
+                    $('<input/>').prop('type', 'hidden')
+                        .val(nonce).attr('name', 'payment_method_nonce').appendTo(form);
+                }
+                $('.btn.checkout').html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>').prop('disabled', true);
+                form.submit();
+            };
+
+            var getPaymentMethod = function () {
+                return $('#payment-method-selector .active').attr('data-payment_method');
+            };
+
+            var initPaymentUI = function (token) {
+                braintree.client.create({
+                    authorization: token
+                }, function (clientErr, clientInstance) {
+                    if (clientErr) {
+                        return;
+                    }
+
+                    braintree.paypal.create({
+                        client: clientInstance
+                    }, function (paypalErr, paypalInstance) {
+                        if (paypalErr) {
+                            return;
+                        }
+
+                        $('.btn.checkout').on('click', function (e) {
+                            if ($('#gsc-checkout-form').parsley().validate()) {
+                                if (getPaymentMethod() === 'paypal') {
+                                    if (getPaymentToken() && paymentMethodType === 'paypal') {
+                                        checkout();
+                                    } else {
+                                        paypalInstance.tokenize({flow: 'vault'}, function (err, payload) {
+                                            if (err) {
+                                                $('body').scrollTo($('#payment-method-selector'));
+                                                return;
+                                            }
+
+                                            checkout(payload.nonce);
+                                        });
+                                    }
+                                }
+                                return false;
+                            }
+                        });
+                    });
+
+                    var createHostedFields = function (clientInstance) {
+                        braintree.hostedFields.create({
+                            client: clientInstance,
+                            styles: {
+                                'input': {
+                                    'font-size': '16px',
+                                    'font-family': 'courier, monospace',
+                                    'font-weight': 'lighter',
+                                    'color': '#ccc'
+                                },
+                                ':focus': {
+                                    'color': 'black'
+                                },
+                                '.valid': {
+                                    'color': '#8bdda8'
+                                }
+                            },
+                            fields: {
+                                number: {
+                                    selector: '#card-number'
+                                },
+                                cvv: {
+                                    selector: '#cvv'
+                                },
+                                expirationDate: {
+                                    selector: '#expiration-date'
+                                }
+                            }
+                        }, function (err, hostedFieldsInstance) {
+                            if (err) {
+                                return;
+                            }
+
+                            $('.btn.checkout').on('click', function (e) {
+                                if ($('#gsc-checkout-form').parsley().validate()) {
+                                    if (getPaymentMethod() === 'credit-card') {
+                                        if (paymentMethodType === 'credit_card' && getPaymentToken()) {
+                                            checkout();
+                                        } else {
+                                            hostedFieldsInstance.tokenize(function (err, payload) {
+                                                if (err) {
+                                                    $('body').scrollTo($('#payment-method-selector'));
+                                                    return;
+                                                }
+
+                                                checkout(payload.nonce);
+                                            });
+                                        }
+                                    }
+                                    return false;
+                                }
+                            });
+                        });
+                    };
+
+                    createHostedFields(clientInstance);
+                })
+            };
+
+            $.ajax({
+                url: "{% url "api:bt-token" %}",
+                method: 'post',
+                success: function (data) {
+                    initPaymentUI(data.token);
+                }
+            });
+        });
+    </script>
+
+    <!-- state country -->
+    <script>
+        $(function () {
+            var $state = $('[name=state]');
+            var $country = $('[name=country]');
+            var origin = {
+                state: $state.val(),
+                country: $country.val()
+            };
+
+            $country.find('option[value=""]').attr('disabled', true);
+
+
+            setTimeout(function(){
+                $('select').material_select();
+            },500);
+
+            var onCountryChange = function () {
+                $('#state').next().find('select').material_select('destroy');
+                $('#state').next().find('option').remove();
+                var states;
+                var country = $('[name=country]').val();
+
+                var appendSelect = function (country, states) {
+                    $('#state').next().html('');
+                    $('#state').next().append(
+                            $('<select name="state"/>')
+                    );
+                    $.each(states, function (val, text) {
+                        var $option = $('<option/>').val(text).text(text);
+                        if (origin.state == text && country == origin.country) {
+                            $option.attr('selected', true);
+                        }
+                        $('#state').next().find('select').append($option);
+                    });
+
+                    $('#state').next().find('[name=state]').material_select();
+                };
+
+                switch (country) {
+                    case 'Australia':
+                        states = ['Australian Capital Territory', 'New South Wales',
+                            'Northern Territory', 'Queensland',
+                            'South Australia', 'Tasmania',
+                            'Victoria', 'Western Australia'];
+                        appendSelect(country, states);
+                        break;
+
+                    case 'Canada':
+                        states = ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick',
+                            'Newfoundland and Labrador', 'Nova Scotia', 'Ontario',
+                            'Prince Edward Island', 'Quebec', 'Saskatchewan',
+                            'Northwest Territories', 'Nunavut', 'Yukon'];
+                        appendSelect(country, states);
+                        break;
+
+                    case 'United States':
+                        states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+                            'Delaware', 'District Of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois',
+                            'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts',
+                            'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada',
+                            'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+                            'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+                            'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia',
+                            'Wisconsin', 'Wyoming'];
+                        appendSelect(country, states);
+                        break;
+                    default:
+                        $('#state').next().find('input').remove();
+                        $('#state').next().find('select').remove();
+                        $('#state').next().append('{{ billing_form.state }}');
+                        if (country == origin.country) {
+                            $('#state').find('input').val(origin.state);
+                        }
+                }
+            };
+
+            $('select[name=country]').on('change', onCountryChange).material_select();
+            onCountryChange();
+        });
+    </script>
+
+    <!-- checkout app-->
+    <script>
+        $(function () {
+            $('#cancel-paypal-payment-method').click(function () {
+                $()
+            });
+
+            var checkoutApp;
+
+            $('#apply_for_promo').on('click', function () {
+                var promotion_code = $('#promotion_code').val().trim();
+            });
+
+            $('.add_promo_code').on('click', 'a', function () {
+                $('.add_promo_code').hide();
+                $('#promo-block').show();
+            });
+
+
+            $('[name=plan]').on('change', function (e) {
+                var $form = $('#change-billing-method-form');
+                $form.find('[name=plan]').val($('[name=plan]:checked').val());
+                $form.submit();
+            });
+
+            $('#BCCswitch').on('click', function () {
+                $('.BillingContactCard').addClass("active");
+                $('.BillingContactCard.BCC-NotFirst').removeClass("active");
+            });
+
+            $('#BDCswitch').on('click', function () {
+                $('.BillingDetailCard').addClass("active");
+                $('.BillingDetailCard.BDC-notFirst').removeClass("active");
+            });
+
+            checkoutApp = angular.module('checkout', []);
+            checkoutApp.config(function ($interpolateProvider) {
+                $interpolateProvider.startSymbol('[[');
+                $interpolateProvider.endSymbol(']]');
+            });
+
+            var round = function (float_var) {
+                return Math.round(parseFloat(float_var) * 100) / 100;
+            };
+
+            checkoutApp.constant('$balance', {{ balance|stringformat:"f"}})
+                    .constant('$productCommitmentDays', {{product_commitment_days|safe}})
+                    .constant('$checkoutType', '{{checkout_type}}')
+                    .constant('$remainingDays', {{ remaining_days | safe}});
+
+            checkoutApp.directive('packageChooser', function ($rootScope) {
+                return {
+                    scope: {
+                        frequencyVerbose: '@'
+                    },
+                    template: $('#package-chooser-template').html(),
+                    restrict: 'AE',
+                    controller: function ($scope, $element, $attrs) {
+                        $scope.tiers = _.map(JSON.parse($attrs['packageTiers']), function (tier, index) {
+                            tier.id = index;
+                            return tier;
+                        });
+
+                        $scope.$watch('tier', function () {
+                            $rootScope.$broadcast('totalPrice', $scope.tier.price);
+                            $rootScope.$broadcast('totalNumber', $scope.tier.number);
+                        });
+
+                        $scope.tier = $scope.tiers[0];
+                    }
+                }
+            });
+
+            checkoutApp.directive('basicPlan', function ($rootScope, $timeout) {
+                return {
+                    scope: {
+                        price: '@'
+                    },
+                    template: '',
+                    restrict: 'AE',
+                    controller: function ($scope) {
+                        $timeout(function () {
+                            $rootScope.$broadcast('totalPrice', parseFloat($scope.price));
+                        }, 500);
+                    }
+                }
+            });
+
+            checkoutApp.directive('totalCalculator', function ($balance, $remainingDays, $checkoutType) {
+                return {
+                    scope: true,
+                    template: $('#total-calculator-template').html(),
+                    restrict: 'AE',
+                    controller: function ($scope, $element) {
+                        $scope.discount = 0;
+                        $scope.checkoutType = $checkoutType;
+                        $scope.$on('totalPrice', function (e, totalPrice) {
+                            $scope.totalToPay = $scope.total = round(totalPrice);
+                            if ($remainingDays && $scope.balance) {
+                                $scope.totalToPay = round(totalPrice * $remainingDays.remain / $remainingDays.total - $scope.balance);
+                            }
+                            $scope.discountedTotal = round($scope.total * (1 - $scope.discount));
+                        });
+
+                        $scope.$on('promotion_code_applied', function (e, code) {
+                            $scope.discount = code.amount;
+                            $scope.total = ("{{ order_detail.product.version}}" == "BASIC" ? "{{ tier.price  }}": $scope.total);
+                            $scope.discountedTotal = round($scope.total * (1 - $scope.discount));
+                        });
+
+                        $scope.balance = parseFloat($balance);
+                    }
+                }
+            });
+
+            checkoutApp.directive('extendedExpirationDate', function ($balance, $productCommitmentDays) {
+                return {
+                    scope: true,
+                    template: $('#extended-expiration-date-template').html(),
+                    restrict: 'A',
+                    controller: function ($scope, $element, $attrs) {
+                        $scope.$on('totalPrice', function (e, totalPrice) {
+                            var expirationTimestamp = parseInt($attrs.expirationTimestamp);
+                            $scope.extendedDays = parseInt($balance / (totalPrice / $productCommitmentDays));
+                            expirationTimestamp += $scope.extendedDays * 3600 * 24;
+                            $scope.expirationDate = new moment(new Date(expirationTimestamp * 1000)).format('MM/DD/YYYY');
+                        });
+                    }
+                }
+            });
+
+            checkoutApp.directive('orderLicenseNumber', function () {
+                return {
+                    scope: true,
+                    template: "[[totalNumber]]",
+                    restrict: 'A',
+                    controller: function ($scope) {
+                        $scope.$on('totalNumber', function (e, number) {
+                            $scope.totalNumber = number;
+                        });
+                    }
+                }
+            });
+
+            checkoutApp.directive('tierPrice', function() {
+                return {
+                    template: '[[tierPrice]]',
+                    restrict: 'A',
+                    controller: function($scope) {
+                        $scope.$on('totalPrice', function(e, number) {
+                            $scope.tierPrice = number;
+                        });
+                    }
+                }
+            });
+
+            checkoutApp.controller('promotionCode', function ($scope, $rootScope) {
+                $scope.code = "";
+                $scope.check = function () {
+                    $.ajax({
+                        url: '/api/promotion',
+                        type: 'get',
+                        data: {'code': $scope.code},
+                        success: function (data) {
+                            $('#promo-block').hide();
+                            $rootScope.$apply(function () {
+                                $rootScope.$broadcast('promotion_code_applied', data);
+                            });
+                            // trigger update promotion code
+                        },
+                        error: function (data) {
+                            $('#promotion-code-error-modal').openModal();
+                        }
+                    });
+                }
+            });
+
+            checkoutApp.directive('licenseEditor', function ($rootScope, $remainingDays, $balance) {
+                return {
+                    scope: {
+                        number: '@licenseNumber',
+                        userNumber : '@userNumer',
+                        price: '@licensePrice',
+                        currentNumber: '@currentLicenseNumber',
+                        frequencyVerbose: '@',
+                        licensePackage: '@'
+                    },
+                    template: $('#license-editor-template').html(),
+                    restrict: 'AE',
+                    controller: function ($scope, $element, $attrs) {
+                        var discount = 0;
+                        $scope.licensePackage = $scope.licensePackage == 'true';
+                        $($element).find('[name=licenses]').on('click', function () {
+                            this.setSelectionRange(0, this.value.length);
+                        });
+
+                        var getNumber = function (number) {
+                            number = number || 'number';
+                            return parseInt($scope[number]) || 0;
+                        };
+
+                        var getPrice = function () {
+                            return round($scope.price);
+                        };
+                        
+                        $scope.getPriceEu = function () {
+                            var test = parseFloat($scope.price).toFixed(2) + "€";
+                            /*return parseFloat($scope.price).toFixed(2);*/
+                            return test;
+                                
+                        };
+                        
+                        $scope.getPriceUs = function () {
+                            var test = "$" + parseFloat($scope.price).toFixed(2);
+                            /*return parseFloat($scope.price).toFixed(2);*/
+                            return test;
+                        };
+
+                        $scope.price = getPrice();
+                        $scope.number = getNumber();
+                        var miniNumber = parseInt($attrs['minimumLicenseNumber']);
+                        $scope.miniNumber = miniNumber;
+                        
+
+                        var getTotalNumber = function () {
+                            var number = getNumber() + getNumber('currentNumber');
+                            $scope.totalNumber = number;
+                            return number;
+                        };
+                        
+                        $scope.nbLicenceEditModeOn = function(){
+                            $scope.nbLicenceVal = $scope.number;
+                            $scope.nbLicenceIsBeingEdited = true;
+                            $scope.editNbLicence = true;
+                        }
+                        
+                        $scope.nbLicenceEditModeOff = function(){
+                            $scope.nbLicenceIsBeingEdited = false;
+                            $scope.editNbLicence = false;
+                            $scope.number = $scope.nbLicenceVal;
+                        }
+
+                        $scope.add = function () {
+                            $scope.number = getNumber() + 1;
+                        };
+
+                        $scope.minus = function () {
+                            if (getTotalNumber() <= miniNumber) {
+                                return;
+                            }
+
+                            $scope.number = getNumber() - 1;
+                        };
+                        
+                        
+                        $scope.$watch('nbLicenceIsBeingEdited', function() {
+                            
+                            if ($scope.nbLicenceIsBeingEdited == false){
+                               if ($scope.nbLicenceVal < miniNumber) {
+                                    $('#licences-error-modal').show();
+                                    $scope.nbLicenceVal = miniNumber;
+                                } 
+                                
+                                calTotalPrice(); 
+                            }
+                            
+                        })
+ 
+
+                        $scope.$watch('number', function () {
+                            if (getNumber() < miniNumber) {
+                                $scope.number = miniNumber;
+                            }
+
+                            calTotalPrice();
+                        });
+
+                        $scope.balance = parseFloat($balance);
+
+                        var calTotalPrice = function () {
+                            var price = ($scope.licensePackage ? 1 : getTotalNumber()) * getPrice();
+                            $rootScope.$broadcast('totalPrice', price);
+                            $rootScope.$broadcast('totalNumber', $scope.licensePackage ? 1 : getTotalNumber());
+                            $scope.totalPrice = round(price * (1 - discount));
+                            $scope.totalToPay = $scope.totalPrice;
+                            if ($remainingDays && $scope.balance) {
+                                $scope.totalToPay = round(
+                                        $scope.totalPrice * $remainingDays.remain / $remainingDays.total - $balance);
+                            }
+                            return price;
+                        };
+                    }
+                }
+            });
+            
+            checkoutApp.directive('ngEnter', function () {
+                return function (scope, element, attrs) {
+                    element.bind("keydown keypress", function (event) {
+                        if(event.which === 13) {
+                            scope.$apply(function (){
+                                scope.$eval(attrs.ngEnter);
+                            });
+             
+                            event.preventDefault();
+                        }
+                    });
+                };
+            });
+                
+            angular.bootstrap(angular.element($('#gsc-checkout-form')), ['checkout']);
+        });
+    </script>
+{% endblock %}

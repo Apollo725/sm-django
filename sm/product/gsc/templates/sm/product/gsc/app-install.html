@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register - Gmailsharedcontacts</title>
+    <meta name="google-signin-client_id" content="643378504561-o207o7hsp1me1n3rru6mp9367k8agmdc.apps.googleusercontent.com">
+    <link rel="stylesheet" href="http://www.gmailsharedcontacts.com/wp-content/themes/enfold/css/base.css?ver=2">
+    <link rel="stylesheet" href="http://www.gmailsharedcontacts.com/wp-content/uploads/dynamic_avia/enfold.css?ver=56ee3335222fd">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+
+<body id="top">
+    <div id="wrap_all">
+        <div class="main_color avia-section">
+            <style>
+                #s2id_registerName {
+                    width: 100%;
+                }
+            </style>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/js/standalone/selectize.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.min.css">
+            <style>
+                body {
+                    overflow: inherit;
+                }
+
+                .flexbox {
+                    -ms-box-orient: horizontal;
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -moz-flex;
+                    display: -webkit-flex;
+                    display: flex;
+                }
+
+                .register-section {
+                    height: 100vh;
+                    padding: 130px 0 0 0;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    .register-section {
+                        height: 100vh;
+                        padding: 0 0 0 0;
+                    }
+                }
+
+                .register-content {
+                    font-size: 1.2em;
+                    margin-bottom: 40px;
+                }
+
+                .intro {
+                    padding: 50px 0 20px;
+                }
+
+                .step {
+                    float: left;
+                    margin-left: 25px;
+                    background-color: #f5f5f5;
+                    padding: 10px;
+                    width: 375px;
+                    position: relative;
+                    -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.2);
+                    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.2);
+                }
+
+                .step .head {
+                    padding: 10px;
+                    background-color: #e8e8e8;
+                    margin: -10px -10px 10px -10px;
+                    font-weight: bold;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .step .head img {
+                    opacity: .5;
+                    width: 70px;
+                    vertical-align: middle;
+                    position: absolute;
+                    right: 15px;
+                    top: -15px;
+                }
+
+                .step form {
+                    margin-bottom: 0 !important;
+                    width: 100%;
+                }
+
+                .step form input {
+                    margin-bottom: 10px !important;
+                }
+
+                .step button {
+                    text-align: center;
+                    background-color: #399bef;
+                    border: 0;
+                    padding: 10px;
+                    color: #fff;
+                    font-weight: bold;
+                    border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    -webkit-border-radius: 2px;
+                    cursor: pointer;
+                    float: right;
+                }
+
+                .step-content {
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    -webkit-align-items: center;
+                    height: 269px;
+                }
+
+                .step-content p.bubble {
+                    font-family: 'Roboto', arial, sans-serif !important;
+                    margin: 0;
+                    text-align: center;
+                    background-color: #cef;
+                    padding: 10px;
+                }
+
+                .main_color .arrow {
+                    border-top: 10px solid #cef;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                    width: 0;
+                    height: 0;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .center {
+                    text-align: center;
+                }
+
+                .signin {
+                    font-style: 2em;
+                    font-weight: bold;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                .signin .g-signin2 {
+                    margin: 10px 0;
+                }
+
+                .signin .g-signin2 div {
+                    margin: auto;
+                }
+                /* Button Integrate with google */
+
+                .authorizeIt {
+                    display: none;
+                }
+
+                .slideUp {
+                    height: 90px;
+                    transition: 1s height;
+                    -moz-transition: 1s height;
+                    -webkit-transition: 1s height;
+                }
+
+                .valid {
+                    color: #090;
+                }
+
+                .certifications {
+                    /*background-color: #ffffff;*/
+                    /*padding: 10px;*/
+                    text-align: center;
+                }
+
+                .certifications .item {
+                    background-color: #fff;
+                    width: 100px;
+                    height: 75px;
+                    padding: 20px;
+                    margin-left: 20px;
+                    border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                }
+
+                .certifications .item img {
+                    vertical-align: middle;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .flexbox {
+                    -ms-box-orient: horizontal;
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -moz-flex;
+                    display: -webkit-flex;
+                    display: flex;
+                }
+
+                .flexbox.flex-start {
+                    justify-content: flex-start;
+                }
+
+                .flexbox.flex-end {
+                    justify-content: flex-end;
+                }
+
+                .flexbox.column {
+                    flex-direction: column;
+                }
+
+                .flexbox.space-around {
+                    justify-content: space-around;
+                }
+
+                .flexbox.vcenter {
+                    align-items: center;
+                }
+
+                .white {
+                    color: #fff;
+                }
+
+                .disabled {
+                    z-index: 10;
+                    bottom: 0;
+                    top: 0;
+                    background-color: rgba(71, 156, 211, 0.3);
+                    left: 0;
+                    right: 0;
+                    position: absolute;
+                    display: block;
+                }
+
+                .disabled.green {
+                    background-color: rgba(120, 255, 120, 0.2);
+                }
+
+                .picto {
+                    display: none;
+                    z-index: 20;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                #top input[type="text"].errorfield,
+                #top input[type="tel"].errorfield,
+                #top input[type="email"].errorfield {
+                    border: 1px solid #f00;
+                }
+
+                #textstep3 {
+                    width: 245px;
+                    text-align: center;
+                    margin-top: 60px;
+                }
+
+                .invisible {
+                    display: none;
+                }
+
+                .step form .selectize-input input {
+                    margin-bottom: 0 !important;
+                }
+            </style>
+            <!-- style for loading spinner-->
+            <style>
+                .loader--wrapper {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .loader {
+                    position: relative;
+                    margin: 0 auto;
+                    width: 100px;
+                }
+
+                .loader:before {
+                    content: '';
+                    display: block;
+                    padding-top: 100%;
+                }
+
+                .circular {
+                    -webkit-animation: rotate 2s linear infinite;
+                    animation: rotate 2s linear infinite;
+                    height: 100%;
+                    -webkit-transform-origin: center center;
+                    transform-origin: center center;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+
+                .path {
+                    stroke-dasharray: 1, 200;
+                    stroke-dashoffset: 0;
+                    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+                    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+                    stroke-linecap: round;
+                }
+
+                @-webkit-keyframes rotate {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes rotate {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @-webkit-keyframes dash {
+                    0% {
+                        stroke-dasharray: 1, 200;
+                        stroke-dashoffset: 0;
+                    }
+                    50% {
+                        stroke-dasharray: 89, 200;
+                        stroke-dashoffset: -35px;
+                    }
+                    100% {
+                        stroke-dasharray: 89, 200;
+                        stroke-dashoffset: -124px;
+                    }
+                }
+
+                @keyframes dash {
+                    0% {
+                        stroke-dasharray: 1, 200;
+                        stroke-dashoffset: 0;
+                    }
+                    50% {
+                        stroke-dasharray: 89, 200;
+                        stroke-dashoffset: -35px;
+                    }
+                    100% {
+                        stroke-dasharray: 89, 200;
+                        stroke-dashoffset: -124px;
+                    }
+                }
+
+                @-webkit-keyframes color {
+                    100%,
+                    0% {
+                        stroke: #d62d20;
+                    }
+                    40% {
+                        stroke: #0057e7;
+                    }
+                    66% {
+                        stroke: #008744;
+                    }
+                    80%,
+                    90% {
+                        stroke: #ffa700;
+                    }
+                }
+
+                @keyframes color {
+                    100%,
+                    0% {
+                        stroke: #d62d20;
+                    }
+                    40% {
+                        stroke: #0057e7;
+                    }
+                    66% {
+                        stroke: #008744;
+                    }
+                    80%,
+                    90% {
+                        stroke: #ffa700;
+                    }
+                }
+            </style>
+
+            <script type="text/htmle" id="loader-template">
+                <div class="loader--wrapper">
+                    <div class="loader">
+                        <svg class="circular" viewBox="25 25 50 50">
+                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                        </svg>
+                    </div>
+                </div>
+            </script>
+            <script>
+                Loader = function() {
+                    this.element = $($('#loader-template').html());
+                };
+
+                Loader.prototype.attachTo = function($target, bottom) {
+                    this.element.css({
+                        'top': $target.offset().top,
+                        'left': $target.offset().left,
+                        'width': $target.css('width'),
+                        'height': $target.css('height')
+                    });
+
+                    if (bottom) {
+                        this.element.find('.circular').css('top', parseInt($target.css('height')) - bottom - 100);
+                    }
+                    this.element.insertAfter($target);
+                };
+
+                Loader.prototype.destroy = function() {
+                    this.element.remove();
+                };
+            </script>
+
+            <script>
+                if (window.ga === undefined) {
+                    (function(i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function() {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-23923313-1', 'auto');
+                    ga('send', 'pageview');
+                }
+                ga('require', 'displayfeatures');
+            </script>
+
+            <div class="step">
+                <div class="disabled"></div>
+                <div class="head">
+                    1.Sign In
+                    <img src="http://www.gmailsharedcontacts.com/wp-content/uploads/svg/key.svg" alt="">
+                </div>
+                <div class="step-content flexbox column flex-start">
+                    <p class="bubble">Please sign in to your Google Account to access "Shared Contacts for Gmail®"</p>
+                    <div class="arrow"></div>
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                </div>
+                <img class="picto" src="http://www.gmailsharedcontacts.com/wp-content/uploads/svg/valid.svg" alt="">
+            </div>
+
+            <div class="step">
+                <div class="disabled"></div>
+                <div class="head">
+                    2.Register
+                    <img src="http://www.gmailsharedcontacts.com/wp-content/uploads/svg/pen-angled.svg" alt="">
+                </div>
+                <div class="step-content flexbox column flex-start">
+                    <p class="bubble">Check your details and fill the missing information.</p>
+                    <div class="arrow"></div>
+                    <form id="dataForm" method="post">
+                        <input name="fullName" id="fullName" type="text" placeholder="Full Name*" />
+                        <input name="emailAddress" id="emailAddress" type="text" placeholder="Email Address*" />
+                        <input name="phone" id="phone" type="text" placeholder="Phone number*" />
+                        <select name="resellerName" id="resellerName" type="text" placeholder="Please enter your reseller name (optional)">
+                        </select>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+                <img class="picto" src="http://www.gmailsharedcontacts.com/wp-content/uploads/svg/valid.svg" alt="">
+            </div>
+
+            <div class="step">
+                <div class="disabled"></div>
+                <div class="head">
+                    3.Authorize
+                    <img src="http://www.gmailsharedcontacts.com/wp-content/uploads/svg/lock-open.svg" alt="">
+                </div>
+                <div class="step-content flexbox column flex-start">
+                    <p class="buble" id="textstep3">Start sharing contacts with the coworkers of your choice now !</p>
+                    <div class="share">
+                        <div class="arrow"></div>
+                        <button>Start sharing now</button>
+                    </div>
+                    <div class="authorizeIt">
+                        <div class="arrow"></div>
+                        <g:additnow applicationid="643378504561">Integrate with Google</g:additnow>
+                    </div>
+                </div>
+            </div>
+            <script>
+                window.smURL = "";
+                window.appURL = "/";
+            </script>
+
+            <script type="text/javascript">
+                var urlParam = function(name) {
+                    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                    if (!results) {
+                        return 0;
+                    }
+                    return results[1].replace(/\+/g, ' ') || 0;
+                }
+
+                var smapi = {
+                    user: null,
+                    baseUri: smURL + "/api",
+                    baseGscUri: smURL + "/api/products/gsc",
+
+                    buildUri: function(uri) {
+                        return this.baseUri + uri;
+                    },
+
+                    buildGscUri: function(uri) {
+                        return this.baseGscUri + uri;
+                    },
+
+                    buildFrontendUri: function(uri) {
+                        return smURL + uri;
+                    },
+
+                    retrieveResellers: function() {
+                        return $.ajax({
+                            url: this.buildUri('/customers/resellers')
+                        });
+                    },
+
+                    signIn: function(accessToken) {
+                        return $.ajax({
+                            method: 'POST',
+                            url: this.buildGscUri('/users/sign_in'),
+                            headers: {
+                                'authorization': 'gauth ' + accessToken,
+                                'content-type': 'application/json'
+                            },
+                            data: JSON.stringify({
+                                source: urlParam('utm_source') || "GSC Install - Website"
+                            })
+                        });
+                    },
+
+                    updateUser: function(payload) {
+                        return $.ajax({
+                            method: "PUT",
+                            data: JSON.stringify(payload),
+                            url: this.buildGscUri("/users/" + this.user.userId),
+                            headers: {
+                                'authorization': 'user-token ' + this.user.userToken,
+                                'content-type': 'application/json',
+                                'charset': 'UTF-8',
+                            }
+                        });
+                    },
+
+                    getToken: function(customer, email) {
+                        return $.ajax({
+                            method: "GET",
+                            url: this.buildUri("/userTokens/" + customer + "/" + email + ''),
+                            headers: {
+                                'authorization': 'Token {{ admin_token }}',
+                                'content-type': 'application/json'
+                            }
+                        });
+                    },
+
+                    loginIn: function(token) {
+                        document.location = this.buildFrontendUri("/accounts/login/?user_token=" + token);
+                    },
+
+                    updateVendorProfile: function(customer) {
+                        return $.ajax({
+                            method: "PUT",
+                            url: this.buildGscUri("/vendorProfiles/" + customer),
+                            headers: {
+                                'authorization': 'Token {{ admin_token }}',
+                                'content-type': 'application/json'
+                            }
+                        });
+                    },
+
+                    notifyFirstSharing: function(customer) {
+                        return $.ajax({
+                            method: "POST",
+                            url: this.buildGscUri("/firstShare?domain=" + customer),
+                            headers: {
+                                'authorization': 'Token {{ admin_token }}',
+                                'content-type': 'application/json'
+                            }
+                        });
+                    },
+
+                    setAuthUser: function(user) {
+                        this.user = user;
+                    },
+
+                    isGmailUser: function(user) {
+                        if (!user) {
+                            user = this.user;
+                        }
+
+                        if (/@gmail\.com$/.test(user.email) || /@googlemail.com$/.test(user.email)) {
+                            return true;
+                        }
+
+                        return false;
+                    }
+                };
+
+                var reseller = {
+                    data: null,
+                    selectizer: null,
+
+                    _update: function() {
+                        if (!this.data.id) {
+                            this.selectizer.addOption({
+                                id: this.data.text,
+                                text: this.data.text
+                            });
+                        }
+
+                        this.selectizer.setValue(this.data.id || this.data.text);
+                    },
+
+                    setSelectizer: function(selectizer) {
+                        this.selectizer = selectizer;
+                        if (this.data) {
+                            this._update();
+                        }
+                    },
+
+                    set: function(data) {
+                        this.data = data;
+                        if (this.selectizer) {
+                            this._update()
+                        }
+                    }
+                };
+
+                var showError = function(errorCode) {
+                    $(".share").hide();
+                    $("#textstep3").html(
+                        $("#template-" + errorCode).html()
+                    );
+                };
+
+                $(function() {
+                    $('.disabled').eq(0).hide();
+
+                    smapi.retrieveResellers().done(function(data) {
+                        data = $.map(data, function(r) {
+                            return {
+                                id: r.id,
+                                text: r.name
+                            }
+                        });
+
+                        $('#resellerName').selectize({
+                            valueField: 'id',
+                            labelField: 'text',
+                            options: data,
+                            create: function(input) {
+                                input = input.replace(/^\s+/g, '').replace(/\s+$/g, '');
+                                if (input) {
+                                    return {
+                                        id: input,
+                                        text: input
+                                    }
+                                }
+
+                                return false;
+                            }
+                        });
+
+                        reseller.setSelectizer($("#resellerName").data("selectize"));
+                    });
+                });
+
+                function getCustomer(customer) {
+                    if (customer.toLowerCase().endsWith('googlemail.com') ||  customer.toLowerCase().endsWith('gmail.com'))
+                        customer = customer.toLowerCase().replace('@', '__')
+                    else
+                        customer = customer.split("@").pop();
+                    return customer;
+                }
+
+                function onSignIn(googleUser) {
+                    // Useful data for your client-side scripts:
+                    var profile = googleUser.getBasicProfile();
+
+                    ga('set', 'dimension1', profile.getEmail());
+                    ga('send', 'pageview', '/gsc/sign_in');
+
+
+                    $("#dataForm input").css("color", " black");
+                    // The ID token you need to pass to your backend:
+                    var access_token = googleUser.getAuthResponse(true).access_token;
+
+                    $(function() {
+                        var $disabledBox = $('.disabled');
+                        var $stepContent = $('.step-content');
+                        var $picto = $('.picto');
+
+                        // disable first step
+                        $disabledBox.eq(0).show();
+
+                        // todo: show waiting....
+
+                        var loader = new Loader();
+                        loader.attachTo($(".step:first"), 50);
+                        smapi.signIn(access_token)
+                            .done(function(data) {
+                                ga('send', 'pageview', '/gsc/register');
+                                // show step2
+                                $disabledBox.eq(0).show();
+                                $disabledBox.eq(0).addClass('green');
+                                $disabledBox.eq(1).hide();
+                                $stepContent.eq(0).html('<p>You are connected! ✔</p>');
+                                $stepContent.eq(0).removeClass('column flex-start')
+                                $picto.eq(0).css('display', 'block');
+                                smapi.setAuthUser(data);
+
+                                // fill the form
+                                $('#fullName').val(data.name || profile.getName());
+                                $('#emailAddress').val(data.contactEmail || profile.getEmail());
+                                $('#phone').val(data.phoneNumber);
+                                if (data.resellerId) {
+                                    // user real id from database
+                                    reseller.set({
+                                        id: data.resellerId
+                                    });
+                                } else if (data.resellerName) {
+                                    reseller.set({
+                                        text: data.resellerName
+                                    });
+                                }
+
+                                if (smapi.isGmailUser()) {
+                                    $('.share button').text('Access');
+                                    $('#textstep3').text('Start to accept sharing now!');
+                                }
+                            }).always(function() {
+                                loader.destroy();
+                            });
+                    });
+                }
+
+                // handle with integrated events
+                var granted = false;
+                var integrated = false;
+                $(window).on('message', function(e) {
+                    var event = e.originalEvent;
+                    if (event) {
+                        if (event.origin && event.origin.match(/google\.com/i)) {
+                            $('iframe').each(function(index, iframe) {
+                                if (iframe.src) {
+                                    if (iframe.src.match(/\/additnow\/confirm\.html/i)) {
+                                        ga('send', 'pageview', '/gsc/granted');
+                                        $(".authorizeIt").hide();
+                                        smapi.updateUser({
+                                            installStatus: 'granted'
+                                        });
+
+                                        // since the access won't be valid immediately
+                                        var loader = new Loader();
+                                        loader.attachTo($('.step:nth(2)'), 80);
+                                        $("#textstep3").html(
+                                            "Please wait, we are activating you account..."
+                                        );
+
+                                        var checkGrant = function(times) {
+                                            smapi.updateUser({
+                                                checkGranted: true
+                                            }).done(function(user) {
+                                                if (!user.granted) {
+                                                    // if after 1 minute, backend still can't access user's data, show error
+                                                    if (user.notGrantedReason == "ACCESS_DENIED" && times < 12) {
+                                                        setTimeout(checkGrant.bind(null, ++times), 5000);
+                                                        console.debug("access denied after try for", times, "times");
+                                                    } else {
+                                                        showError(user.notGrantedReason);
+                                                        loader.destroy();
+                                                    }
+                                                } else {
+                                                    loader.destroy();
+                                                    $(".share").show();
+                                                    if (smapi.isGmailUser()) {
+                                                        $("#textstep3").html(
+                                                            "Start to accept sharing now !"
+                                                        );
+                                                    } else {
+                                                        $("#textstep3").html(
+                                                            "Start sharing contacts with the coworkers of your choice now !"
+                                                        );
+                                                    }
+                                                }
+                                            });
+                                        }
+
+                                        setTimeout(checkGrant.bind(null, 0), 5000);
+
+                                        var frameParent = $(iframe).parent().parent();
+                                        var modals = [frameParent, frameParent.prev('div'), frameParent.prev('div').prev('iframe')];
+                                        $.each(modals, function(index, elem) {
+                                            elem.remove();
+                                        });
+                                    } else if (iframe.src.match(/\/additnow\/modal\.html/)) {
+                                        if (!integrated) {
+                                            ga('send', 'pageview', '/gsc/integrateClicked');
+                                            integrated = true;
+                                            smapi.updateUser({
+                                                installStatus: 'Integrateclicked'
+                                            });
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
+
+                $(function() {
+                    $('.share').on('click', function() {
+                        var customer = getCustomer(smapi.user.email);
+                        smapi.updateVendorProfile(customer).done(function(){
+                            smapi.getToken(customer, smapi.user.email).done(function(token){
+                                smapi.loginIn(token.key);
+                            });
+                        });
+                    });
+
+                    var $form = $('#dataForm');
+                    var $inputs = $('#dataForm input');
+
+                    // registration form
+                    $form.on('submit', function(e) {
+                        ga('send', 'pageview', '/gsc/registered');
+                        var error = 0;
+                        // Boucle sur chacun des champs et teste qu'ils ne soient pas vide.
+
+                        $inputs.each(function(i) {
+                            $input = $inputs.eq(i);
+                            if ($input.attr('id') === 'resellerName') return;
+                            if ($input.val() === '') {
+                                $(this).addClass('errorfield');
+                                e.preventDefault();
+                                error++;
+                            }
+                        });
+
+                        if (error === 0) {
+                            // disable step2
+                            $('.disabled').eq(1).show();
+
+                            var payload = {
+                                contactEmail: $('#emailAddress').val(),
+                                phoneNumber: $('#phone').val(),
+                                name: $('#fullName').val(),
+                                registered: true,
+                                installStatus: 'Registered',
+                                installType: 'Try'
+                            };
+
+                            var reseller = $('#resellerName').val();
+                            if (/\d+/.test('' + reseller)) {
+                                payload['resellerId'] = reseller;
+                            } else {
+                                payload['resellerName'] = reseller;
+                                payload['resellerId'] = '';
+                            }
+
+
+                            var loader = new Loader();
+                            loader.attachTo($('.step:nth(1)'));
+                            smapi.updateUser(
+                                payload
+                            ).done(function(user) {
+                                smapi.setAuthUser(user);
+                                // step 3
+                                $('.disabled').eq(1).addClass('green');
+                                $('.disabled').eq(2).hide();
+                                $('.picto').eq(1).css('display', 'block');
+
+                                if (!user.granted) {
+                                    // todo: improve UI show install Error
+                                    switch (user.notGrantedReason) {
+                                        case 'DOMAIN_CANNOT_USE_APIS':
+                                        case 'NOT_ADMIN':
+                                        case 'NOT_ACCEPT_GOOGLE_TERMS':
+                                            showError(user.notGrantedReason);
+                                            break;
+                                        default:
+                                            if (smapi.isGmailUser()) {
+                                                $("#textstep3").html(
+                                                    "Connect your google account to Shared Contact Gmail®"
+                                                );
+                                            } else {
+                                                $("#textstep3").html(
+                                                    "Connect your Google Apps domain to Shared Contacts for Gmail® to start sharing and synchronize your contact."
+                                                );
+                                            }
+                                            $(".share").hide();
+                                            $(".authorizeIt").show();
+                                    }
+                                }
+                            }).always(function(){
+                                loader.destroy();
+                            });
+
+                            return false;
+                        }
+                    })
+                });
+            </script>
+            <script type="text/html" id="template-DOMAIN_CANNOT_USE_APIS">
+                <p>
+                    Sorry, please enable your provisioning api in your <a href="https://support.google.com/a/answer/60757">admin panel</a> and try again.
+                </p>
+            </script>
+            <script type="text/html" id="template-NOT_ADMIN">
+                <p>
+                    Sorry you are not the administrator of your domain. Please ask your admin to install the app.
+                </p>
+
+                <p>
+                    If you are the administrator of the domain but cannot log in, please contact us at
+                    <a href="mailto:support@gmailsharedcontacts.com">support@gmailsharedcontacts.com</a>
+                </p>
+                <p>
+            </script>
+            <script type="text/html" id="template-NOT_ACCEPT_GOOGLE_TERMS">
+                Please go to <a href="https://mail.google.com">https://mail.google.com</a> and accept Google terms and try again.
+            </script>
+            <script type="text/html" id="template-ACCESS_DENIED">
+                Failed to access your data, please enabled the application in your <a href="https://admin.google.com/AdminHome?pli=1&fral=1#AppsList:serviceType=MARKETPLACE">admin console</a> and try again.
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

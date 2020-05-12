@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load mathfilters %}
+
+{% with month_price=yearly.price|div:12|floatformat:2 month_price_monthly=monthly.price %}
+    {% with year_price=yearly.price year_price_monthly=month_price_monthly|mul:12 %}
+        {% with year_per_user=yearly.per_user month_per_user=monthly.per_user %}
+            <div class="monthlytemplate">
+                <div class="basic pricing-box white {% if not inactive %}hoverable z-depth-1{% else %}inactive z-depth-0{% endif %}">
+                    {% block pricing_box_prefix %}
+                    {% endblock %}
+                    <div class="title {{ btn_color_class }}">
+                        <div class="cost">
+                            <sup>$</sup>{% if monthly_pricing == "true" %} {{ month_price_monthly }}  {%else%}  {{ year_price_monthly }} {%endif%}<sub> /{% trans "month" %}</sub>
+                        </div>
+    
+                        <div class="feature">
+                            {% block feature_title %}
+                            {% endblock %}
+                        </div>
+    
+                        {% block billed_annualy %}
+                        {% endblock %}
+    
+    
+                        <div class="total">
+                            {% trans "Or" %} ${{ month_price_monthly }}
+                            {% if month_per_user %}{% trans "/user" %} {% endif %} {% trans "with monthly billing" %}
+                        </div>
+                    </div>
+                    <div class="name">
+                        {% block version_name %}
+                        {% endblock %}
+                    </div>
+                    <div class="features">
+                        {% block feature_list %}
+                        {% endblock %}
+                    </div>
+                    <div class="buy-button">
+                        <button class="btn waves-effect waves-light {{ btn_color_class }} uppercase" type="submit" name="plan"
+                                {% if inactive %}disabled{% endif %}
+                                value="{{ plan }}">
+                            {% if upgrade and not inactive %}
+                                {% trans "upgrade" %}
+                            {% else %}
+                                {% trans "Buy" %}
+                            {% endif %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        {% endwith %}
+    {% endwith %}
+{% endwith %}

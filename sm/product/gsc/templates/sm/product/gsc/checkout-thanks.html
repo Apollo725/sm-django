@@ -1,0 +1,70 @@
+{% extends "sm/product/gsc/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}
+    {% trans "Thank you" %} - {{ block.super }}
+{% endblock %}
+
+{% block large-banner-text %}
+    {% trans "Thank you" %}
+{% endblock %}
+
+{% block content %}
+    <div class="center-align container gsc-checkout-thanks">
+        <div class="row">
+            <img src="{% static "sm/product/gsc/img/Confirmation.png" %}" alt="confirmation"/>
+        </div>
+
+        <div class="row">
+            <h1>
+                {% trans "Thank you for trusting Shared Contacts for Gmail®." %}
+                <br>
+                {% if request.session.checkout_success_type != 'first' %}
+                    {% trans "Your account has been successfully upgraded." %}
+                {% else %}
+                    {% trans "Your account has subscribed to Shared Contacts for Gmail® successfully." %}
+                {% endif %}
+            </h1>
+        </div>
+
+        <div class="row">
+            <p>
+                {% blocktrans trimmed %}
+                    You can now enjoy all the features and options of the full version, and find at any time all the
+                    details of your subscription: expiration date, next payment, number of licenses and more.
+                {% endblocktrans %}
+            </p>
+        </div>
+
+        <form action="{{ PRODUCT_URL|default:'http://app.gmailsharedcontacts.com' }}">
+            <div class="row center-align">
+                <button class="btn-grey-lowkey" type="submit" name="action">
+                    {% trans "LAUNCH APP" %}
+                </button>
+            </div>
+        </form>
+
+        <div class="row center-align">
+            <a href="{% url 'gsc:subscriptions' %}" id="my-sub">{% trans "See my subscriptions" %}</a>
+        </div>
+
+        <div class="row center-align connect">
+            {% trans "Connect with us" %}
+            <a href="https://plus.google.com/+Gmailsharedcontactsgae">
+                <img src="{% static "sm/product/gsc/img/google115.png" %}" alt="confirmation"/>
+            </a>
+            <a href="https://twitter.com/GSharedContacts">
+                <img src="{% static "sm/product/gsc/img/twitter44.png" %}" alt="confirmation"/>
+            </a>
+            <a href="https://www.facebook.com/gmailsharedcontacts/timeline/">
+                <img src="{% static "sm/product/gsc/img/facebook51.png" %}" alt="confirmation"/>
+            </a>
+
+            <a href="https://www.linkedin.com/company/shared-contact-for-gmail%C2%AE">
+                <img src="{% static "sm/product/gsc/img/social123.png" %}" alt="confirmation"/>
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "sm/frontend/menu.html" %}
+{% load static %}
+{% load i18n %}
+{% load sm %}
+
+{% block title %}
+    {% trans "Reseller" %}
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "sm/frontend/bower_components/angular/angular.min.js" %}"></script>
+    <script src="{% static "sm/frontend/bower_components/parsleyjs/dist/parsley.js" %}"></script>
+    {% with "sm/frontend/bower_components/parsleyjs/src/i18n/"|add:lang_code|add:".js" as parsley_i18n_js %}
+        <script src="{% static parsley_i18n_js %}"></script>
+    {% endwith %}
+    <script src="{% static "sm/frontend/bower_components/moment/min/moment.min.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+	<div class="center">
+        <h1>
+            {% trans "YOUR RESELLER IS" %}
+            <!--Votre Reseller est-->
+        </h1>
+        <p class="resellerName">{{ reseller_name }}</p>
+	</div>
+	<div class="borderContainer">
+        <p>
+            {% trans "Please contact your reseller for any new orders." %}
+            <!-- Veuillez contacter votre reseller pour toute nouvelle commande.-->
+        </p>
+	</div>
+	<div class="contactContainer">
+        <h3>{% trans "You do not have a Reseller?" %}<!--Vous n'avez pas de Reseller ?--></h3>
+        <p>
+            {% blocktrans trimmed %}
+                Contact us at <a href="support@gmailsharedcontacts.com">support@gmailsharedcontacts.com</a>
+            {% endblocktrans %}
+        </p>
+
+        <!--<p>Contactez-nous à <a href="">support@gmailsharedcontacts.com</a></p>-->
+	</div>
+{% endblock %}

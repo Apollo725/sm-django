@@ -1,0 +1,79 @@
+{% extends "sm/frontend/menu.html" %}
+{% load static %}
+{% load i18n %}
+{% load sm %}
+
+
+{% block title %}
+    {% trans "Invoices" %}
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "sm/frontend/bower_components/angular/angular.min.js" %}" xmlns="http://www.w3.org/1999/html"></script>
+    <script src="{% static "sm/frontend/bower_components/parsleyjs/dist/parsley.js" %}"></script>
+    {% with "sm/frontend/bower_components/parsleyjs/src/i18n/"|add:lang_code|add:".js" as parsley_i18n_js %}
+        <script src="{% static parsley_i18n_js %}"></script>
+    {% endwith %}
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="titlepage">{% trans "INVOICES" %}</h1>
+    <div class="wrapper-center">
+        <table class="table table-bordered" id="invoicesTable">
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>Invoice #</td>
+                    <td>Name</td>
+                    <td>Amount</td>
+                    <td>Status</td>
+                </tr>
+            {% if invoices %}
+              {% for invoice in invoices %}
+                  <tr>
+                      <td>{{ invoice.date }}</td>
+                      <td><a href="{% url 'gsc:invoices' invoice_id=invoice.id %}" target="_blank">{{ invoice.id }}</a></td>
+                      <td>{{ invoice.name }}</td>
+                      <td>${{ invoice.total }}</td>
+                      {% if invoice.status != "PAID" %}
+                         <td class="redStatus">{{ invoice.status }}</td>
+                      {% else %}
+                         <td class="greenStatus">{{ invoice.status }}</td>
+                      {% endif %}
+                  </tr>
+              {% endfor %}
+            {% else %}
+                  <tr>
+                      <td>Sorry you don't have any invoices</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                  </tr>
+            {% endif %}
+            </tbody>
+        </table>
+        {% if page.has_other_pages %}
+          <ul class="pagination">
+            {% if page.has_previous %}
+              <li><a href="?page={{ page.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for page_number in page.page_range %}
+              {% if page.number == page_number %}
+                <li class="activePagination"><span>{{ page_number }}</span></li>
+              {% else %}
+                <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if page.has_next %}
+              <li><a href="?page={{ page.next_page_number }}">&raquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+          </ul>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% load i18n %}
+<div class="product-card whitebox nopad rounded">
+    <div class="product-card-header">
+        <div class="row">
+            <div class="col s12 m12 product-card-header-content">
+                <div class="product-logo">
+                    {% block product-logo %}
+                    {% endblock %}
+                    {% block product-card-header %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% if subscription.vendor_status != 'EVAL' %}
+        <div class="arrowdown ">
+            <p><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="product-card-body">
+        {% block product-card-body %}
+        {% endblock %}
+    </div>
+</div>
+
+<div class="product-card-extra">
+    {% block product-card-extra %}
+    {% endblock %}
+</div>

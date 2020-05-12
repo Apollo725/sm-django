@@ -1,0 +1,24 @@
+{% extends "sm/frontend/large_banner_template.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block large-banner-text %}
+    Foobar
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        Foobar
+
+        <p>
+            localize sample1: {% trans "name" %}
+        </p>
+
+        <p>
+            localize sample2:
+            {% blocktrans trimmed %}
+                full name
+            {% endblocktrans %}
+        </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,154 @@
+[
+  {
+    "fields": {
+      "product_category" : "GSC",
+      "per_user" : false,
+      "customer_type" : "",
+      "customer_region" : "",
+      "offline_customer" : null,
+      "customer_country" : "",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "",
+      "catalog" : null,
+      "vendor_console" : "",
+      "minimal_quantity" : null,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "product_category" : "GSC",
+      "per_user" : true,
+      "customer_type" : "",
+      "customer_region" : "",
+      "offline_customer" : null,
+      "customer_country" : "",
+      "order_type" : "new",
+      "product" : null,
+      "currency" : "",
+      "catalog" : null,
+      "vendor_console" : "",
+      "minimal_quantity" : 5,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "product_category" : "GSC",
+      "per_user" : true,
+      "customer_type" : "",
+      "customer_region" : "",
+      "offline_customer" : false,
+      "customer_country" : "",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "USD",
+      "catalog" : null,
+      "vendor_console" : "",
+      "minimal_quantity" : null,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "product_category" : "GSC",
+      "per_user" : true,
+      "customer_type" : "",
+      "customer_region" : "Europe",
+      "offline_customer" : false,
+      "customer_country" : "",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "EUR",
+      "catalog" : null,
+      "vendor_console" : "",
+      "minimal_quantity" : null,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "product_category" : "GSC",
+      "per_user" : true,
+      "customer_type" : "Econsulting Customer",
+      "customer_region" : "",
+      "offline_customer" : false,
+      "customer_country" : "FR",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "EUR",
+      "catalog" : null,
+      "vendor_console" : "",
+      "minimal_quantity" : null,
+      "tax_id" : "French Tax"
+    },
+    "model": "core.policy",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "product_category" : "Google",
+      "per_user" : true,
+      "customer_type" : "Econsulting Customer",
+      "customer_region" : "",
+      "offline_customer" : false,
+      "customer_country" : "",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "EUR",
+      "catalog" : null,
+      "vendor_console" : "econsulting.fr",
+      "minimal_quantity" : null,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "product_category" : "Google",
+      "per_user" : true,
+      "customer_type" : "",
+      "customer_region" : "",
+      "offline_customer" : false,
+      "customer_country" : "Canada",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "CAD",
+      "catalog" : null,
+      "vendor_console" : "canada.gappsexperts.com",
+      "minimal_quantity" : null,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "product_category" : "Google",
+      "per_user" : true,
+      "customer_type" : "",
+      "customer_region" : "",
+      "offline_customer" : false,
+      "customer_country" : "",
+      "order_type" : "",
+      "product" : null,
+      "currency" : "USD",
+      "catalog" : null,
+      "vendor_console" : "mybonobo.info",
+      "minimal_quantity" : null,
+      "tax_id" : ""
+    },
+    "model": "core.policy",
+    "pk": 8
+  }
+]

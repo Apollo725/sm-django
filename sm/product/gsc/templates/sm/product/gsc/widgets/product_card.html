@@ -1,0 +1,363 @@
+{% extends "sm/frontend/widgets/product_card.html" %}
+{% load i18n %}
+{% load static %}
+{% load sm %}
+
+
+<!-- Product card head -->
+
+    
+
+    {% block product-logo %}
+        <div class="col m6 l4">
+            <div class="col m4">
+                <p class="GscPicto">
+                <img src="{% static "sm/product/gsc/img/shared-contact-for-gmail-pic.png" %}"
+                        alt="GSC Logo" height="37">
+                </p>
+            </div>
+            <div class="col m8">
+                <p class="Product">
+                    {% trans "Shared Contacts for Gmail®" %}
+                </p>
+                <p class="domainname">for {{customer.name}}</p>
+                <p class="ProductVersion">
+                    {% if subscription.product.version == 'PRO' %}
+                        {% trans 'PROFESSIONAL EDITION' %}
+                    {% elif subscription.product.version == 'ENTERPRISE '%}
+                        {% trans 'ENTERPRISE EDITION' %}
+                    {% elif subscription.product.version == 'BASIC' %}
+                        {% trans 'BASIC EDITION' %}
+                    {% else %}
+                        {% trans 'ENTERPRISE EDITION' %}
+                    {% endif %}
+                </p>
+                <div class="statut">
+                    <b class="cercle"></b>
+                    <span value="{{subscription.vendor_status}}">
+                        {% if subscription.vendor_status != 'EVAL' %}
+                            {{subscription.vendor_status}}
+                        {% else %}
+                            {% trans 'EVALUATION' %}
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+        
+
+
+    
+    {% block product-card-header %}
+    <div class="col m6 l8">
+
+            <div class="col m8 l4 push-l1 licences">
+                <p class="uppercase">{% trans "Licences" %} &nbsp; | &nbsp; {% trans "Domain users" %}</p>
+                
+                <p class="nbrLicences">
+                    <strong>
+                        {% blocktrans trimmed with license_numer=subscription.vendor_licenses %}
+                            <span class="spanLicence bold">{{ license_numer }}</span>
+                        {% endblocktrans %} &nbsp; | &nbsp;
+                    </strong>
+                    {% blocktrans trimmed with domain_users=subscription.billable_licenses %}
+                        <span class="spanUser">{{ domain_users }}</span>
+                    {% endblocktrans %}
+                </p>
+                {% if subscription.billable_licenses > subscription.vendor_licenses %}
+                <div class="progress">
+                    <div class="determinate"></div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col m4 l3 push-l1 licences"> 
+                <p>TOTAL</p>
+                <p class="price">
+                    <span class="bold">
+                    {% if subscription.paid %}
+                        {% with cost=subscription.cost|floatformat:2 %}
+                            {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{%endif%}{{ cost }}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{%endif%}
+                        {% endwith %}
+                    {% else %}
+                    -
+                    {% endif %}</span><br/>
+                    <div class="frequencyHeader">
+                     {% if subscription.paid %}
+                         {% if subscription.product.monthly %}
+                            <p class="uppercase">/{% trans 'Per month' %}</p>
+                        {% else %}
+                            <p class="uppercase">/{% trans 'Per year' %}</p>
+                        {% endif %}
+                    {% else %}
+                    &nbsp;
+                    {% endif %}
+                    </div>
+                </p>
+            </div>
+            <div class=" col l3 push-l1 actionSection">
+                
+                <div style="position:relative;" class="btn-wrapper col s6 l12">
+                {% if subscription.vendor_status != 'EVAL' %}
+                
+                    <img class="btnAction" src="{% static "sm/product/gsc/img/fleche.png" %}" />
+                    <!--<button class="activeAction">ADD LICENCES</button>-->
+                        {% if subscription.paid and not license_not_addable %}
+                            <form action="{% url "gsc:license-add" %}" method="post" id="add-license-form">
+                                {% csrf_token %}
+                                <button type="submit" class="activeAction uppercase">{% trans "Add licences" %}</button>
+                            </form>
+                            <div class="menuAction col s6 l12">
+                                <ul>
+                                    <!--<li id="addLicences">ADD LICENCES</li>-->
+                                    {% if subscription.product.version != 'ENTERPRISE' %}
+                                        <li id="upgrade" class="uppercase">{% trans "Upgrade" %} {{ renewal_option }}</li>
+                                    {% endif %}
+                                    <li id="cancel" class="uppercase">{% if subscription.renewal_option == 'CANCEL' %} {% trans 'Renew' %} {% else %} {% trans 'Cancel' %} {% endif %}</li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                    <button id="buyBtn" class="activeAction uppercase">{% trans "Buy" %}</button>
+
+                
+                {% endif %}
+                </div>
+                <div class="btn-wrapper col s6 l12">
+                    <a href="{{ GSC_PRODUCT_URL }}"><button class="launchButton uppercase">{% trans "Launch" %}</button></a>
+                </div>
+                    
+            </div>
+
+    </div>
+    {% endblock %}
+    
+
+<!-- !Product card head -->
+
+<!-- Product card body -->
+
+{% block product-card-body %}
+    {% if subscription.vendor_status != 'EVAL' %}
+        <div class="productBodyContainer">
+        <div class="row">
+            <div class="col s6 m2">
+                {% trans "Unit cost" %}
+            </div>
+            <div class="col s6 m3">
+                {% if subscription.customer.currency == "USD" %}{{ subscription.customer.currency|currency_symbol }}{%endif%}{{unit_price}}{% if subscription.customer.currency == "EUR" %}{{ subscription.customer.currency|currency_symbol }}{%endif%}{{unit_frequency}}
+            </div>
+            <div class="col s6 m3">
+                {% trans "Payment method" %}
+            </div>
+            <div class="col s6 m4">
+                {% trans "Credit card" %}
+            </div>
+            <div class="col s6 m2">
+                {% trans "Started on" %}
+            </div>
+            <div class="col s6 m3">
+                {{ subscription.order.date|date:'SHORT_DATE_FORMAT' }}
+            </div>
+            <div class="col s6 m3">
+                {% trans "Billing frequency" %}
+            </div>
+            <div class="col s6 m3">
+                {% if subscription.product.get_plan_display == 'Flex prepaid' %}
+                    {% trans 'Monthly billing' %}
+                {% else %}
+                    {% trans 'Annual billing' %}
+                {% endif %}
+            </div>
+            <div class="col s6 m2">
+                {% if not subscription.renewal_option == 'CANCEL' %}
+                    {% trans 'Renews on' %}
+                {% else %}
+                    {% trans 'Expires on' %}
+                {% endif %}
+            </div>
+            <div class="col s6 m3">
+                {{ subscription.expiry_date|date:'SHORT_DATE_FORMAT' }}
+            </div>
+            {% if not subscription.renewal_option == 'CANCEL' %}
+            <div class="col s6 m3">
+                {% trans "Next invoice" %}
+            </div>
+            <div class="col s6 m4">
+                {{ subscription.renewal_date|date:'SHORT_DATE_FORMAT' }}
+            </div>
+            {% endif %}
+            <div class="col s6 {% if subscription.renewal_option == 'CANCEL' %} m3 {% endif %} {% if not subscription.renewal_option == 'CANCEL' %}  m2 {% endif %}">
+                {% trans "Renewal option" %}
+            </div>
+            <div class="col s6 m3">
+                {% if not subscription.renewal_option == 'CANCEL' %}
+                    {% trans 'Renew' %}
+                {% else %}
+                    {% trans 'Cancel' %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block product-card-extra %}
+    <div id="change-plan-modal" class="modal">
+        <form action="" method="post">
+            <input type="hidden" name="update_renewal_option" value="true">
+
+            <div class="modal-content">
+                <span class="modal_title">{% trans "Renewal options" %}</span>
+                <img src="{% static "sm/product/gsc/img/close.png" %}" alt="Paypal-verified"
+                        class="modal-close close_button"/>
+
+                {% with renewal_option=subscription.renewal_option %}
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="radio" id="auto_renew" name="renewal_option" value="RENEW"
+                                    {% if renewal_option != 'CANCEL' %} checked {% endif %} >
+                            <label for="auto_renew">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <span class="options-title">{% trans "Auto-renew my contract" %}</span>
+                                    </div>
+                                    <div class="col s12">
+                                        {% blocktrans trimmed with renewal_date=subscription.renewal_date|date:'SHORT_DATE_FORMAT' license_number=subscription.vendor_licenses %}
+                                            Renew my commitment on {{ renewal_date }} for all licenses at the current price. (Currently {{ license_number }} licenses)
+                                        {% endblocktrans %}
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="radio" id="cancel_renewal" name="renewal_option"
+                                    value="CANCEL" {% if renewal_option == 'CANCEL' %} checked {% endif %}>
+                            <label for="cancel_renewal">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <span class="options-title">{% trans "Cancel my service at the end of my term" %}</span>
+                                    </div>
+                                    <div class="col s12">
+                                        {% blocktrans trimmed with renewal_date=subscription.expiry_date|date:'SHORT_DATE_FORMAT' %}
+                                            Service will be suspended on {{ renewal_date }}, when my existing commitment
+                                            ends.
+                                        {% endblocktrans %}
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                {% endwith %}
+            </div>
+            <div class="modal-footer center-align" style="margin-bottom: 30px;">
+                {% csrf_token %}
+                <button class="btn-grey-lowkey btn-lowkey-wide radius modal-action modal-close waves-effect waves-green"
+                        type="submit">
+                    {% trans "Save" %}
+                </button>
+            </div>
+            <style>
+                #change-plan-modal label .col:last-child {
+                    font-size: 13px;
+                    color: #BDBDBD;
+                }
+            </style>
+        </form>
+    </div>
+    {% if reseller_link %}
+        <script>
+            window.__reseller_link = "{{ reseller_link }}";
+        </script>
+    {% endif %}
+    <script>
+        $(function () {
+            $('body').on('click', 'a[name=change-plan]', function () {
+                $('#change-plan-modal').openModal();
+            });
+
+            $('#add-license-form').on('click', 'a', function (e) {
+                e.preventDefault();
+                $(this).parents('form').submit();
+            });
+            
+            /* WARNING PROD POINT */
+            $(".activeAction").click(function(){
+                $(location).attr('href',"/products/gsc/checkout");
+            })
+            
+            
+            /* WARNING PROD POINT */
+            $("#buyBtn").click(function(){
+                $(location).attr('href',"/products/gsc/pricing");
+            })
+
+
+            $('.btnAction').click(function () {
+                if ( $('.menuAction').is(':visible') )
+                {
+                    $(".menuAction").slideUp();
+                }
+                else{
+                  $(".menuAction").slideDown();  
+                }
+            });
+
+
+            if (!window.__reseller_link) {
+                $("#upgrade").click(function () {
+                    $(location).attr('href', "/products/gsc/pricing?upgrade=true");
+                });
+
+                $("#cancel").click(function () {
+                    $('#change-plan-modal').openModal();
+                });
+            } else {
+                $('#upgrade,#cancel').click(function () {
+                    $(location).attr('href', window.__reseller_link);
+                })
+            }
+
+            
+            $(".close_button").click(function(){
+                $(".menuAction").slideUp();
+            })
+            
+
+            /*DYNAMIC PRODUCT NAME*/ 
+            var reg= /(-[0-9]+)+\)/g;
+            tmp = reg.exec($(".Product").html());
+            if ( tmp != null )
+            {
+                var result = tmp[0].substring(1, tmp[0].length -1 ) + " users pack";
+                $('.Product').html("Shared Contacts for Gmail® " + result);   
+            }
+            else{
+                $('.Product').html("Shared Contacts for Gmail® "); 
+            }
+            
+            /*DYNAMIC CIRCLE COLOR*/ 
+            if( $(".statut span").html().replace(/\s/g,"") == 'PAID')
+            {
+                $(".cercle").css("background-color","#3DA139");
+            }
+            else if( $(".statut span").html().replace(/\s/g,"") == 'EVALUATION')
+            {
+                $(".cercle").css("background-color","orange");
+            }
+            else{
+                $(".cercle").css("background-color","red");
+            }
+            
+            /* DYNAMIC USER BAR*/
+            var numberLicence = parseInt( $(".spanLicence").html() , 10);
+            var numberUser = parseInt( $(".spanUser").html() , 10);
+            var progressWidth = Math.round((numberLicence / numberUser) * 100)+ "%";
+            $(".determinate").css("width", progressWidth );
+        });
+    </script>
+{% endblock %}

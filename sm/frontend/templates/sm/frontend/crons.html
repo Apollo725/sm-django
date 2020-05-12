@@ -1,0 +1,31 @@
+{% extends "sm/frontend/large_banner_template.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    {% for cron in crons %}
+        <div class="container">
+            <div>
+                <input href="#" value="{{ cron }}" type = "button" class="modif btn">
+            </div>
+        </div>
+    {% endfor %}
+
+    <script>
+        $(function () {
+            $('input').click(function () {
+                 $.ajax({
+                    method: "GET",
+                    data: {'cron': $(this).val()},
+                    url: '/crons',
+                    headers: {
+                        //'authorization': 'user-token ' + this.user.userToken,
+                        'content-type': 'application/json',
+                    },
+                     dataType: "json",
+                });
+            });
+        });
+    </script>
+
+{% endblock %}

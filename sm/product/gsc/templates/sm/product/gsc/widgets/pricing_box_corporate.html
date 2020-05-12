@@ -1,0 +1,62 @@
+{% extends "sm/product/gsc/widgets/pricing_box.html" %}
+{% load sm %}
+{% load i18n %}
+
+{% block price_title %}
+    <div class="cost">
+         <a class="contact-us uppercase" href="https://www.gmailsharedcontacts.com/contact-us/">{% trans "contact us" %}</a>
+    </div>
+{% endblock %}
+
+{% block feature_title %}
+    <p class="slogtext"> {% trans "advanced admin capabilities" %} </p>
+{% endblock %}
+
+{% block version_name %}
+    {% trans "corporate" %}
+{% endblock %}
+
+{% block feature_list %}
+    <ul>
+        <li class="additional">
+            {% trans "Advanced logging and security features" %}
+        </li>
+        <li class="additional">
+            {% trans "Unlimited Contact Backup" %}
+        </li>
+        <li>
+            {% trans "Unlimited # of shared contact groups" %}
+        </li>
+        <li>
+            {% trans "Unlimited # of shared contacts" %}
+        </li>
+        <li>
+            {% trans "Sharing with users AND users groups" %}
+        </li>
+        <li>
+            {% trans "Sharing with external domain users and @gmail.com addresses" %}
+        </li>
+        <li>
+            {% trans "Instant Synchronization (Chrome users)" %}
+        </li>
+        <li>
+            {% trans "Live Support" %}
+        </li>
+        <li>
+            {% trans "Mobile/Tablet & Outlook sync" %}
+        </li>
+        <li>
+            {% trans "Permissions Management" %}
+        </li>
+        <li>
+            {% trans "Email Support" %}
+        </li>
+
+    </ul>
+{% endblock %}
+
+{% block buy_button %}   
+    <div class="buy-button">
+        <a class="contact-us btn waves-effect waves-light {{ btn_color_class }} uppercase" href="https://www.gmailsharedcontacts.com/contact-us/">{% trans "contact us" %}</a>
+    </div>
+{% endblock %}

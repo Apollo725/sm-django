@@ -1,0 +1,189 @@
+<html>
+ <head>
+   <title>Invoice</title>
+   <style>
+     body{
+      padding: 0px !important;
+      margin: 0px !important;
+     }
+     .centerDiv{
+      width: 110%;
+      margin: -5% auto 0 -5%;
+     }
+     img{
+      width: 60%;
+      margin-bottom: 20px;
+     }
+     table {
+      border-spacing : 0;
+      border-collapse : collapse;
+      margin: 0 auto 50px;
+      padding: 0px;
+      width: 100%;
+     }
+     td, th {
+      border: 1px solid #6b6b6b;
+      font-size: 13px;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+     }
+     th{
+      background-color: #55A5D5;
+      color: #fff;
+     }
+     tbody tr th{
+      font-weight: 400;
+      background-color: #fff;
+      color: black;
+     }
+     tr{
+      border: 1px solid black;
+     }
+     td{
+      font-size: 12px;
+     }
+     p{
+      font-size: 12px;
+     }
+     .descriptionTd{
+      width: 50%;
+     }
+     .licencesTd{
+      width: 12%;
+     }
+     .addressGapps, .addressCustomer{
+      vertical-align: top;
+      display: inline-block;
+      line-height: 18px;
+     }
+     .addressCustomer{
+      float: right;
+     }
+     .invoiceDate{
+      font-size: 14px;
+     }
+     .invoiceNumberInfos{
+      text-align: center;
+      margin: 55px 0;
+     }
+     .invoiceNumberInfos p {
+      font-size: 12px;
+      font-weight: 900;
+     }
+     .invoiceNumberInfos .tableTitle{
+      margin-top: 35px;
+      font-size: 15px;
+     }
+     .delivered{
+      font-weight: 900;
+      margin-bottom: 5px;
+     }
+     .totalTable{
+      width: 48%;
+      float: right;
+      border: none
+     }
+     .break{
+      clear: right;
+     }
+     .paid{
+      position: absolute;
+      right: 0px;
+      bottom: 200px;
+      width: 150px;
+      transform: rotate(-20deg);
+     }
+     .outro{
+      font-size: 15px;
+      margin-top: 70px;
+      text-align: center;
+     }
+   </style>
+ </head>
+ <body>
+  <div class="centerDiv">
+    <img src="https://www.gmailsharedcontacts.com/sm/gapp_experts.jpg">
+    <div>
+      <div class="addressGapps">
+        <p>
+          Gapps Experts Inc.<br/>
+          19 West 34th Street | Suite 1018 <br/>
+          New York, NY 10001 U.S.A <br/>
+          +1 (646) 583 2663 | www.gappsexperts.com <br/>
+          EIN (Taxpayer Identification Number) : 39-2078444
+        </p>
+      </div>
+      <div class="addressCustomer">
+        <p>
+          {{ order.customer.company_name }}<br/>
+          {{ order.customer.profiles.0.address }}<br/>
+          {{ order.customer.profiles.0.zip_code }}<br/>
+          {{ order.customer.profiles.0.city }}<br/>
+          {{ order.customer.profiles.0.state }}<br/>
+          {{ order.customer.profiles.0.country }} <br/>
+        </p>
+      </div>
+    <div>
+    <p class="invoiceDate">Invoice Date : {{ order.date }}</p>
+    <div class="invoiceNumberInfos">
+      <p>Invoice #: {{ order.id }}</p>
+      <p>Account #: {{ order.customer.id }}</p>
+      <p class="tableTitle">Shared Contacts for Gmail&#174; for domain {{ order.subscription.domain }}</p>
+    </div>
+    <p class="delivered">
+      Delivered Items :
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th># of licences</th>
+          <th>Valid from</th>
+          <th>Valid until</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody >
+        {% if order.subscription %}
+          <tr>
+            <td class="descriptionTd">Shared Contacts for Gmail&#174; {{ order.subscription.product_version }}
+              Edition {{ order.subscription.plan }} <br> Commitment for domain {{ order.subscription.domain }}</td>
+            <td class="licencesTd">{{ order.number_licenses }}</td>
+            <td>{{ order.valid_from }}</td>
+            <td>{{ order.valid_until }}</td>
+            <td>${{ order.order_detail.sub_total }}</td>
+          </tr>
+        {% else %}
+          <tr>
+            <td class="descriptionTd">Shared Contacts for Gmail Subscription</td>
+            <td class="licencesTd"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+    <table class="totalTable">
+      <tbody>
+      {% if order.order_detail.discount != 0 %}
+        <tr>
+          <td>Discount</td>
+          <td>- ${{ order.order_detail.discount }}</td>
+        </tr>
+      {% endif %}
+        <tr>
+          <td><strong>Grand Total</strong></td>
+          <td><strong>${{ order.order_detail.total }}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="break"></p>
+    <p class="outro">Thanks for your business !</p>
+    {% if order.status == "PAID" %}
+      <img class="paid" src="https://www.gmailsharedcontacts.com/sm/paid.png">
+    {% endif %}
+  </div>
+ </body>
+</html>

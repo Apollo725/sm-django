@@ -1,0 +1,442 @@
+{% extends "sm/frontend/menu.html" %}
+{% load static %}
+{% load i18n %}
+{% load sm %}
+{% get_current_language as LANGUAGE %}
+
+{% block title %}
+    {% trans "Payment information" %} - {{ block.super }}
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "sm/frontend/bower_components/angular/angular.min.js" %}"></script>
+    <script src="{% static "sm/frontend/bower_components/parsleyjs/dist/parsley.js" %}"></script>
+    {% with "sm/frontend/bower_components/parsleyjs/src/i18n/"|add:lang_code|add:".js" as parsley_i18n_js %}
+        <script src="{% static parsley_i18n_js %}"></script>
+    {% endwith %}
+{% endblock %}
+
+{% block content %}
+    <div class="bgpopup">
+        <div class="popup">
+            <a href="#" class="btn-close"><i class="material-icons {% if LANGUAGE == 'he' %}left{% else %}right{% endif %}">close</i></a>
+            
+            <div id="whichPayment">
+                <div class="row headerTitle">
+                    <span class="card-title">{% trans "Which kind of payment?" %}</span>
+                </div>
+                <form action="#" id="paymentMethodForm">
+                    <div class="row">
+                        <div class="col s4 offset-s2">
+                            <input name="group1" type="radio" id="ccard" data-payment_method="credit-card" />
+                            <label for="ccard">{% trans "Credit card" %}</label>
+                        </div>
+                        <div class="col s4 offset-s1">
+                            <input name="group1" type="radio" id="ppal" data-payment_method="paypal" />
+                            <label for="ppal">Paypal</label>
+                        </div>
+                    </div>
+                    <button class="waves-effect waves-light btn {% if LANGUAGE == 'he' %}left{% else %}right{% endif %}" type="submit">{% trans "Validate" %}</button>
+                </form>
+                
+            </div>
+            
+            <div id="ccardFormWrapper">
+                 <div class="row headerTitle">
+                    <span class="card-title">{% trans "Credit card information" %}</span>
+                </div>
+                <div class="checked row">
+                    <div id="credit-card" class="col s10 offset-s1">
+                        <div class="row">
+                            <div class="col m5 s12">
+                                <label class="hosted-fields--label" for="card-number">{% trans "Card Number" %}</label>
+                            </div>
+                            <div class="col m7 s12">
+                                <div id="card-number" class="hosted-field"></div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col m5 s12">
+                                <label class="hosted-fields--label" for="expiration-date">{% trans "Expiration Date" %} <span style="font-size:xx-small">(MM/YYYY)</span></label>
+                            </div>
+                            <div class="col m7 s12">
+                                <div id="expiration-date" class="hosted-field"></div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col m5 s12">
+                                <label class="hosted-fields--label" for="cvv">{% trans "CVV" %} <i class="material-icons cvv-tooltip">info</i></label>
+                            </div>
+                            <div class="col m7 s12">
+                                <div id="cvv" class="hosted-field"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn {% if LANGUAGE == 'he' %}left{% else %}right{% endif %} cardinfovalid waves-effect lighten-2">
+                    {% trans "Validate" %}
+                </button>
+
+            </div>
+            
+            <div id="ppalFormWrapper">
+
+                <div id="paypal-container"></div>
+                
+                <button type="button" class="btn {% if LANGUAGE == 'he' %}left{% else %}right{% endif %} cardinfovalid waves-effect lighten-2">
+                    {% trans "Validate" %}
+                </button>
+
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <h1 class="titlepage">{% trans "My payment information" %}</h1>
+
+
+    {% if not payment_method or not payment_method.type in validate_card_types %}
+    <p class="add-payment">
+        <a class="btn-floating btn-large waves-effect waves-light teal lighten-2 popup-trigger" class="btn">
+            <i class="material-icons">add</i>
+        </a>
+        <a href="#!" class="popup-trigger">{% trans "Add a payment method" %}</a>
+    </p>
+    {% else %}
+
+    <div id="card">
+
+        {% if payment_method.type == 'credit_card' %}
+        
+        <!-- If a card has already defined and that it's a credit card -->
+        
+        
+        <div class="ccard">
+
+                <div class="card-panel">
+                    <!-- user can't delete a payment method -->
+                    <p class="card-title">{% trans "Credit card" %} <!--<a href="#" class="rmcard"><i class="material-icons right">close</i></a>--></p>
+                    
+                    <div class="row">
+                         <div class="col s7">
+                             <p class="data number">{{ payment_method.card_type }} **** {{ payment_method.last_4_digits }}</p>
+                        </div>
+                        <!--
+                        <div class="col s4 offset-s1 valign cardType">
+                            <p class="label">&nbsp;</p>
+                            <p class="ccardpicto"><img src="{{ payment }}"></img></p>
+                        </div>
+                        -->
+                        <div class="col s4 offset-s1 valign validityDate">
+                            <p class="label">{% trans "Valid until" %}</p>
+                            <p class="data">{{ payment_method.expiration_date }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--name is not captured
+                        <div class="col s7 valign">
+                        {# <p class="data name">{{ payment_method.name }}</p>#}
+                        </div>
+                        -->
+                        <div class="col s12 footer">
+                            {% if payment_method.succeed %}
+                                <p class="card-state valid">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i> Valid
+                                </p>
+                            {% else %}
+                                <p class="card-state invalid">
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i> Not Valid
+                                </p>
+                            {% endif %}
+                            <button class="changeCard">Change</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+
+        {% else %}
+        
+        <!-- If a card has already defined and that it's paypal -->
+
+        <div class="ppal">
+
+            <div class="card-panel paypalCard">
+                <p class="card-title">
+                    <i class="fa fa-paypal titleP" aria-hidden="true"></i> Paypal account </p>
+                <div class="row">
+                    <div class="col s8 valign">
+                        <p class="label">
+                            Email Address
+                        </p>
+                        <p class="data">
+                            {{ payment_method.email_address }}
+                        </p>
+                    </div>
+                    <div class="col s12 footer">
+                        {% if payment_method.succeed %}
+                            <p class="card-state valid">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i> Valid
+                            </p>
+                        {% else %}
+                            <p class="card-state invalid">
+                                <i class="fa fa-times-circle" aria-hidden="true"></i> Not Valid
+                            </p>
+                        {% endif %}
+                        <button class="changeCard">Change</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <form id="add-payment-method" method="POST">
+        {% csrf_token %}
+    </form>
+
+    
+{% endblock %}
+
+{% block app %}
+
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+
+    <!-- payment UI -->
+    <script src="https://js.braintreegateway.com/web/3.5.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.5.0/js/paypal.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.5.0/js/hosted-fields.min.js"></script>
+
+    <script type="text/javascript">
+    
+        /*
+            ---------------
+            GLOBAL FUNCTIONS
+            ---------------
+        */
+    
+        var popupOpen = function(){
+            $('.bgpopup').css('display','block');
+            $('.popup').css('display','block');
+        }
+        
+        var popupClose = function(){
+            $('.bgpopup').css('display','none');
+            $('.popup').css('display','none');
+            
+            $('#ccardFormWrapper').css('display','none');
+            $('#whichPayment').css('display','block');
+        }
+        
+        var showCard = function(type){
+            if(type == 'ccard'){
+                $('.add-payment').css('display','none');
+                $('#card .ccard').fadeIn(500);
+                $('#card .ppal').css('display','none');
+                
+                for(var i = 0; i < $('#card p span').length; i++){
+                    $('#card p span').eq(i).html(creditCardData[i]);
+                }
+                
+                //$('#card p span').eq(2).html()
+                //'{{creditCardData.name}}'.replace('{{creditCardData.name}}','test');
+            } else if (type == 'ppal'){
+                $('.add-payment').css('display','none');
+                $('#card .ccard').css('display','none');
+                $('#card .ppal').fadeIn(500);
+            }
+        };
+            
+        $(document).ready(function(){
+            
+            creditCardData = [];
+
+            /* Materialize js */
+            
+            $('select').material_select();
+        
+            
+            /* /Materialize js */
+
+            
+            /*
+                ---------------------
+                PAYMENT METHOD CHOICE
+                ---------------------
+            */
+            
+            $( "#paymentMethodForm" ).submit(function( event ) {
+                event.preventDefault();
+                
+                if ($('#ccard').prop('checked') == true) {
+                    $('#ppal').removeClass('active');
+                    $('#ccard').addClass('active');
+                    $('#ccardFormWrapper').css('display','block');
+                    $('#whichPayment').css('display','none');
+                } else if ($('#ppal').prop('checked') == true)  {
+                    $('#ccard').removeClass('active');
+                    $('#ppal').addClass('active');
+                    paypalPopupLaunch();
+                } else {
+                    return false;
+                }
+            });
+                
+            
+            $('.btn-close').on('click', function(e){
+                e.preventDefault();
+                popupClose();
+            });
+            
+            $('.popup-trigger').on('click', function(e){
+                e.preventDefault();
+                popupOpen();
+            });
+            
+            $('.changeCard').on('click', function(e){
+                e.preventDefault();
+                popupOpen();
+            });
+            
+            $(".rmcard").on('click', function(e){
+                e.preventDefault();
+                
+                $( "#card" ).children().fadeOut( "fast", function() {
+                    setTimeout(function(){
+                        $('.add-payment').css('display','block');
+                    },200)
+                });
+
+            });
+          
+          
+        });
+    </script>
+    <script>
+        var paypalPopupLaunch;
+        var disableButton = function ($button) {
+            $button.html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>').prop('disabled', true);
+        };
+        
+        $(function () {
+
+            var checkout = function (nonce) {
+                var form = $('#add-payment-method');
+                $('[name=payment_method_nonce]').remove();
+                $('<input/>').prop('type', 'hidden')
+                        .val(nonce).attr('name', 'payment_method_nonce').appendTo(form);
+                form.submit();
+            };
+            
+            var getPaymentMethod = function() {
+                return $('#paymentMethodForm input[type=radio].active').attr('data-payment_method');
+            };
+
+            var initPaymentUI = function (token) {
+                braintree.client.create({
+                    authorization: token
+                }, function (clientErr, clientInstance) {
+                    if (clientErr) {
+                        return;
+                    }
+
+                    braintree.paypal.create({
+                        client: clientInstance
+                    }, function (paypalErr, paypalInstance) {
+                        if (paypalErr) {
+                            return;
+                        }
+                        
+
+                        paypalPopupLaunch = function(){
+                            if (getPaymentMethod() === 'paypal') {
+                                paypalInstance.tokenize({flow: 'vault'}, function (err, payload) {
+                                    if (err) {
+                                        return;
+                                    }
+
+                                    checkout(payload.nonce);
+                                    disableButton($('#paymentMethodForm').find('button:submit'));
+                                });
+                            }
+                            return false;
+
+                        }
+                    });
+
+                    var createHostedFields = function (clientInstance) {
+                        braintree.hostedFields.create({
+                            client: clientInstance,
+                            styles: {
+                                'input': {
+                                    'font-size': '16px',
+                                    'font-family': 'courier, monospace',
+                                    'font-weight': 'lighter',
+                                    'color': '#ccc'
+                                },
+                                ':focus': {
+                                    'color': 'black'
+                                },
+                                '.valid': {
+                                    'color': '#8bdda8'
+                                }
+                            },
+                            fields: {
+                                number: {
+                                    selector: '#card-number'
+                                },
+                                cvv: {
+                                    selector: '#cvv'
+                                },
+                                expirationDate: {
+                                    selector: '#expiration-date'
+                                }
+                            }
+                        }, function (err, hostedFieldsInstance) {
+                            if (err) {
+                                return;
+                            }
+                            
+                            $('.btn.cardinfovalid').on('click', function (e) {
+                                var _this = this;
+
+                                if (getPaymentMethod() === 'credit-card') {
+                                    hostedFieldsInstance.tokenize(function (err, payload) {
+                                        if (err) {
+                                            return;
+                                        }
+
+                                        disableButton($(_this));
+                                        checkout(payload.nonce);
+                                    });
+                                }
+                                return false;
+
+                            });
+                        });
+                    };
+
+                    createHostedFields(clientInstance);
+                })
+            };
+
+            $.ajax({
+                url: "/api/btToken",
+                method: 'post',
+                success: function (data) {
+                    initPaymentUI(data.token);
+                }
+            });
+        });
+    </script>
+    
+    
+{% endblock %}

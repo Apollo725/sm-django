@@ -1,0 +1,199 @@
+{% extends "sm/frontend/menu.html" %}
+{% load static %}
+{% load i18n %}
+{% load sm %}
+
+{% block title %}
+    {% trans "Profile" %}
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "sm/frontend/bower_components/angular/angular.min.js" %}" xmlns="http://www.w3.org/1999/html"></script>
+    <script src="{% static "sm/frontend/bower_components/parsleyjs/dist/parsley.js" %}"></script>
+    {% with "sm/frontend/bower_components/parsleyjs/src/i18n/"|add:lang_code|add:".js" as parsley_i18n_js %}
+        <script src="{% static parsley_i18n_js %}"></script>
+    {% endwith %}
+    <script src="{% static "sm/frontend/bower_components/moment/min/moment.min.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1 class="titlepage">{% trans "Profile" %}</h1>
+    <form class="gsc-checkout" method="post" id="gsc-checkout-form">
+        {% csrf_token %}
+        <div class="row">
+            <div class="user-detail detail-page">
+                <div class="row">
+                    <div class="col s12 BillingContactCard">
+                        <div class="whitebox">
+                            <fieldset>
+                                <div class="greybox">
+                                    <legend class="card-title">
+                                        {% trans "Billing contact" %}
+                                    </legend>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label id="label_email" for="email">{% trans "Email address" %}{{ customer }}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ contact_form.contact_email }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label id="label_name" class="disableable" for="name">{% trans "Full name" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ contact_form.name }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label id="label_phone" for="id_phone_number">{% trans "Phone number" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ contact_form.phone_number }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="greybox nomarbot">
+                                    <legend class="card-title">
+                                        {% trans "Billing details" %}
+                                    </legend>
+                                    <div class="row inline-form">
+                                        <div id="country" class="col s3">
+                                            <label for="country">{% trans "Country" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.country }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div id="state" class="col s3">
+                                            <label for="state">{% trans "State" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.state }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label for="city">{% trans "City" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.city }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label for="zip_code">{% trans "Zip code" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.zip_code }}
+                                        </div>
+                                    </div>
+                                    <div class="row inline-form">
+                                        <div class="col s3">
+                                            <label for="address">{% trans "Address" %}</label>
+                                        </div>
+                                        <div class="col offset-s1 s8">
+                                            {{ billing_form.address }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="{% if LANGUAGE == 'he' %}left{% else %}right{% endif %}">
+                                <button type="submit" id="BDCswitch" class="modif btn">{% trans "Update" %}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+ <!-- state country -->
+    <script>
+        $(function () {
+            var $state = $('[name=state]');
+            var $country = $('[name=country]');
+            var origin = {
+                state: $state.val(),
+                country: $country.val()
+            };
+
+            $country.find('option[value=""]').attr('disabled', true);
+
+            setTimeout(function(){
+                $('select').material_select();
+            },500);
+
+            var onCountryChange = function () {
+                
+                $('#state').next().find('select').material_select('destroy');
+                $('#state').next().find('option').remove();
+                var states;
+                var country = $('[name=country]').val();
+
+                var appendSelect = function (country, states) {
+                    $('#state').next().html('');
+                    $('#state').next().append(
+                            $('<select name="state"/>')
+                    );
+                    $.each(states, function (val, text) {
+                        var $option = $('<option/>').val(text).text(text);
+                        if (origin.state == text && country == origin.country) {
+                            $option.attr('selected', true);
+                        }
+                        $('#state').next().find('select').append($option);
+                    });
+
+                    $('#state').next().find('[name=state]').material_select();
+                };
+
+                switch (country) {
+                    case 'Australia':
+                        states = ['Australian Capital Territory', 'New South Wales',
+                            'Northern Territory', 'Queensland',
+                            'South Australia', 'Tasmania',
+                            'Victoria', 'Western Australia'];
+                        appendSelect(country, states);
+                        break;
+
+                    case 'Canada':
+                        states = ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick',
+                            'Newfoundland and Labrador', 'Nova Scotia', 'Ontario',
+                            'Prince Edward Island', 'Quebec', 'Saskatchewan',
+                            'Northwest Territories', 'Nunavut', 'Yukon'];
+                        appendSelect(country, states);
+                        break;
+
+                    case 'United States':
+                        states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+                            'Delaware', 'District Of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois',
+                            'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts',
+                            'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada',
+                            'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+                            'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+                            'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia',
+                            'Wisconsin', 'Wyoming'];
+                        appendSelect(country, states);
+                        break;
+                    default:
+                        $('#state').next().find('input').remove();
+                        $('#state').next().find('select').remove();
+                        $('#state').next().append('{{ billing_form.state }}');
+                        if (country == origin.country) {
+                            $('#state').find('input').val(origin.state);
+                        }
+                }
+            };
+
+	        $('select[name=country]').on('change', onCountryChange).material_select();
+	        onCountryChange();
+
+        });
+    </script>
+    
+    {% endblock %}

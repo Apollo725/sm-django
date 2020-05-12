@@ -1,0 +1,162 @@
+{% load i18n %}
+{% load sm %}
+{% load mathfilters %}
+{% get_current_language as LANGUAGE %}
+
+<table class="plans" cellspacing="0" cellpadding="0" border="1">
+	<colgroup>
+		<col />
+		<col />
+		<col />
+		<col />
+	</colgroup>
+	<thead>
+	<tr>
+		<th>
+			{% if LANGUAGE == 'he' %}
+			<img src="/static/sm/product/gsc/img/GSC-logo-by-HE-600.png" alt="GSC Logo">
+			{% else %}
+			<img src="/static/sm/product/gsc/img/GSC-logo-by-600.png" alt="GSC Logo">
+			{% endif %}
+		</th>
+		<th class="gw-go-price-wrap" {% if LANGUAGE == 'he' %}style="border-left: 1px solid #2880c3;border-right: 0;"{% endif %}>
+			<p class="plan_name">{% trans "BASIC" %}</p>
+			<p class="pricing">
+				{% if subscription.customer.currency == "USD" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="price">{% if monthly_pricing == "true" %}{{ tiers.monthly.basic.price }}{% else %}{{ tiers.yearly.basic.price|div:12|floatformat:2 }}{% endif %}</span>{% if subscription.customer.currency == "EUR" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="frequency">/{% trans "domain" %}/{% trans "month" %}</span>
+			</p>
+			<p class="billed_yearly">{% if monthly_pricing == "true" %}{% trans "Billed monthly" %}{% else %}{% trans "Billed annually" %}{% endif %}</p>
+			<p class="yrly_price">
+				{% if monthly_pricing != "true" %}({% trans "Total" %} {% if subscription.customer.currency == "USD" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="price">{{ tiers.yearly.basic.price }}</span>{% if subscription.customer.currency == "EUR" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="frequency">/{% trans "year" %}</span>){% endif %}
+			</p>
+		</th>
+		<th class="gw-go-price-wrap">
+			<div class="ribbon">{% trans "Most popular" %}</div>
+			<p class="plan_name">{% trans "ENTERPRISE" %}</p>
+			<p class="pricing">
+				{% if subscription.customer.currency == "USD" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="price">{% if monthly_pricing == "true" %}{{ tiers.monthly.enterprise.price }}{% else %}{{ tiers.yearly.enterprise.price|div:12|floatformat:2 }}{% endif %}</span>{% if subscription.customer.currency == "EUR" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="frequency">/{% trans "user" %}/{% trans "month" %}</span>
+			</p>
+			<p class="billed_yearly">{% if monthly_pricing == "true" %}{% trans "Billed monthly" %}{% else %}{% trans "Billed annually" %}{% endif %}</p>
+			<p class="yrly_price">
+				{% if monthly_pricing != "true" %}(Total {% if subscription.customer.currency == "USD" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="price">{{ tiers.yearly.enterprise.price }}</span>{% if subscription.customer.currency == "EUR" %}<span class="device">{{ subscription.customer.currency|currency_symbol }}</span>{% endif %}<span class="frequency">/{% trans "year" %}</span>){% endif %}
+			</p>
+			<p class="user_limit"><em>{% trans "(from 5 users)" %}</em></p>
+		</th>
+		<th>
+			<p class="plan_name">{% trans "corporate" %}</p>
+			<p class="btn_contact"><a href="{% if LANGUAGE = 'en' %}http://www.gmailsharedcontacts.com/contact-us/ {% else %} http://{{LANGUAGE}}.gmailsharedcontacts.com/contact-us/ {% endif %}">{% trans "contact us" %}</a></p>
+		</th>
+	</tr>
+	<tr>
+		<th>{% trans "Features" %}</th>
+		<td>
+			{% with tier=tiers.yearly.basic %}
+				{% if tier.high > 0 %}
+					<p class="slogtext">
+						{% blocktrans trimmed with tier_high=tier.high %}
+							{{tier_high}} USERS PACK
+						{% endblocktrans %}
+					</p>
+				{% endif %}
+			{% endwith %}
+		</td>
+		<td>{% trans "UNLIMITED SHARES" %}</td>
+		<td>{% trans "advanced admin capabilities" %}</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>{% trans "Shared contacts groups" %}</td>
+		<td>{% trans "Up to 10 shared contact groups" %}</td>
+		<td class="check"><strong>{% trans "Unlimited" %}</strong></td>
+		<td class="check"><strong>{% trans "Unlimited" %}</strong></td>
+	</tr>
+	<tr>
+		<td>{% trans "Shared contacts" %}</td>
+		<td>{% trans "Up to 250 contacts per group" %}</td>
+		<td class="check"><strong>{% trans "Unlimited" %}</strong></td>
+		<td class="check"><strong>{% trans "Unlimited" %}</strong></td>
+	</tr>
+	<tr>
+		<td>{% trans "Mobile/Tablet & Outlook sync" %}</td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Permissions Management" %}</td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Email Support" %}</td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Sharing with users AND users groups" %}</td>
+		<td><br></td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Sharing with external domain users and @gmail.com addresses" %}</td>
+		<td><br></td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Instant Synchronization" %}*</td>
+		<td><br></td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Live Support" %}</td>
+		<td><br></td>
+		<td class="check">✔</td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Advanced logging and security features" %}</td>
+		<td><br></td>
+		<td><br></td>
+		<td class="check">✔</td>
+	</tr>
+	<tr>
+		<td>{% trans "Unlimited Contact Backup" %}</td>
+		<td><br></td>
+		<td><br></td>
+		<td class="check">✔</td>
+	</tr>
+	</tbody>
+	<tfoot>
+	<tr>
+		<td><br></td>
+		<td {% if inactive_products.basic == True %}class="disabled"{% endif %}>
+			<div>
+				<form method="post">
+					<button {% if inactive_products.basic == True %}disabled{% endif %} type="submit" class="btn_cta" value="{% if monthly_pricing = "true" %}FLEX_PREPAID{% else %}ANNUAL_YEARLY{% endif %}" name="plan">{% trans "Buy" %}</button>
+					<input type="hidden" name="amount" value="{% if monthly_pricing = "true" %}{{ tiers.monthly.basic.high }}{% else %}{{ tiers.yearly.basic.high }}{% endif %}">
+					<input type="hidden" name="version" value="BASIC">
+					{% csrf_token %}
+				</form>
+			</div>
+		</td>
+		<td {% if inactive_products.enterprise == True %}class="disabled"{% endif %}>
+			<div>
+				<form method="post">
+					<button {% if inactive_products.enterprise == True %}disabled{% endif %} type="submit" class="btn_cta" value="{% if monthly_pricing = "true" %}FLEX_PREPAID{% else %}ANNUAL_YEARLY{% endif %}" name="plan">{% if upgrade == 'true' %}{% trans "Upgrade" %}{% else %}{% trans "Buy" %}{% endif %}</button>
+					<input type="hidden" name="amount" value="{% if monthly_pricing = "true" %}{{ tiers.monthly.enterprise.high }}{% else %}{{ tiers.yearly.enterprise.high }}{% endif %}">
+					<input type="hidden" name="version" value="ENTERPRISE">
+					{% csrf_token %}
+				</form>
+			</div>
+		</td>
+		<td>
+			<div><button class="btn_cta"><a href="{% if LANGUAGE = 'en' %}http://www.gmailsharedcontacts.com/contact-us/ {% else %} http://{{LANGUAGE}}.gmailsharedcontacts.com/contact-us/ {% endif %}">{% trans "contact us" %}</a></button></div>
+		</td>
+	</tr>
+	</tfoot>
+</table>

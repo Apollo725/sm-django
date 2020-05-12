@@ -1,0 +1,39 @@
+version: "2"
+services:
+  runtime:
+    command: echo "Runtime initialized, exit now"
+    entrypoint: /bin/entrypoint.sh
+    depends_on:
+      - pg
+      - redis
+      - mail
+    ports:
+      - 80:80
+    environment:
+      PG_HOST: pg
+      REDIS_HOST: redis
+      DJANGO_SETTINGS_MODULE: app.dev_settings
+      USE_DOCKER: 'True'
+      XDG_CACHE_HOME: /var/cache/pip
+    image: gappsexperts/sm-runtime-2
+    build:
+      context: .
+      dockerfile: scripts/Dockerfile.yml
+    volumes:
+      - pip_cache:/var/cache/pip
+      - .:/app
+    working_dir: /app
+  redis:
+    image: redis:2
+  pg:
+    image: postgres:9.4
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: sm
+  mail:
+    image: mailhog/mailhog
+
+volumes:
+  db-data:
+  pip_cache: {}

@@ -1,0 +1,129 @@
+{% extends "sm/frontend/large_banner_template.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block large-banner-text %}
+    {% trans "sign in" %}
+{% endblock %}
+
+
+{% block content %}
+    <meta name="google-signin-client_id" content="643378504561-o207o7hsp1me1n3rru6mp9367k8agmdc.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    {% if mock_users.count %}
+        <div class="container">
+            {% for mock_user in mock_users.all %}
+                <div>
+                    <a class="tooltipped" data-position="right"  href="{{ mock_user.debug_login_url }}" data-tooltip="{{ mock_user.description }}">Login as {{ mock_user.email }} (mock)</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <h1 class="center-align">
+        {% if test_mode %}
+            <a class="btn btn-large waves-effect waves-light blue" style="height: auto; padding: 20px"
+                    href="{{ install_path }}" title="Register with your Shared Contacts for Gmail&reg; account">
+                <img  src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="Shared Contacts for Gmail &reg;" style="height: 60px; vertical-align: middle"> Register
+            </a>
+            <a class="btn btn-large waves-effect waves-light blue" style="height: auto; padding: 20px" title="Login with your Shared Contacts for Gmail&reg; account">
+                <div id="signin"></div>
+                <img src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="Shared Contacts for Gmail &reg;" style="height: 60px; vertical-align: middle"> {% trans 'Sign in' %}
+            </a>
+        {% else %}
+            <a class="btn btn-large waves-effect waves-light blue" style="height: auto; padding: 20px"
+                    href="{{ gsc_url }}/account/login?redirect={{ abs_path }}" title="Login with your Shared Contacts for Gmail&reg; account">
+                <img src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="Shared Contacts for Gmail &reg;" style="height: 60px; vertical-align: middle"> {% trans 'Sign in' %}
+            </a>
+        {% endif %}
+    </h1>
+  <script>
+    function getCustomer(customer) {
+        if (customer.toLowerCase().endsWith('googlemail.com') ||  customer.toLowerCase().endsWith('gmail.com'))
+            customer = customer.toLowerCase().replace('@', '__')
+        else
+            customer = customer.split("@").pop();
+        return customer;
+    }
+
+    var signInClicked = false;
+    $('#signin').on('click', function (event) {
+        signInClicked = true;
+    });
+    function onSuccess(googleUser) {
+        if(signInClicked) {
+            var email = googleUser.getBasicProfile().getEmail();
+            var customer = getCustomer(email);
+
+            smapi.getInstallState(email).done(function (data) {
+                if(data.installed == true) {
+                    smapi.getToken(customer, email).done(function(token) {
+                            smapi.loginIn(token.key);
+                        }
+                    );
+                }
+            })
+        }
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('signin', {
+        'scope': 'profile email',
+        'width': 265,
+        'height': 100,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+
+    window.smURL = "{{ abs_path }}";
+    var smapi = {
+        user: null,
+        baseUri: smURL + "api",
+        baseGscUri: smURL + "api/products/gsc",
+
+        buildUri: function(uri) {
+            return this.baseUri + uri;
+        },
+
+        buildGscUri: function(uri) {
+            return this.baseGscUri + uri;
+        },
+
+        buildFrontendUri: function(uri) {
+            return smURL + uri;
+        },
+
+        getToken: function(customer, email) {
+            return $.ajax({
+                method: "GET",
+                url: this.buildUri("/userTokens/" + customer + "/" + email + ''),
+                headers: {
+                    'authorization': 'Token {{ admin_token }}',
+                    'content-type': 'application/json'
+                }
+            });
+        },
+
+        getInstallState: function(email) {
+            return $.ajax({
+                method: "GET",
+                url: this.buildGscUri("/installState?email=" + email),
+                headers: {
+                    'authorization': 'Token {{ admin_token }}',
+                    'content-type': 'application/json'
+                }
+            });
+        },
+
+        loginIn: function(token) {
+            document.location = this.buildFrontendUri("accounts/login/?user_token=" + token);
+        },
+    };
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+{% endblock %}

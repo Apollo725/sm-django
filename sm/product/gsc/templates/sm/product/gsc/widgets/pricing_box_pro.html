@@ -1,0 +1,89 @@
+{% extends "sm/product/gsc/widgets/pricing_box.html" %}
+{% load i18n %}
+{% load sm %}
+{% load static %}
+
+{% block price_title %}
+    <div class="cost">
+         {% if subscription.customer.currency == "USD" %}<sup>{{ subscription.customer.currency|currency_symbol }}</sup>{%endif%}{% if monthly_pricing == "true" %}{{ month_price_monthly }}{%else%}{{ month_price }}{%endif%}{% if subscription.customer.currency == "EUR" %}<sup>{{ subscription.customer.currency|currency_symbol }}</sup>{%endif%}<sub>/{% trans "user" %}/{% trans "month" %}</sub>
+    </div>
+{% endblock %}
+
+{% block feature_title %}
+    <p class="slogtext"> {% trans "UNLIMITED SHARES" %}</p>
+{% endblock %}
+
+{% block billed_annualy %}
+    <div class="billing-circle cost-resume">
+        <p class="cost-resume-txt">
+            {% if monthly_pricing == "true" %}
+                {% trans "Billed monthly" %} 
+            {% else %}
+                {% trans "Billed annually" %} 
+            {% endif %}
+            <br/>
+            
+            {% if monthly_pricing != "true" %}
+                {% trans "Total " %}
+            {% endif %}
+            {% if subscription.customer.currency == "USD" %}
+                {% if monthly_pricing != "true" %}
+                    {{ subscription.customer.currency|currency_symbol }}
+                {% endif %}
+            {%endif%}
+                {% if monthly_pricing != "true" %}
+                    {{ year_price }}
+                {% endif %}
+            {% if subscription.customer.currency == "EUR" %}
+                {% if monthly_pricing != "true" %}
+                    {{ subscription.customer.currency|currency_symbol }}
+                {% endif %}
+            {%endif%}
+            {% if monthly_pricing != "true" %}
+                /{% trans "year" %}
+            {% endif %}
+        </p>
+        <p style="text-align:center;font-size:x-small;margin:0;line-height: .8em;"><em>(min. 5 {% trans 'users' %})</em></p>
+    </div>
+{% endblock %}
+
+{% block version_name %}
+    {% trans "PRO" %}
+{% endblock %}
+
+{% block feature_list %}
+    <ul>
+        <li class="additional">
+            {% trans "Unlimited # of shared contact groups" %}
+        </li>
+        <li class="additional">
+            {% trans "Unlimited # of shared contacts" %}
+        </li>
+        <li class="additional">
+            {% trans "Sharing with users AND users groups" %}
+        </li>
+        <li>
+            {% trans "Mobile/Tablet & Outlook sync" %}
+        </li>
+        <li>
+            {% trans "Permission delegation" %}
+        </li>
+        <li>
+            {% trans "Sharing with users" %}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block buy_button %}   
+                    <div class="buy-button">
+                        <button class="btn waves-effect waves-light {{ btn_color_class }} uppercase" type="submit" name="plan"
+                                {% if inactive %}disabled{% endif %}
+                                 {% if monthly_pricing == "true" %} value="FLEX_PREPAID"  {% else %} value="ANNUAL_YEARLY" {% endif %} >
+                            {% if upgrade and not inactive %}
+                                {% trans "upgrade" %}
+                            {% else %}
+                                {% trans "Buy" %}
+                            {% endif %}
+                        </button>
+                    </div>
+                    {% endblock %}

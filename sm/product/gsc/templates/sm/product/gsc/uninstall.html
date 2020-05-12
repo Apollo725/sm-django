@@ -1,0 +1,60 @@
+{% extends "sm/frontend/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load mathfilters %}
+
+{% block title %}
+    {% trans "Uninstalled" %} - {% trans "Shared Contacts for Gmail" %} ® - {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "sm/product/gsc/css/main.css" %}">
+{% endblock %}
+
+
+{% block template %}
+    <div class="gsc-pricing-template roboto">
+        <div class="banner center-align">
+            <a href="/">
+                <img src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="GSC Logo" height="116">
+            </a>
+        </div>
+        <div id="uninstalled-modal" class="modal">
+            <div class="modal-content">
+                <img src="{% static "sm/product/gsc/img/Uninstall.png" %}" alt="uninstalled"/>
+                <span class="uninstalled_title">Shared Contacts for Gmail® was uninstalled</span>
+
+                <div class="row">
+                    <div class="col s12">
+                        {% blocktrans trimmed %}
+                            It seems Shared Contacts for Gmail® was uninstalled from your domain.
+                        {% endblocktrans %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        {% blocktrans trimmed %}
+                            Please install the application again to enjoy sharing your contacts.
+                        {% endblocktrans %}
+                    </div>
+                </div>
+
+                <div class="modal-footer right-align">
+                    <a class="radius btn modal-action waves-effect waves-green"
+                       href="https://apps.google.com/marketplace/app/mbfapdghdacnmfajnmikblekeoopfgll">
+                        {% trans "Install now" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            $('#uninstalled-modal').openModal({
+                dismissible: false
+            });
+        }
+    </script>
+{% endblock %}
+
+

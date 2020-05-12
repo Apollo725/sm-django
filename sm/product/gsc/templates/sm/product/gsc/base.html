@@ -1,0 +1,20 @@
+{% extends "sm/frontend/large_banner_template.html" %}
+{% load static %}
+{% load i18n %}
+{% load mathfilters %}
+
+{% block title %}
+    {% trans "Shared Contacts for Gmail" %} ® - {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "sm/product/gsc/css/main.css" %}">
+{% endblock %}
+
+{% block product-logo %}
+    <div class="gsc-logo">
+        <a href="http://www.gmailsharedcontacts.com">
+            <img src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="GSC Logo">
+        </a>
+    </div>
+{% endblock %}

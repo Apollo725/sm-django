@@ -1,0 +1,15 @@
+[
+  {
+    "fields": {
+      "code": "7152214",
+      "start_at": "2016-10-19T17:46:42.092Z",
+      "name": "discount -15%",
+      "created_at": "2016-10-19T17:46:42.091Z",
+      "modified_at": "2016-10-19T17:46:42.091Z",
+      "end_at": null,
+      "amount": 0.15
+    },
+    "model": "core.discountcode",
+    "pk": 1
+  }
+]

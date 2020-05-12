@@ -1,0 +1,815 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SM 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-02 10:45+0000\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+
+msgid "English"
+msgstr ""
+
+msgid "French"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Italian"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "Portuguese"
+msgstr ""
+
+msgid "Korean"
+msgstr ""
+
+msgid "Japanese"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Customer"
+msgstr ""
+
+msgid "Resold customer"
+msgstr ""
+
+msgid "Google customer"
+msgstr ""
+
+msgid "Reseller"
+msgstr ""
+
+msgid "Buyer"
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Free version"
+msgstr ""
+
+msgid "Basic version"
+msgstr ""
+
+msgid "Professional version"
+msgstr ""
+
+msgid "Enterprise version"
+msgstr ""
+
+msgid "Subscription"
+msgstr ""
+
+msgid "One-shot"
+msgstr ""
+
+msgid "1 year"
+msgstr ""
+
+msgid "1 month"
+msgstr ""
+
+msgid "Paypal auto"
+msgstr ""
+
+msgid "Paypal preapproved"
+msgstr ""
+
+msgid "Paypal manual"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Paid"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "OVERDUE"
+msgstr ""
+
+msgid "Partially paid"
+msgstr ""
+
+msgid "Delivered"
+msgstr ""
+
+msgid "Approved"
+msgstr ""
+
+msgid "Invoice sent"
+msgstr ""
+
+msgid "Renew"
+msgstr ""
+
+msgid "Flex"
+msgstr ""
+
+msgid "Reduce"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Subscription Manager"
+msgstr ""
+
+msgid "sign in"
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "name"
+msgstr ""
+
+msgid "full name"
+msgstr ""
+
+msgid "MY SUBSCRIPTIONS"
+msgstr ""
+
+msgid "Need assistance?"
+msgstr ""
+
+msgid "If you need help with your subscription please contact our support team at <a href=\"%(mail_to)s\">%(mail)s</a>."
+msgstr ""
+
+msgid "Full name"
+msgstr ""
+
+msgid "Email address"
+msgstr ""
+
+msgid "Phone number"
+msgstr ""
+
+msgid "Shared Contacts for Gmail"
+msgstr ""
+
+msgid "Thank you"
+msgstr ""
+
+msgid "Thank you for trusting Shared Contacts for Gmail®."
+msgstr ""
+
+msgid "Your account has been successfully upgraded."
+msgstr ""
+
+msgid "Your account has subscribed to Shared Contacts for Gmail® successfully."
+msgstr ""
+
+msgid "You can now enjoy all the features and options of the full version, and find at any time all the details of your subscription: expiration date, next payment, number of licenses and more."
+msgstr ""
+
+msgid "LAUNCH APP"
+msgstr ""
+
+msgid "See my subscriptions"
+msgstr ""
+
+msgid "Connect with us"
+msgstr ""
+
+msgid "Checkout"
+msgstr ""
+
+msgid "CHECKOUT"
+msgstr ""
+
+msgid "edition"
+msgstr ""
+
+msgid "Billed"
+msgstr ""
+
+msgid "1 year commitment"
+msgstr ""
+
+msgid "Enter how many licences you need"
+msgstr ""
+
+msgid "Licenses"
+msgstr ""
+
+msgid "Total to pay"
+msgstr ""
+
+msgid "You have"
+msgstr ""
+
+msgid "You add"
+msgstr ""
+
+msgid "You will have now"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Billing contact"
+msgstr ""
+
+msgid "This contact will receive all the communication relative to the payment"
+msgstr ""
+
+msgid "Change"
+msgstr ""
+
+msgid "Billing details"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Zip code"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "YOUR ORDER"
+msgstr ""
+
+msgid "Shared Contacts For Gmail"
+msgstr ""
+
+msgid "Number of licenses:"
+msgstr ""
+
+msgid "Domain users: %(domain_users)s"
+msgstr ""
+
+msgid "Domain name"
+msgstr ""
+
+msgid "Plan"
+msgstr ""
+
+msgid "Billing method"
+msgstr ""
+
+msgid "Annual"
+msgstr ""
+
+msgid "Monthly"
+msgstr ""
+
+msgid "Currency"
+msgstr ""
+
+msgid "Expiration date"
+msgstr ""
+
+msgid "Add promotion code"
+msgstr ""
+
+msgid "Enter promotion code"
+msgstr ""
+
+msgid "APPLY"
+msgstr ""
+
+msgid "Total cost "
+msgstr ""
+
+msgid "Per month"
+msgstr ""
+
+msgid "Per year"
+msgstr ""
+
+msgid "Total cost"
+msgstr ""
+
+msgid "\n                            from now to %(expiry_date)s\n"
+msgstr ""
+
+msgid "Select your method of payment"
+msgstr ""
+
+msgid "Card Number"
+msgstr ""
+
+msgid "Expiration Date"
+msgstr ""
+
+msgid "CVV"
+msgstr ""
+
+msgid "Terms and conditions"
+msgstr ""
+
+msgid "You are subscribing to a %(commitment)s subscription with Shared Contacts for Gmail®."
+msgstr ""
+
+msgid "Gapps Experts will renew your commitment for an additional %(commitment)s for all licenses at the then-current price, exactly %(commitment)s after your payment."
+msgstr ""
+
+msgid "Yes, I have read and accept Gapps Experts terms and conditions. "
+msgstr ""
+
+msgid "PROCEED TO CHECKOUT"
+msgstr ""
+
+msgid "Credit card"
+msgstr ""
+
+msgid "Paypal"
+msgstr ""
+
+msgid "PAY"
+msgstr ""
+
+msgid "Sorry, the promotion code you entered is either wrong or expired. Please contact or Cloud consultants at to get assistance."
+msgstr ""
+
+msgid "Send us an email at %(contact_email)s or chat with us through our website."
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Pricing"
+msgstr ""
+
+msgid "Choose the plan that fits your business"
+msgstr ""
+
+msgid "THANK YOU"
+msgstr ""
+
+msgid "Thank you for installing Shared Contacts for Gmail®."
+msgstr ""
+
+msgid "Your data has been saved and you can start now using the application."
+msgstr ""
+
+msgid "Registration"
+msgstr ""
+
+msgid "YOUR ARE INSTALLING <br> SHARED CONTACTS FOR GMAIL®"
+msgstr ""
+
+msgid "Welcome to"
+msgstr ""
+
+msgid "Create an account and start using <br> Shared Contacts for Gmail®"
+msgstr ""
+
+msgid "How do you buy your Google Apps licenses?"
+msgstr ""
+
+msgid "Directly from Google"
+msgstr ""
+
+msgid "Through a Reseller"
+msgstr ""
+
+msgid "Register"
+msgstr ""
+
+msgid "Uninstalled"
+msgstr ""
+
+msgid "It seems Shared Contacts for Gmail® was uninstalled from your domain."
+msgstr ""
+
+msgid "Please install the application again to enjoy sharing your contacts."
+msgstr ""
+
+msgid "Install now"
+msgstr ""
+
+msgid "Need assistance"
+msgstr ""
+
+msgid "If you need help with your subscription please contact our support team at %(email_link)s."
+msgstr ""
+
+msgid "month"
+msgstr ""
+
+msgid "Or"
+msgstr ""
+
+msgid "/user"
+msgstr ""
+
+msgid "with monthly billing"
+msgstr ""
+
+msgid "upgrade"
+msgstr ""
+
+msgid "Buy"
+msgstr ""
+
+msgid "UP to %(tier_high)s USERS"
+msgstr ""
+
+msgid "Billed annually"
+msgstr ""
+
+msgid "year"
+msgstr ""
+
+msgid "BASIC"
+msgstr ""
+
+msgid "24/7 technical support"
+msgstr ""
+
+msgid "Mobile/Tablet & Outlook sync"
+msgstr ""
+
+msgid "Permission delegation"
+msgstr ""
+
+msgid "Sharing with users"
+msgstr ""
+
+msgid "Up to 10 shared contact groups"
+msgstr ""
+
+msgid "Up to 250 shared Contacts per groups"
+msgstr ""
+
+msgid "PER USER"
+msgstr ""
+
+msgid "FOR YOUR WHOLE DOMAIN"
+msgstr ""
+
+msgid "user"
+msgstr ""
+
+msgid "ENTERPRISE"
+msgstr ""
+
+msgid "Unlimited # of shared contact groups"
+msgstr ""
+
+msgid "Unlimited # of shared contacts"
+msgstr ""
+
+msgid "Sharing with users AND users groups"
+msgstr ""
+
+msgid "Sharing with external domain users and @gmail.com addresses"
+msgstr ""
+
+msgid "Most popular"
+msgstr ""
+
+msgid "PRO"
+msgstr ""
+
+msgid "Shared Contacts for Gmail®"
+msgstr ""
+
+msgid "Number of licenses: %(license_numer)s"
+msgstr ""
+
+msgid "buy more"
+msgstr ""
+
+msgid "Upgrade"
+msgstr ""
+
+msgid "Renewal date"
+msgstr ""
+
+msgid "Expiry date"
+msgstr ""
+
+msgid "Renewal option"
+msgstr ""
+
+msgid "Auto-renew on %(renewal_date)s"
+msgstr ""
+
+msgid "Order #"
+msgstr ""
+
+msgid "Order date"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Evalution"
+msgstr ""
+
+msgid "Start date"
+msgstr ""
+
+msgid "Renewal options"
+msgstr ""
+
+msgid "Auto-renew my contract"
+msgstr ""
+
+msgid "Renew my commitment on %(renewal_date)s for all licenses at the current price. (Currently %(license_number)s licenses)"
+msgstr ""
+
+msgid "Cancel my service at the end of my term"
+msgstr ""
+
+msgid "Service will be suspended on %(renewal_date)s, when my existing commitment ends."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Error happens when you pay, please try again or try with another credit card."
+msgstr ""
+
+msgid "pack"
+msgstr ""
+
+msgid "Billed monthly"
+msgstr ""
+
+msgid "%(tier_high)s USERS PACK"
+msgstr ""
+
+msgid "UNLIMITED SHARES"
+msgstr ""
+
+msgid "FOR MULTIPLE DOMAINS"
+msgstr ""
+
+msgid "Please enter your credit card information"
+msgstr ""
+
+msgid "Yes, I have read and accept Shared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>"
+msgstr ""
+
+msgid "Unit cost"
+msgstr ""
+
+msgid "Launch"
+msgstr ""
+
+msgid "Domain users"
+msgstr ""
+
+msgid "for %(customer_name)s"
+msgstr ""
+
+msgid "My subscription"
+msgstr ""
+
+msgid "Payment method"
+msgstr ""
+
+msgid "Started on"
+msgstr ""
+
+msgid "Billing frequency"
+msgstr ""
+
+msgid "Renews on"
+msgstr ""
+
+msgid "Next invoice"
+msgstr ""
+
+msgid "Add licences"
+msgstr ""
+
+msgid "Annual billing"
+msgstr ""
+
+msgid "Monthly billing"
+msgstr ""
+
+msgid "domain"
+msgstr ""
+
+msgid "Number of licenses"
+msgstr ""
+
+msgid "Total licences"
+msgstr ""
+
+msgid "My payment information"
+msgstr ""
+
+msgid "Add a payment method"
+msgstr ""
+
+msgid "Which kind of payment?"
+msgstr ""
+
+msgid "Validate"
+msgstr ""
+
+msgid "Credit card information"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Payment information"
+msgstr ""
+
+msgid "Yearly commitment"
+msgstr ""
+
+msgid "Monthly commitment"
+msgstr ""
+
+msgid "Enterprise Edition"
+msgstr ""
+
+msgid "Professional Edition"
+msgstr ""
+
+msgid "Basic Edition"
+msgstr ""
+
+msgid "Share contacts"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid "Advanced logging and security features"
+msgstr ""
+
+msgid "Click on \"Proceed to checkout\" to pay with your Paypal account"
+msgstr ""
+
+msgid "You will be charged by Paypal account %(email)s"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Saved successfully"
+msgstr ""
+
+msgid "Contact us at <a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>"
+msgstr ""
+
+msgid "You cannot purchase less than %(minimum_licenses_to_upgrade)s licenses"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Expires on"
+msgstr ""
+
+msgid "Econsulting Customer"
+msgstr ""
+
+msgid "Econsulting Partner"
+msgstr ""
+
+msgid "Econsulting Prospect"
+msgstr ""
+
+msgid "Prospect"
+msgstr ""
+
+msgid "Please contact your reseller for any new orders."
+msgstr ""
+
+msgid "from now to %(expiry_date)s"
+msgstr ""
+
+msgid "Valid until"
+msgstr ""
+
+msgid "Until your renewal date"
+msgstr ""
+
+msgid "Prorated price from now to"
+msgstr ""
+
+msgid "users"
+msgstr ""
+
+msgid "contact us"
+msgstr ""
+
+msgid "unlimited backup"
+msgstr ""
+
+msgid "corporate"
+msgstr ""
+
+msgid "advanced admin capabilities"
+msgstr ""
+
+msgid "Corporate Version"
+msgstr ""
+
+msgid "Up to 250 contacts per group"
+msgstr ""
+
+msgid "Sharing with same domain users"
+msgstr ""
+
+msgid "Permissions Management"
+msgstr ""
+
+msgid "Live Support"
+msgstr ""
+
+msgid "Unlimited Contact Backup"
+msgstr ""
+
+msgid "Instant Synchronization (Chrome users)"
+msgstr ""
+
+msgid "Email support"
+msgstr ""
+
+msgid "(from 5 users)"
+msgstr ""
+
+msgid "Try for free"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Features"
+msgstr ""
+
+msgid "Shared contacts groups"
+msgstr ""
+
+msgid "Shared contacts"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Instant Synchronization"
+msgstr ""
+
+msgid "Invoices"
+msgstr ""
+
+msgid "Chrome extension"
+msgstr ""
+
+msgid "1 Pack of 5 licenses"
+msgstr ""
+
+msgid "for one year"
+msgstr ""
+
+msgid "for one month"
+msgstr ""
+
+msgid "Wrong license number"
+msgstr ""
+
+msgid "Wrong promotion code"
+msgstr ""
+
+msgid "Chrome users"
+msgstr ""
+
+msgid "We are sorry but your payment could not be processed. Please try again or contact us on support@gmailsharedcontacts.com"
+msgstr ""
+

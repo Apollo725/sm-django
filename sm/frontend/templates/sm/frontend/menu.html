@@ -1,0 +1,100 @@
+{% extends "sm/frontend/base.html" %}
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE %}
+
+{% block template %}
+    <div class="left-menu {% if LANGUAGE == 'he' %}rtl{% endif %}">
+        <nav>
+            <ul>
+                <li>
+                    {% if LANGUAGE == 'he' %}
+                    <img src="{% static "sm/frontend/img/shared-contact-for-gmail-he.png" %}">
+                    {% else %}
+                    <img src="{% static "sm/frontend/img/shared-contact-for-gmail.png" %}">
+                    {% endif %}
+                </li>
+                <li>
+                    <a href="{{ PRODUCT_URL }}">
+                        <div class="picto-wrapper">
+                            <span class="picto"><img src="{% static "sm/frontend/img/menu-share-contacts.png" %}"></span>
+                        </div>
+                        <span class="uppercase">{% trans "Share contacts" %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/products/gsc/subscriptions">
+                        <div class="picto-wrapper">
+                            <span class="picto"><img src="{% static "sm/frontend/img/menu-subscription.png" %}"></span>
+                        </div>
+                        <span class="uppercase">{% trans "Subscription" %}</span>
+                    </a>
+                </li>
+                {% if show_pricing_menu %}
+                <li>
+                    <a href="/products/gsc/pricing">
+                        <div class="picto-wrapper">
+                            <span class="picto"><img src="{% static "sm/frontend/img/menu-pricing.png" %}"></span>
+                        </div>
+                        <span class="uppercase">{% trans "Pricing" %}</span>
+                    </a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="/products/gsc/invoices">
+                        <div class="picto-wrapper">
+                            <span class="picto"><img src="{% static "sm/frontend/img/invoice.png" %}"></span>
+                        </div>
+                        <span class="uppercase">{% trans "Invoices" %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/products/gsc/profile">
+                        <div class="picto-wrapper">
+                            <span class="picto"><img src="{% static "sm/frontend/img/menu-profile.png" %}"></span>
+                        </div>
+                        <span class="uppercase">{% trans "Profile" %}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/products/gsc/payment-information">
+                        <div class="picto-wrapper">
+                            <span class="picto"><img src="{% static "sm/frontend/img/menu-payment-information.png" %}"></span>
+                        </div>
+                        <span class="uppercase">{% trans "Payment information" %}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+ 
+    </div>
+    
+    <script>
+    
+        var pages = $('.left-menu ul li a');
+        
+        pages.each(function(i){
+           
+            if(window.location.pathname.match(pages[i].pathname) != null){
+                if(i!=0) {
+                    $(this).parent().addClass('activeNav');
+                }
+
+            } else {
+                if(window.location.pathname == "/products/gsc/checkout")
+                {
+                    $('.left-menu ul li').eq(2).addClass('activeNav');
+                }
+                $(this).parent().removeClass('activeNav');
+            }
+            
+        });
+        
+
+    </script>
+    
+        <section class="content">
+            {% block content %}
+            {% endblock %}
+        </section>
+{% endblock %}

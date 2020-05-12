@@ -1,0 +1,221 @@
+{% extends "sm/frontend/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load mathfilters %}
+{% get_current_language as LANGUAGE %}
+
+{% block title %}
+    {% trans "Pricing" %} - {% trans "Shared Contacts for Gmail" %} ® - {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "sm/product/gsc/css/main.css" %}">
+{% endblock %}
+
+{% block template %}
+<div class="center">
+    <div class="gsc-pricing-template roboto">
+        <!--
+        <div class="banner center-align">
+            <a href="/">
+                <img src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="GSC Logo" height="116">
+            </a>
+        </div>
+        -->
+        <div class="pricing-list container" style="position: relative">
+            <!--
+            <div class="center-align head">
+                {% trans "Choose the plan that fits your business" %}
+            </div>
+            -->
+
+            <div class="header">
+                {% if LANGUAGE == 'he' %}
+                    <img src="{% static "sm/product/gsc/img/GSC-logo-by-HE-600.png" %}" alt="GSC Logo">
+                {% else %}
+                    <img src="{% static "sm/product/gsc/img/GSC-logo-by-600.png" %}" alt="GSC Logo">
+                {% endif %}
+            </div>
+
+            <div class="frequency_btn">
+                <ul>
+                    <li class="active uppercase">
+                        {% trans "Yearly commitment" %}
+                    </li><!--
+                    --><li class="uppercase">
+                        {% trans "Monthly commitment" %}
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+
+            <div class="hidden_for_mobile">
+                <div id="annually_pricing_table">
+                    {% include "sm/product/gsc/widgets/pricing_table.html" %}
+                </div>
+
+
+                {% with monthly_pricing="true" %}
+                <div id="monthly_pricing_table">
+                    {% include "sm/product/gsc/widgets/pricing_table.html" %}
+                </div>
+                {% endwith %}
+
+            </div>
+
+            <div class="hidden_for_desktop">
+                <div class="row" id="yearly_pricing">
+                    <div class="col s12 center-align notpopular">
+                        <!--BASIC version-->
+                        {% with tier=tiers.yearly.basic yearly=tiers.yearly.basic monthly=tiers.monthly.basic version='BASIC' btn_color_class='amber' inactive=inactive_products.basic %}
+                             <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_basic.html" %}
+                                <input type="hidden" name="amount" value="{{ tier.high }}">
+                                <input type="hidden" name="version" value="{{ version }}">
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %}
+                    </div>
+                    <!-- <div class="col s12 center-align notpopular"> -->
+                        <!--PRO version-->
+                        <!-- {% with tier=tiers.yearly.pro yearly=tiers.yearly.pro monthly=tiers.monthly.pro version='PRO' btn_color_class='amber' inactive=inactive_products.pro %}
+                            <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_pro.html" %}
+                                <input type="hidden" name="amount" value="{{ tier.high }}">
+                                <input type="hidden" name="version" value="{{ version }}">
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %}
+                    </div> -->
+                    <div class="col s12 center-align pro notpopular">
+                        <!--ENTERPRISE version-->
+                        {% with tier=tiers.yearly.enterprise yearly=tiers.yearly.enterprise monthly=tiers.monthly.enterprise version='ENTERPRISE' btn_color_class='blue' %}
+                            <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_enterprise.html" %}
+                                <input type="hidden" name="amount" value="{{ tier.high }}">
+                                <input type="hidden" name="version" value="{{ version }}">
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %}
+                    </div>
+                    <div class="col s12 center-align notpopular">
+                        <!--CORPORATE version-->
+                        {% with tier=tiers.yearly.basic yearly=tiers.yearly.enterprise monthly=tiers.monthly.enterprise version='CORPORATE' btn_color_class='red' %}
+                            {% include "sm/product/gsc/widgets/pricing_box_corporate.html" %}
+                        {% endwith %}
+                    </div>
+                </div>
+
+                {% with monthly_pricing="true" %}
+                <div class="row" id="monthly_pricing">
+                    <div class="col s12 center-align notpopular">
+                        <!--BASIC version-->
+                        {% with tier=tiers.yearly.basic yearly=tiers.yearly.basic monthly=tiers.monthly.basic version='BASIC' btn_color_class='amber' inactive=inactive_products.basic %}
+                            <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_basic.html" %}
+                                <input type="hidden" name="amount" value="{{ tier.high }}">
+                                <input type="hidden" name="version" value="{{ version }}">
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %}
+                    </div>
+                    <!-- <div class="col s12 center-align  notpopular "> -->
+                        <!--PRO version-->
+                        <!-- {% with tier=tiers.yearly.pro yearly=tiers.yearly.pro monthly=tiers.monthly.pro version='PRO' btn_color_class='amber' inactive=inactive_products.pro %}
+                            <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_pro.html" %}
+                                <input type="hidden" name="amount" value="{{ tier.high }}">
+                                <input type="hidden" name="version" value="{{ version }}">
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %} -->
+                    <!-- </div> -->
+                    <div class="col s12 center-align pro popular ">
+                        <!--ENTERPRISE version-->
+                        {% with tier=tiers.yearly.enterprise yearly=tiers.yearly.enterprise monthly=tiers.monthly.enterprise version='ENTERPRISE' btn_color_class='blue' %}
+                            <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_enterprise.html" %}
+                                <input type="hidden" name="amount" value="{{ tier.high }}">
+                                <input type="hidden" name="version" value="{{ version }}">
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %}
+                    </div>
+                    <div class="col s12 center-align notpopular">
+                        <!--ENTERPRISE version-->
+                        {% with tier=tiers.yearly.enterprise yearly=tiers.yearly.enterprise monthly=tiers.monthly.enterprise version='CORPORATE' btn_color_class='red' %}
+                            <form method="post">
+                                {% include "sm/product/gsc/widgets/pricing_box_corporate.html" %}
+                                {% csrf_token %}
+                            </form>
+                        {% endwith %}
+                    </div>
+                </div>
+                {% endwith %}
+            </div>
+            <p class="legend"><em>*{% trans "Chrome users" %}</em></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        
+        $("#monthly_pricing").hide();
+	    $("#monthly_pricing_table").hide();
+        $("#yearly_pricing").show();
+	    $("#annually_pricing_table").show();
+        
+        $(".frequency_btn ul li:eq(1)").addClass("shadow1");
+        
+        $(".frequency_btn li").click(function(){
+            $(".active").removeClass("shadow1");
+            $(".active").removeClass("shadow2");
+            $(".active").removeClass("active");
+            
+            $(this).addClass("active");
+            
+           if ( !$(".active").is(".frequency_btn li:first-child") ){
+               $(".frequency_btn li:first-child").addClass("shadow2");
+           }
+           else
+           {
+               $(".frequency_btn li:eq(1)").addClass("shadow1");
+           }
+        })
+        
+        $(".frequency_btn").click(function(){
+            if( $(".frequency_btn li:first-child").hasClass("active")){
+               $("#monthly_pricing").hide();
+	           $("#monthly_pricing_table").hide();
+               $("#yearly_pricing").show();
+	           $("#annually_pricing_table").show();
+            } else{
+               $("#monthly_pricing").show();
+	           $("#monthly_pricing_table").show();
+               $("#yearly_pricing").hide();
+	           $("#annually_pricing_table").hide();
+            }
+        })
+    })
+
+    // $(".notpopular").mouseenter(function(){
+    //     $(".popular").stop().animate({
+    //         top : "40px"
+    //     },300);
+    //     $(this).stop().animate({
+    //         top : "-40px"
+    //     },300);
+    // })
+    // $(".notpopular").mouseleave(function(){
+    //     $(".popular").stop().animate({
+    //         top : "0px"
+    //     },300);
+    //     $(this).stop().animate({
+    //         top : "0px"
+    //     },300);
+    // })
+
+</script>
+{% endblock %}

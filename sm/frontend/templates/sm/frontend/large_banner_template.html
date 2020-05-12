@@ -1,0 +1,30 @@
+{% extends "sm/frontend/base.html" %}
+{% load static %}
+
+{% block template %}
+    <div class="large-banner-template">
+        <section class="large-banner">
+            <div class="row logos center-align">
+                <div class="col s4 offset-l1 l1">
+                    <a href="/">
+                        <img src="{% static "sm/frontend/img/GAE_logo.png" %}" alt="GAE Logo">
+                    </a>
+                </div>
+                <div class="col s4 offset-l2 l4 large-banner-text">
+                    {% block large-banner-text %}
+                    {% endblock %}
+                </div>
+                <div class="col s4 offset-l2 l1">
+                    {% block product-logo %}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            {% block content %}
+            {% endblock %}
+        </section>
+    </div>
+{% endblock %}
+

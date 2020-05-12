@@ -1,0 +1,815 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SM 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-02 10:45+0000\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+
+msgid "English"
+msgstr "Inglês"
+
+msgid "French"
+msgstr "Francês"
+
+msgid "German"
+msgstr "Alemão"
+
+msgid "Spanish"
+msgstr "Espanhol"
+
+msgid "Italian"
+msgstr "Italiano"
+
+msgid "Russian"
+msgstr "Russo"
+
+msgid "Portuguese"
+msgstr "Português"
+
+msgid "Korean"
+msgstr "Coreano"
+
+msgid "Japanese"
+msgstr "Japonês"
+
+msgid "Home"
+msgstr "Página inicial"
+
+msgid "Customer"
+msgstr "Cliente"
+
+msgid "Resold customer"
+msgstr "Cliente de revenda"
+
+msgid "Google customer"
+msgstr "Cliente do Google"
+
+msgid "Reseller"
+msgstr "Revendedor"
+
+msgid "Buyer"
+msgstr "Comprador"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "User"
+msgstr "Usuário"
+
+msgid "Free version"
+msgstr "Versão gratuita"
+
+msgid "Basic version"
+msgstr "Versão básica"
+
+msgid "Professional version"
+msgstr "Versão profissional"
+
+msgid "Enterprise version"
+msgstr "Versão Corporativa"
+
+msgid "Subscription"
+msgstr "Assinatura"
+
+msgid "One-shot"
+msgstr "Impressão única"
+
+msgid "1 year"
+msgstr "1 ano"
+
+msgid "1 month"
+msgstr "1 mês"
+
+msgid "Paypal auto"
+msgstr "Paypal automático"
+
+msgid "Paypal preapproved"
+msgstr "Paypal pré-aprovado"
+
+msgid "Paypal manual"
+msgstr "Paypal manual"
+
+msgid "Offline"
+msgstr "Off-line"
+
+msgid "Active"
+msgstr "Ativo"
+
+msgid "Inactive"
+msgstr "Inativo"
+
+msgid "Open"
+msgstr "Aberto"
+
+msgid "Paid"
+msgstr "Pago"
+
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgid "OVERDUE"
+msgstr "VENCIDO"
+
+msgid "Partially paid"
+msgstr "Pago parcialmente"
+
+msgid "Delivered"
+msgstr "Entregue"
+
+msgid "Approved"
+msgstr "Aprovado"
+
+msgid "Invoice sent"
+msgstr "Fatura enviada"
+
+msgid "Renew"
+msgstr "Renovar"
+
+msgid "Flex"
+msgstr "Flex"
+
+msgid "Reduce"
+msgstr "Reduzir"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Subscription Manager"
+msgstr "Gerente de assinatura"
+
+msgid "sign in"
+msgstr "entrar"
+
+msgid "Sign in"
+msgstr "Entrar"
+
+msgid "name"
+msgstr "nome"
+
+msgid "full name"
+msgstr "nome completo"
+
+msgid "MY SUBSCRIPTIONS"
+msgstr "MINHAS ASSINATURAS"
+
+msgid "Need assistance?"
+msgstr "Precisa de ajuda?"
+
+msgid "If you need help with your subscription please contact our support team at <a href=\"%(mail_to)s\">%(mail)s</a>."
+msgstr "Se precisar de ajuda com a sua assinatura entre em contato com nossa equipe de suporte no  <a href=\"%(mail_to)s\">%(mail)s</a>."
+
+msgid "Full name"
+msgstr "Nome completo"
+
+msgid "Email address"
+msgstr "Endereço de e-mail"
+
+msgid "Phone number"
+msgstr "Número de telefone"
+
+msgid "Shared Contacts for Gmail"
+msgstr "Contatos Compartilhados para Gmail"
+
+msgid "Thank you"
+msgstr "Obrigado"
+
+msgid "Thank you for trusting Shared Contacts for Gmail®."
+msgstr "Obrigado por confiar nos Contatos Compartilhados para Gmail®."
+
+msgid "Your account has been successfully upgraded."
+msgstr "Sua conta foi atualizada com sucesso."
+
+msgid "Your account has subscribed to Shared Contacts for Gmail® successfully."
+msgstr "Crie uma conta e comece a usar o <br> Contatos Compartilhados para Gmail®"
+
+msgid "You can now enjoy all the features and options of the full version, and find at any time all the details of your subscription: expiration date, next payment, number of licenses and more."
+msgstr "Agora você pode desfrutar de todos os recursos e opções da versão completa, bem como encontrar a qualquer momento todos os detalhes de sua assinatura: data de validade, próximo pagamento, número de licenças, entre outros."
+
+msgid "LAUNCH APP"
+msgstr "INICIAR APLICATIVO"
+
+msgid "See my subscriptions"
+msgstr "Ver minhas assinaturas"
+
+msgid "Connect with us"
+msgstr "Conecte-se conosco"
+
+msgid "Checkout"
+msgstr "Finalizar compra"
+
+msgid "CHECKOUT"
+msgstr "FINALIZAR COMPRA"
+
+msgid "edition"
+msgstr "Registro"
+
+msgid "Billed"
+msgstr "Método de pagamento"
+
+msgid "1 year commitment"
+msgstr "Compromisso"
+
+msgid "Enter how many licences you need"
+msgstr "Insira a quantidade de licenças desejadas"
+
+msgid "Licenses"
+msgstr "licenças"
+
+msgid "Total to pay"
+msgstr "Custo total"
+
+msgid "You have"
+msgstr "Você tem"
+
+msgid "You add"
+msgstr "Você está adicionando"
+
+msgid "You will have now"
+msgstr "Agora você terá"
+
+msgid "New"
+msgstr "Novo(a)"
+
+msgid "Billing contact"
+msgstr "Contato de cobrança"
+
+msgid "This contact will receive all the communication relative to the payment"
+msgstr "Esse contato receberá toda a comunicação relativa ao pagamento"
+
+msgid "Change"
+msgstr "Mudança"
+
+msgid "Billing details"
+msgstr "Detalhes do pagamento"
+
+msgid "Country"
+msgstr "País"
+
+msgid "State"
+msgstr "Estado"
+
+msgid "City"
+msgstr "Cidade"
+
+msgid "Zip code"
+msgstr "CEP"
+
+msgid "Address"
+msgstr "Endereço"
+
+msgid "YOUR ORDER"
+msgstr "SEU PEDIDO"
+
+msgid "Shared Contacts For Gmail"
+msgstr "Contatos Compartilhados para Gmail"
+
+msgid "Number of licenses:"
+msgstr "Número de licenças: %(license_numer)s"
+
+msgid "Domain users: %(domain_users)s"
+msgstr "Usuários do domínio: %(domain_users)s"
+
+msgid "Domain name"
+msgstr "Nome do domínio"
+
+msgid "Plan"
+msgstr "Plano"
+
+msgid "Billing method"
+msgstr "Método de pagamento"
+
+msgid "Annual"
+msgstr "Anual"
+
+msgid "Monthly"
+msgstr "mês"
+
+msgid "Currency"
+msgstr "Moeda"
+
+msgid "Expiration date"
+msgstr "Data de expiração"
+
+msgid "Add promotion code"
+msgstr "Adicionar código promocional"
+
+msgid "Enter promotion code"
+msgstr "Digite o código promocional"
+
+msgid "APPLY"
+msgstr "APLICAR"
+
+msgid "Total cost "
+msgstr "Custo total"
+
+msgid "Per month"
+msgstr "1 mês"
+
+msgid "Per year"
+msgstr "1 ano"
+
+msgid "Total cost"
+msgstr "Custo total"
+
+msgid "\n                            from now to %(expiry_date)s\n"
+msgstr "\n                            a partir de agora até %(expiry_date)s\n"
+
+msgid "Select your method of payment"
+msgstr "Selecione seu método de pagamento"
+
+msgid "Card Number"
+msgstr "Número do cartão"
+
+msgid "Expiration Date"
+msgstr "Data de expiração"
+
+msgid "CVV"
+msgstr "CVV"
+
+msgid "Terms and conditions"
+msgstr "Termos e condições"
+
+msgid "You are subscribing to a %(commitment)s subscription with Shared Contacts for Gmail®."
+msgstr "Você está firmando %(commitment)s  assinaturas com Contatos Compartilhados para Gmail®."
+
+msgid "Gapps Experts will renew your commitment for an additional %(commitment)s for all licenses at the then-current price, exactly %(commitment)s after your payment."
+msgstr "A Gapps Experts renovará  a sua assinatura por um adicional de %(commitment)s para todas as licenças no preço vigente, exatamente %(commitment)s após o pagamento."
+
+msgid "Yes, I have read and accept Gapps Experts terms and conditions. "
+msgstr "Sim, eu li e aceito os termos e condições da Gapps Experts."
+
+msgid "PROCEED TO CHECKOUT"
+msgstr "FINALIZAR COMPRA"
+
+msgid "Credit card"
+msgstr "Cartão de crédito"
+
+msgid "Paypal"
+msgstr "Paypal"
+
+msgid "PAY"
+msgstr "PAGAR"
+
+msgid "Sorry, the promotion code you entered is either wrong or expired. Please contact or Cloud consultants at to get assistance."
+msgstr "Lamentamos, mas o código promocional que você inseriu está errado ou expirou. Entre em contato com os consultores para obter assistência."
+
+msgid "Send us an email at %(contact_email)s or chat with us through our website."
+msgstr "Envie um e-mail para %(contact_email)s ou fale conosco pelo nosso site."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Pricing"
+msgstr "Preços"
+
+msgid "Choose the plan that fits your business"
+msgstr "Escolha o plano que se ajusta ao seu negócio"
+
+msgid "THANK YOU"
+msgstr "OBRIGADO"
+
+msgid "Thank you for installing Shared Contacts for Gmail®."
+msgstr "Obrigado por instalar o Contatos Compartilhados para Gmail®."
+
+msgid "Your data has been saved and you can start now using the application."
+msgstr "Os seus dados foram salvos e você já pode começar a utilizar o aplicativo."
+
+msgid "Registration"
+msgstr "Registro"
+
+msgid "YOUR ARE INSTALLING <br> SHARED CONTACTS FOR GMAIL®"
+msgstr "VOCÊ ESTÁ INSTALANDO <br> CONTATOS COMPARTILHADOS PARA GMAIL®"
+
+msgid "Welcome to"
+msgstr "Bem-vindo(a) ao"
+
+msgid "Create an account and start using <br> Shared Contacts for Gmail®"
+msgstr "Crie uma conta e comece a usar o <br> Contatos Compartilhados para Gmail®"
+
+msgid "How do you buy your Google Apps licenses?"
+msgstr "Como você compra suas licenças do Google Apps?"
+
+msgid "Directly from Google"
+msgstr "Diretamente pelo Google"
+
+msgid "Through a Reseller"
+msgstr "Por meio de um revendedor"
+
+msgid "Register"
+msgstr "Registre-se"
+
+msgid "Uninstalled"
+msgstr "Desinstalado"
+
+msgid "It seems Shared Contacts for Gmail® was uninstalled from your domain."
+msgstr "Parece que o aplicativo Contatos Compartilhados para Gmail® foi desinstalado do seu domínio."
+
+msgid "Please install the application again to enjoy sharing your contacts."
+msgstr "Instale o aplicativo novamente para voltar a compartilhar seus contatos."
+
+msgid "Install now"
+msgstr "Instalar agora"
+
+msgid "Need assistance"
+msgstr "Precisa de ajuda"
+
+msgid "If you need help with your subscription please contact our support team at %(email_link)s."
+msgstr "Se precisar de ajuda com a sua assinatura entre em contato com nossa equipe de suporte pelo e-mail %(email_link)s."
+
+msgid "month"
+msgstr "mês"
+
+msgid "Or"
+msgstr "Ou"
+
+msgid "/user"
+msgstr "/usuário"
+
+msgid "with monthly billing"
+msgstr "com cobrança mensal"
+
+msgid "upgrade"
+msgstr "Prorrogar/atualizar"
+
+msgid "Buy"
+msgstr "Comprar"
+
+msgid "UP to %(tier_high)s USERS"
+msgstr "ATÉ %(tier_high)s USUÁRIOS"
+
+msgid "Billed annually"
+msgstr "Faturado anualmente"
+
+msgid "year"
+msgstr "ano"
+
+msgid "BASIC"
+msgstr "BÁSICO"
+
+msgid "24/7 technical support"
+msgstr "Suporte técnico 24x7"
+
+msgid "Mobile/Tablet & Outlook sync"
+msgstr "Sincronização com celular/tablete e Outlook"
+
+msgid "Permission delegation"
+msgstr "Delegação de permissão"
+
+msgid "Sharing with users"
+msgstr "Compartilhando com usuários"
+
+msgid "Up to 10 shared contact groups"
+msgstr "Até 10 grupos de contatos compartilhados"
+
+msgid "Up to 250 shared Contacts per groups"
+msgstr "Até 250 contatos compartilhados por grupos"
+
+msgid "PER USER"
+msgstr "POR USUÁRIO"
+
+msgid "FOR YOUR WHOLE DOMAIN"
+msgstr "PARA TODO O SEU DOMÍNIO"
+
+msgid "user"
+msgstr "usuário"
+
+msgid "ENTERPRISE"
+msgstr "EMPRESA"
+
+msgid "Unlimited # of shared contact groups"
+msgstr "N.º ilimitado de grupos de contatos compartilhados"
+
+msgid "Unlimited # of shared contacts"
+msgstr "N.º ilimitado de contatos compartilhados"
+
+msgid "Sharing with users AND users groups"
+msgstr "Compartilhando com usuários e grupos de usuários"
+
+msgid "Sharing with external domain users and @gmail.com addresses"
+msgstr "Compartilhando com os usuários do domínio externo e endereços @gmail.com"
+
+msgid "Most popular"
+msgstr "Mais popular"
+
+msgid "PRO"
+msgstr "PRO"
+
+msgid "Shared Contacts for Gmail®"
+msgstr "Contatos compartilhados para Gmail®"
+
+msgid "Number of licenses: %(license_numer)s"
+msgstr "Número de licenças: %(license_numer)s"
+
+msgid "buy more"
+msgstr "Comprar mais"
+
+msgid "Upgrade"
+msgstr "Atualização"
+
+msgid "Renewal date"
+msgstr "Data de renovação"
+
+msgid "Expiry date"
+msgstr "Data de expiração"
+
+msgid "Renewal option"
+msgstr "Opção de renovação"
+
+msgid "Auto-renew on %(renewal_date)s"
+msgstr "Renovamento automático em %(renewal_date)s"
+
+msgid "Order #"
+msgstr "N.º do pedido"
+
+msgid "Order date"
+msgstr "Data do pedido"
+
+msgid "Version"
+msgstr "Versão gratuita"
+
+msgid "Evalution"
+msgstr "Evaluação"
+
+msgid "Start date"
+msgstr "Data do pedido"
+
+msgid "Renewal options"
+msgstr "Opção de renovação"
+
+msgid "Auto-renew my contract"
+msgstr "Renovamento automático do meu contrato"
+
+msgid "Renew my commitment on %(renewal_date)s for all licenses at the current price. (Currently %(license_number)s licenses)"
+msgstr "A Gapps Experts renovará o seu compromisso por um adicional de %(commitment)s para todas as licenças ao preço então vigente, exatamente %(commitment)s após o pagamento."
+
+msgid "Cancel my service at the end of my term"
+msgstr "Cancelar o serviço no final do prazo atual"
+
+msgid "Service will be suspended on %(renewal_date)s, when my existing commitment ends."
+msgstr "O serviço será suspenso em %(renewal_date)s, quando o acordo atual cessará."
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Error happens when you pay, please try again or try with another credit card."
+msgstr "Erro ao pagar. Tente novamente ou tente com outro cartão de crédito."
+
+msgid "pack"
+msgstr "pacote"
+
+msgid "Billed monthly"
+msgstr "Cobrança mensal"
+
+msgid "%(tier_high)s USERS PACK"
+msgstr "%(tier_high)s PACOTE DE USUÁRIOS"
+
+msgid "UNLIMITED SHARES"
+msgstr "PARTILHA ILIMITADA"
+
+msgid "FOR MULTIPLE DOMAINS"
+msgstr "PARA MÚLTIPLOS DOMÍNIOS"
+
+msgid "Please enter your credit card information"
+msgstr "Por favor digite suas informações de cartão de crédito"
+
+msgid "Yes, I have read and accept Shared Contacts for Gmail® <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">terms and conditions.</a>"
+msgstr "Sim, li e aceito os Termos e Condições de <a href=\"http://www.gmailsharedcontacts.com/tos/\" target=\"_blank\">Contatos Compartilhados para Gmail®. </a>"
+
+msgid "Unit cost"
+msgstr "Custo unitário"
+
+msgid "Launch"
+msgstr "Lançamento"
+
+msgid "Domain users"
+msgstr "Usuários do domínio"
+
+msgid "for %(customer_name)s"
+msgstr "Para %(nome_do_cliente)s"
+
+msgid "My subscription"
+msgstr "Minha assinatura"
+
+msgid "Payment method"
+msgstr "Método de pagamento"
+
+msgid "Started on"
+msgstr "Iniciado em"
+
+msgid "Billing frequency"
+msgstr "Freqüência de faturamento"
+
+msgid "Renews on"
+msgstr "Renova em"
+
+msgid "Next invoice"
+msgstr "Próxima fatura"
+
+msgid "Add licences"
+msgstr "Adicionar licenças"
+
+msgid "Annual billing"
+msgstr "Faturamento anual"
+
+msgid "Monthly billing"
+msgstr "Faturamento mensal"
+
+msgid "domain"
+msgstr "domínio"
+
+msgid "Number of licenses"
+msgstr "Número de licenças"
+
+msgid "Total licences"
+msgstr "Total de licenças"
+
+msgid "My payment information"
+msgstr "Minhas informações de pagamento"
+
+msgid "Add a payment method"
+msgstr "Adicionar um método de pagamento"
+
+msgid "Which kind of payment?"
+msgstr "Que tipo de pagamento?"
+
+msgid "Validate"
+msgstr "Validar"
+
+msgid "Credit card information"
+msgstr "Informação do cartão de crédito"
+
+msgid "Profile"
+msgstr "Perfil"
+
+msgid "Payment information"
+msgstr "Informação de pagamento"
+
+msgid "Yearly commitment"
+msgstr "Assinatura anual"
+
+msgid "Monthly commitment"
+msgstr "Assinatura mensal"
+
+msgid "Enterprise Edition"
+msgstr "Edição Empresarial"
+
+msgid "Professional Edition"
+msgstr "Edição Profissional"
+
+msgid "Basic Edition"
+msgstr "Edição básica"
+
+msgid "Share contacts"
+msgstr " Contatos Compartilhados"
+
+msgid "Pending"
+msgstr "Pendente"
+
+msgid "Advanced logging and security features"
+msgstr "Recursos avançados de login e segurança"
+
+msgid "Click on \"Proceed to checkout\" to pay with your Paypal account"
+msgstr "Clique em \"Continuar para fazer o check-out\" para pagar com sua conta Paypal"
+
+msgid "You will be charged by Paypal account %(email)s"
+msgstr "Você será debitado pela conta Paypal% (e-mail) s"
+
+msgid "Update"
+msgstr "Atualizar"
+
+msgid "Saved successfully"
+msgstr "Salvo com sucesso"
+
+msgid "Contact us at <a href=\"support@gmailsharedcontacts.com\">support@gmailsharedcontacts.com</a>"
+msgstr "Contacte-nos em <a href=\"support@gmailsharedcontacts.com\"> support@gmailsharedcontacts.com </a>"
+
+msgid "You cannot purchase less than %(minimum_licenses_to_upgrade)s licenses"
+msgstr "Você não pode comprar menos de %(minimum_licenses_to_upgrade)s licenças"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Expires on"
+msgstr "Expira em"
+
+msgid "Econsulting Customer"
+msgstr "Econsulting Cliente"
+
+msgid "Econsulting Partner"
+msgstr "Parceiro Econsulting"
+
+msgid "Econsulting Prospect"
+msgstr "Econsulting Prospecte"
+
+msgid "Prospect"
+msgstr "Perspectiva"
+
+msgid "Please contact your reseller for any new orders."
+msgstr "Entre em contato com seu revendedor para novas encomendas."
+
+msgid "from now to %(expiry_date)s"
+msgstr "De agora para% (expiry_date) s"
+
+msgid "Valid until"
+msgstr "Válido até"
+
+msgid "Until your renewal date"
+msgstr "Até a sua data de renovação"
+
+msgid "Prorated price from now to"
+msgstr "Preço rateado a partir de agora para"
+
+msgid "users"
+msgstr "usuários"
+
+msgid "contact us"
+msgstr "entre em contato conosco"
+
+msgid "unlimited backup"
+msgstr "backup ilimitado"
+
+msgid "corporate"
+msgstr "corporativo"
+
+msgid "advanced admin capabilities"
+msgstr "capacidades avançadas de administração"
+
+msgid "Corporate Version"
+msgstr "Versão Corporativo"
+
+msgid "Up to 250 contacts per group"
+msgstr "Até 250 contatos por grupo "
+
+msgid "Sharing with same domain users"
+msgstr "Compartilhando com usuários do mesmo domínio"
+
+msgid "Permissions Management"
+msgstr "Delegação de permissão"
+
+msgid "Live Support"
+msgstr "Suporte ao vivo"
+
+msgid "Unlimited Contact Backup"
+msgstr "Backup de Contato Ilimitado"
+
+msgid "Instant Synchronization (Chrome users)"
+msgstr "Sincronização instantânea (Extensão do Chrome)"
+
+msgid "Email support"
+msgstr "Atendimento por e-mail"
+
+msgid "(from 5 users)"
+msgstr "(A partir de 5 utilizadores)"
+
+msgid "Try for free"
+msgstr "Teste gratuitamente"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Features"
+msgstr "Características"
+
+msgid "Shared contacts groups"
+msgstr "Grupos de contatos compartilhados"
+
+msgid "Shared contacts"
+msgstr "Contatos compartilhados"
+
+msgid "Unlimited"
+msgstr "Ilimitado"
+
+msgid "Instant Synchronization"
+msgstr "Sincronização instantânea"
+
+msgid "Invoices"
+msgstr "Faturas"
+
+msgid "Chrome extension"
+msgstr "Extensão do Chrome"
+
+msgid "1 Pack of 5 licenses"
+msgstr "1 pacote de 5 licenças"
+
+msgid "for one year"
+msgstr "por um ano"
+
+msgid "for one month"
+msgstr "por um mês"
+
+msgid "Wrong license number"
+msgstr "Número da licença errado"
+
+msgid "Wrong promotion code"
+msgstr "Código promocional errado"
+
+msgid "Chrome users"
+msgstr "Usuários do Chrome"
+
+msgid "We are sorry but your payment could not be processed. Please try again or contact us on support@gmailsharedcontacts.com"
+msgstr "Lamentamos, mas o pagamento não pôde ser processado. Por favor, tente novamente ou entre em contato conosco via support@gmailsharedcontacts.com"
+

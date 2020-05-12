@@ -1,0 +1,14 @@
+{% load i18n %}
+
+{% with support_email|default:"support@gmailsharedcontacts.com" as email %}
+    {% with "<a href='mailto:"|add:email|add:"'>"|add:email|add:"</a>" as email_link %}
+        <div class="col s12">
+            {% trans "Need assistance" %}?
+        </div>
+        <div class="col s12">
+            {% blocktrans trimmed %}
+                If you need help with your subscription please contact our support team at {{ email_link }}.
+            {% endblocktrans %}
+        </div>
+    {% endwith %}
+{% endwith %}

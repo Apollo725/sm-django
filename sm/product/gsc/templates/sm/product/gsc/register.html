@@ -1,0 +1,125 @@
+{% extends "sm/product/gsc/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load sm %}
+
+{% block title %}
+    {% trans "Registration" %} - {{ block.super }}
+{% endblock %}
+
+{% block large-banner-text %}
+    {% trans "Registration" %}
+{% endblock %}
+{% block javascript %}
+    <script src="{% static "sm/frontend/bower_components/parsleyjs/dist/parsley.js" %}"></script>
+    {% with "sm/frontend/bower_components/parsleyjs/src/i18n/"|add:lang_code|add:".js" as parsley_i18n_js %}
+        <script src="{% static parsley_i18n_js %}"></script>
+    {% endwith %}
+{% endblock %}
+
+{% block app %}
+    <script>
+        $(function () {
+            $('input[name=without-reseller]').on('change', function () {
+                if ($(this).val() == 'true') {
+                    $('input[name=reseller]')
+                            .attr('required', false)
+                            .parent().addClass("hide");
+                } else {
+                    $('input[name=reseller]')
+                            .attr('required', true)
+                            .parent().removeClass("hide");
+                }
+            });
+
+            $('#gsc-register-form').on('submit', function () {
+                if ($('input[name=without-reseller]:checked').val() == 'true') {
+                    $('input[name=reseller]').val("");
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <h1 class="center">
+        {% trans "YOUR ARE INSTALLING <br> SHARED CONTACTS FOR GMAIL®" %}
+    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col s12  l5 center-align">
+                <h1 class="raleway">
+                    {% trans "Welcome to" %}
+                </h1>
+
+                <div>
+                    <img src="{% static "sm/product/gsc/img/GSC-logo-by.png" %}" alt="GSC Logo" width="247">
+                </div>
+            </div>
+            <div class="col s12 l7">
+                <div class="row gsc-register-form radius-card" id="gsc-register-form">
+                    <form method="post" class="col offset-s1 s10 offset-l1 l10" data-parsley-validate>
+                        <div class="row">
+                            <h1 class="raleway">
+                                {% trans "Create an account and start using <br> Shared Contacts for Gmail®" %}
+                            </h1>
+                        </div>
+                        <div class="row register-form">
+                            <img src="{% static "sm/product/gsc/img/Icon_name.png" %}" alt="google-identity"/>
+                            <div class="input-field col s12 l12">
+                                {{ form.name }}
+                                {{ form.name.label_tag }}
+                            </div>
+                        </div>
+                        <div class="row register-form">
+                            <img src="{% static "sm/product/gsc/img/Icon_email.png" %}" alt="email"/>
+                            <div class="input-field col s12 l12">
+                                {{ form.contact_email }}
+                                {{ form.contact_email.label_tag }}
+                            </div>
+                        </div>
+                        <div class="row register-form">
+                            <img src="{% static "sm/product/gsc/img/Icon_phone.png" %}" alt="phone"/>
+                            <div class="input-field col s12 l12">
+                                {{ form.phone_number }}
+                                {{ form.phone_number.label_tag }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 l4">
+                                {% trans "How do you buy your Google Apps licenses?" %}
+                            </div>
+                            <div class="row col s12 l8">
+                                <div class="input-field">
+                                    <input type="radio" id="directly-google" name="without-reseller" value="true"
+                                            {% if not form.reseller.value %} checked {% endif %} >
+                                    <label for="directly-google">
+                                        {% trans "Directly from Google" %}
+                                    </label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="radio" id="through-reseller"
+                                            name="without-reseller" value="false"
+                                            {% if form.reseller.value %} checked {% endif %}>
+                                    <label for="through-reseller">
+                                        {% trans "Through a Reseller" %}
+                                    </label>
+                                </div>
+                                <div class="input-field {% if not form.reseller.value %}hide{% endif %}">
+                                    {{ form.reseller }}
+                                </div>
+                            </div>
+                        </div>
+                        {% csrf_token %}
+                        <div class="row center-align">
+                            <button class="btn waves-effect waves-light deep-orange lighten-1" type="submit"
+                                    name="action">
+                                {% trans "Register" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

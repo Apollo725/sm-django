@@ -1,0 +1,3060 @@
+[
+{
+  "fields": {
+    "url": "gmailsharedcontacts.com",
+    "name": "GSC"
+  },
+  "model": "core.vendor",
+  "pk": 1
+},
+{
+  "fields": {
+    "url": "google.com",
+    "name": "Google"
+  },
+  "model": "core.vendor",
+  "pk": 2
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
+    "code": "AF",
+    "name": "Afghanistan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 501
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u00c5land",
+    "code": "AX",
+    "name": "\u00c5land Islands",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 502
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Shqip\u00ebria",
+    "code": "AL",
+    "name": "Albania",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 503
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u062c\u0632\u0627\u0626\u0631",
+    "code": "DZ",
+    "name": "Algeria",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 504
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "American Samoa",
+    "code": "AS",
+    "name": "American Samoa",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 505
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Andorra",
+    "code": "AD",
+    "name": "Andorra",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 506
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Angola",
+    "code": "AO",
+    "name": "Angola",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 507
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Anguilla",
+    "code": "AI",
+    "name": "Anguilla",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 508
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Antarctica",
+    "code": "AQ",
+    "name": "Antarctica",
+    "continent": "Polar"
+  },
+  "model": "core.country",
+  "pk": 509
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Antigua and Barbuda",
+    "code": "AG",
+    "name": "Antigua and Barbuda",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 510
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Argentina",
+    "code": "AR",
+    "name": "Argentina",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 511
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0540\u0561\u0575\u0561\u057d\u057f\u0561\u0576",
+    "code": "AM",
+    "name": "Armenia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 512
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Aruba",
+    "code": "AW",
+    "name": "Aruba",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 513
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Australia",
+    "code": "AU",
+    "name": "Australia",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 514
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u00d6sterreich",
+    "code": "AT",
+    "name": "Austria",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 515
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Az\u0259rbaycan",
+    "code": "AZ",
+    "name": "Azerbaijan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 516
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Bahamas",
+    "code": "BS",
+    "name": "Bahamas",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 517
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u200f\u0627\u0644\u0628\u062d\u0631\u064a\u0646",
+    "code": "BH",
+    "name": "Bahrain",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 518
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Bangladesh",
+    "code": "BD",
+    "name": "Bangladesh",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 519
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Barbados",
+    "code": "BB",
+    "name": "Barbados",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 520
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0411\u0435\u043b\u0430\u0440\u0443\u0301\u0441\u044c",
+    "code": "BY",
+    "name": "Belarus",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 521
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Belgi\u00eb",
+    "code": "BE",
+    "name": "Belgium",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 522
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Belize",
+    "code": "BZ",
+    "name": "Belize",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 523
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "B\u00e9nin",
+    "code": "BJ",
+    "name": "Benin",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 524
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Bermuda",
+    "code": "BM",
+    "name": "Bermuda",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 525
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u02bcbrug-yul",
+    "code": "BT",
+    "name": "Bhutan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 526
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Bolivia",
+    "code": "BO",
+    "name": "Bolivia (Plurinational State of)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 527
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Bonaire",
+    "code": "BQ",
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 528
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Bosna i Hercegovina",
+    "code": "BA",
+    "name": "Bosnia and Herzegovina",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 529
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Botswana",
+    "code": "BW",
+    "name": "Botswana",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 530
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Bouvet\u00f8ya",
+    "code": "BV",
+    "name": "Bouvet Island",
+    "continent": ""
+  },
+  "model": "core.country",
+  "pk": 531
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Brasil",
+    "code": "BR",
+    "name": "Brazil",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 532
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "British Indian Ocean Territory",
+    "code": "IO",
+    "name": "British Indian Ocean Territory",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 533
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "United States Minor Outlying Islands",
+    "code": "UM",
+    "name": "United States Minor Outlying Islands",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 534
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "British Virgin Islands",
+    "code": "VG",
+    "name": "Virgin Islands (British)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 535
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Virgin Islands of the United States",
+    "code": "VI",
+    "name": "Virgin Islands (U.S.)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 536
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Negara Brunei Darussalam",
+    "code": "BN",
+    "name": "Brunei Darussalam",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 537
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f",
+    "code": "BG",
+    "name": "Bulgaria",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 538
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Burkina Faso",
+    "code": "BF",
+    "name": "Burkina Faso",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 539
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Burundi",
+    "code": "BI",
+    "name": "Burundi",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 540
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "K\u00e2mp\u016dch\u00e9a",
+    "code": "KH",
+    "name": "Cambodia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 541
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cameroon",
+    "code": "CM",
+    "name": "Cameroon",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 542
+},
+{
+  "fields": {
+    "currency": "CAD",
+    "trans": "Canada",
+    "code": "CA",
+    "name": "Canada",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 543
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cabo Verde",
+    "code": "CV",
+    "name": "Cabo Verde",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 544
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cayman Islands",
+    "code": "KY",
+    "name": "Cayman Islands",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 545
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "K\u00f6d\u00f6r\u00f6s\u00ease t\u00ee B\u00eaafr\u00eeka",
+    "code": "CF",
+    "name": "Central African Republic",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 546
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Tchad",
+    "code": "TD",
+    "name": "Chad",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 547
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Chile",
+    "code": "CL",
+    "name": "Chile",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 548
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u4e2d\u56fd",
+    "code": "CN",
+    "name": "China",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 549
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Christmas Island",
+    "code": "CX",
+    "name": "Christmas Island",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 550
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cocos (Keeling) Islands",
+    "code": "CC",
+    "name": "Cocos (Keeling) Islands",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 551
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Colombia",
+    "code": "CO",
+    "name": "Colombia",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 552
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Komori",
+    "code": "KM",
+    "name": "Comoros",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 553
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "R\u00e9publique du Congo",
+    "code": "CG",
+    "name": "Congo",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 554
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "R\u00e9publique d\u00e9mocratique du Congo",
+    "code": "CD",
+    "name": "Congo (Democratic Republic of the)",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 555
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cook Islands",
+    "code": "CK",
+    "name": "Cook Islands",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 556
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Costa Rica",
+    "code": "CR",
+    "name": "Costa Rica",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 557
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Hrvatska",
+    "code": "HR",
+    "name": "Croatia",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 558
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cuba",
+    "code": "CU",
+    "name": "Cuba",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 559
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Cura\u00e7ao",
+    "code": "CW",
+    "name": "Cura\u00e7ao",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 560
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u039a\u03cd\u03c0\u03c1\u03bf\u03c2",
+    "code": "CY",
+    "name": "Cyprus",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 561
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u010cesk\u00e1 republika",
+    "code": "CZ",
+    "name": "Czech Republic",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 562
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Danmark",
+    "code": "DK",
+    "name": "Denmark",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 563
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Djibouti",
+    "code": "DJ",
+    "name": "Djibouti",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 564
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Dominica",
+    "code": "DM",
+    "name": "Dominica",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 565
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Rep\u00fablica Dominicana",
+    "code": "DO",
+    "name": "Dominican Republic",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 566
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Ecuador",
+    "code": "EC",
+    "name": "Ecuador",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 567
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0645\u0635\u0631\u200e",
+    "code": "EG",
+    "name": "Egypt",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 568
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "El Salvador",
+    "code": "SV",
+    "name": "El Salvador",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 569
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Guinea Ecuatorial",
+    "code": "GQ",
+    "name": "Equatorial Guinea",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 570
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u12a4\u122d\u1275\u122b",
+    "code": "ER",
+    "name": "Eritrea",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 571
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Eesti",
+    "code": "EE",
+    "name": "Estonia",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 572
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u12a2\u1275\u12ee\u1335\u12eb",
+    "code": "ET",
+    "name": "Ethiopia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 573
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Falkland Islands",
+    "code": "FK",
+    "name": "Falkland Islands (Malvinas)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 574
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "F\u00f8royar",
+    "code": "FO",
+    "name": "Faroe Islands",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 575
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Fiji",
+    "code": "FJ",
+    "name": "Fiji",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 576
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Suomi",
+    "code": "FI",
+    "name": "Finland",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 577
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "France",
+    "code": "FR",
+    "name": "France",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 578
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Guyane fran\u00e7aise",
+    "code": "GF",
+    "name": "French Guiana",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 579
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Polyn\u00e9sie fran\u00e7aise",
+    "code": "PF",
+    "name": "French Polynesia",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 580
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Territoire des Terres australes et antarctiques fran\u00e7aises",
+    "code": "TF",
+    "name": "French Southern Territories",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 581
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Gabon",
+    "code": "GA",
+    "name": "Gabon",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 582
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Gambia",
+    "code": "GM",
+    "name": "Gambia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 583
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u10e1\u10d0\u10e5\u10d0\u10e0\u10d7\u10d5\u10d4\u10da\u10dd",
+    "code": "GE",
+    "name": "Georgia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 584
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Deutschland",
+    "code": "DE",
+    "name": "Germany",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 585
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Ghana",
+    "code": "GH",
+    "name": "Ghana",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 586
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Gibraltar",
+    "code": "GI",
+    "name": "Gibraltar",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 587
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0395\u03bb\u03bb\u03ac\u03b4\u03b1",
+    "code": "GR",
+    "name": "Greece",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 588
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Kalaallit Nunaat",
+    "code": "GL",
+    "name": "Greenland",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 589
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Grenada",
+    "code": "GD",
+    "name": "Grenada",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 590
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Guadeloupe",
+    "code": "GP",
+    "name": "Guadeloupe",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 591
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Guam",
+    "code": "GU",
+    "name": "Guam",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 592
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Guatemala",
+    "code": "GT",
+    "name": "Guatemala",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 593
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Guernsey",
+    "code": "GG",
+    "name": "Guernsey",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 594
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Guin\u00e9e",
+    "code": "GN",
+    "name": "Guinea",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 595
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Guin\u00e9-Bissau",
+    "code": "GW",
+    "name": "Guinea-Bissau",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 596
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Guyana",
+    "code": "GY",
+    "name": "Guyana",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 597
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Ha\u00efti",
+    "code": "HT",
+    "name": "Haiti",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 598
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Heard Island and McDonald Islands",
+    "code": "HM",
+    "name": "Heard Island and McDonald Islands",
+    "continent": ""
+  },
+  "model": "core.country",
+  "pk": 599
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Sancta Sedes",
+    "code": "VA",
+    "name": "Holy See",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 600
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Honduras",
+    "code": "HN",
+    "name": "Honduras",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 601
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u9999\u6e2f",
+    "code": "HK",
+    "name": "Hong Kong",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 602
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Magyarorsz\u00e1g",
+    "code": "HU",
+    "name": "Hungary",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 603
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u00cdsland",
+    "code": "IS",
+    "name": "Iceland",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 604
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u092d\u093e\u0930\u0924",
+    "code": "IN",
+    "name": "India",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 605
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Indonesia",
+    "code": "ID",
+    "name": "Indonesia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 606
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "C\u00f4te d'Ivoire",
+    "code": "CI",
+    "name": "C\u00f4te d'Ivoire",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 607
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u06cc\u0631\u0627\u0646",
+    "code": "IR",
+    "name": "Iran (Islamic Republic of)",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 608
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0639\u0631\u0627\u0642",
+    "code": "IQ",
+    "name": "Iraq",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 609
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u00c9ire",
+    "code": "IE",
+    "name": "Ireland",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 610
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Isle of Man",
+    "code": "IM",
+    "name": "Isle of Man",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 611
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u05d9\u05b4\u05e9\u05b0\u05c2\u05e8\u05b8\u05d0\u05b5\u05dc",
+    "code": "IL",
+    "name": "Israel",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 612
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Italia",
+    "code": "IT",
+    "name": "Italy",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 613
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Jamaica",
+    "code": "JM",
+    "name": "Jamaica",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 614
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u65e5\u672c",
+    "code": "JP",
+    "name": "Japan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 615
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Jersey",
+    "code": "JE",
+    "name": "Jersey",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 616
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0623\u0631\u062f\u0646",
+    "code": "JO",
+    "name": "Jordan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 617
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u049a\u0430\u0437\u0430\u049b\u0441\u0442\u0430\u043d",
+    "code": "KZ",
+    "name": "Kazakhstan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 618
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Kenya",
+    "code": "KE",
+    "name": "Kenya",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 619
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Kiribati",
+    "code": "KI",
+    "name": "Kiribati",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 620
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0643\u0648\u064a\u062a",
+    "code": "KW",
+    "name": "Kuwait",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 621
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d",
+    "code": "KG",
+    "name": "Kyrgyzstan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 622
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0eaa\u0e9b\u0e9b\u0ea5\u0eb2\u0ea7",
+    "code": "LA",
+    "name": "Lao People's Democratic Republic",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 623
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Latvija",
+    "code": "LV",
+    "name": "Latvia",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 624
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0644\u0628\u0646\u0627\u0646",
+    "code": "LB",
+    "name": "Lebanon",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 625
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Lesotho",
+    "code": "LS",
+    "name": "Lesotho",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 626
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Liberia",
+    "code": "LR",
+    "name": "Liberia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 627
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u200f\u0644\u064a\u0628\u064a\u0627",
+    "code": "LY",
+    "name": "Libya",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 628
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Liechtenstein",
+    "code": "LI",
+    "name": "Liechtenstein",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 629
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Lietuva",
+    "code": "LT",
+    "name": "Lithuania",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 630
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Luxembourg",
+    "code": "LU",
+    "name": "Luxembourg",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 631
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u6fb3\u9580",
+    "code": "MO",
+    "name": "Macao",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 632
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u0458\u0430",
+    "code": "MK",
+    "name": "Macedonia (the former Yugoslav Republic of)",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 633
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Madagasikara",
+    "code": "MG",
+    "name": "Madagascar",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 634
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Malawi",
+    "code": "MW",
+    "name": "Malawi",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 635
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Malaysia",
+    "code": "MY",
+    "name": "Malaysia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 636
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Maldives",
+    "code": "MV",
+    "name": "Maldives",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 637
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Mali",
+    "code": "ML",
+    "name": "Mali",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 638
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Malta",
+    "code": "MT",
+    "name": "Malta",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 639
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "M\u0327aje\u013c",
+    "code": "MH",
+    "name": "Marshall Islands",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 640
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Martinique",
+    "code": "MQ",
+    "name": "Martinique",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 641
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0645\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0627",
+    "code": "MR",
+    "name": "Mauritania",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 642
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Maurice",
+    "code": "MU",
+    "name": "Mauritius",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 643
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Mayotte",
+    "code": "YT",
+    "name": "Mayotte",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 644
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "M\u00e9xico",
+    "code": "MX",
+    "name": "Mexico",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 645
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Micronesia",
+    "code": "FM",
+    "name": "Micronesia (Federated States of)",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 646
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Moldova",
+    "code": "MD",
+    "name": "Moldova (Republic of)",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 647
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Monaco",
+    "code": "MC",
+    "name": "Monaco",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 648
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u041c\u043e\u043d\u0433\u043e\u043b \u0443\u043b\u0441",
+    "code": "MN",
+    "name": "Mongolia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 649
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0426\u0440\u043d\u0430 \u0413\u043e\u0440\u0430",
+    "code": "ME",
+    "name": "Montenegro",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 650
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Montserrat",
+    "code": "MS",
+    "name": "Montserrat",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 651
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0645\u063a\u0631\u0628",
+    "code": "MA",
+    "name": "Morocco",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 652
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Mo\u00e7ambique",
+    "code": "MZ",
+    "name": "Mozambique",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 653
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Myanma",
+    "code": "MM",
+    "name": "Myanmar",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 654
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Namibia",
+    "code": "NA",
+    "name": "Namibia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 655
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Nauru",
+    "code": "NR",
+    "name": "Nauru",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 656
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0928\u0947\u092a\u093e\u0932",
+    "code": "NP",
+    "name": "Nepal",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 657
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Nederland",
+    "code": "NL",
+    "name": "Netherlands",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 658
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Nouvelle-Cal\u00e9donie",
+    "code": "NC",
+    "name": "New Caledonia",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 659
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "New Zealand",
+    "code": "NZ",
+    "name": "New Zealand",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 660
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Nicaragua",
+    "code": "NI",
+    "name": "Nicaragua",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 661
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Niger",
+    "code": "NE",
+    "name": "Niger",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 662
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Nigeria",
+    "code": "NG",
+    "name": "Nigeria",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 663
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Niu\u0113",
+    "code": "NU",
+    "name": "Niue",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 664
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Norfolk Island",
+    "code": "NF",
+    "name": "Norfolk Island",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 665
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\ubd81\ud55c",
+    "code": "KP",
+    "name": "Korea (Democratic People's Republic of)",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 666
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Northern Mariana Islands",
+    "code": "MP",
+    "name": "Northern Mariana Islands",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 667
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Norge",
+    "code": "NO",
+    "name": "Norway",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 668
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0639\u0645\u0627\u0646",
+    "code": "OM",
+    "name": "Oman",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 669
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Pakistan",
+    "code": "PK",
+    "name": "Pakistan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 670
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Palau",
+    "code": "PW",
+    "name": "Palau",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 671
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0641\u0644\u0633\u0637\u064a\u0646",
+    "code": "PS",
+    "name": "Palestine, State of",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 672
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Panam\u00e1",
+    "code": "PA",
+    "name": "Panama",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 673
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Papua Niugini",
+    "code": "PG",
+    "name": "Papua New Guinea",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 674
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Paraguay",
+    "code": "PY",
+    "name": "Paraguay",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 675
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Per\u00fa",
+    "code": "PE",
+    "name": "Peru",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 676
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Pilipinas",
+    "code": "PH",
+    "name": "Philippines",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 677
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Pitcairn Islands",
+    "code": "PN",
+    "name": "Pitcairn",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 678
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Polska",
+    "code": "PL",
+    "name": "Poland",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 679
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Portugal",
+    "code": "PT",
+    "name": "Portugal",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 680
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Puerto Rico",
+    "code": "PR",
+    "name": "Puerto Rico",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 681
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0642\u0637\u0631",
+    "code": "QA",
+    "name": "Qatar",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 682
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Republika e Kosov\u00ebs",
+    "code": "XK",
+    "name": "Republic of Kosovo",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 683
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "La R\u00e9union",
+    "code": "RE",
+    "name": "R\u00e9union",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 684
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Rom\u00e2nia",
+    "code": "RO",
+    "name": "Romania",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 685
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0420\u043e\u0441\u0441\u0438\u044f",
+    "code": "RU",
+    "name": "Russian Federation",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 686
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Rwanda",
+    "code": "RW",
+    "name": "Rwanda",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 687
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Saint-Barth\u00e9lemy",
+    "code": "BL",
+    "name": "Saint Barth\u00e9lemy",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 688
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Saint Helena",
+    "code": "SH",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 689
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Saint Kitts and Nevis",
+    "code": "KN",
+    "name": "Saint Kitts and Nevis",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 690
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Saint Lucia",
+    "code": "LC",
+    "name": "Saint Lucia",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 691
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Saint-Martin",
+    "code": "MF",
+    "name": "Saint Martin (French part)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 692
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Saint-Pierre-et-Miquelon",
+    "code": "PM",
+    "name": "Saint Pierre and Miquelon",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 693
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Saint Vincent and the Grenadines",
+    "code": "VC",
+    "name": "Saint Vincent and the Grenadines",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 694
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Samoa",
+    "code": "WS",
+    "name": "Samoa",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 695
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "San Marino",
+    "code": "SM",
+    "name": "San Marino",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 696
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "S\u00e3o Tom\u00e9 e Pr\u00edncipe",
+    "code": "ST",
+    "name": "Sao Tome and Principe",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 697
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629",
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 698
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "S\u00e9n\u00e9gal",
+    "code": "SN",
+    "name": "Senegal",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 699
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0421\u0440\u0431\u0438\u0458\u0430",
+    "code": "RS",
+    "name": "Serbia",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 700
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Seychelles",
+    "code": "SC",
+    "name": "Seychelles",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 701
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Sierra Leone",
+    "code": "SL",
+    "name": "Sierra Leone",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 702
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Singapore",
+    "code": "SG",
+    "name": "Singapore",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 703
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Sint Maarten",
+    "code": "SX",
+    "name": "Sint Maarten (Dutch part)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 704
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Slovensko",
+    "code": "SK",
+    "name": "Slovakia",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 705
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Slovenija",
+    "code": "SI",
+    "name": "Slovenia",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 706
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Solomon Islands",
+    "code": "SB",
+    "name": "Solomon Islands",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 707
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Soomaaliya",
+    "code": "SO",
+    "name": "Somalia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 708
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "South Africa",
+    "code": "ZA",
+    "name": "South Africa",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 709
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "South Georgia",
+    "code": "GS",
+    "name": "South Georgia and the South Sandwich Islands",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 710
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\ub300\ud55c\ubbfc\uad6d",
+    "code": "KR",
+    "name": "Korea (Republic of)",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 711
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "South Sudan",
+    "code": "SS",
+    "name": "South Sudan",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 712
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Espa\u00f1a",
+    "code": "ES",
+    "name": "Spain",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 713
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u015br\u012b la\u1e43k\u0101va",
+    "code": "LK",
+    "name": "Sri Lanka",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 714
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0633\u0648\u062f\u0627\u0646",
+    "code": "SD",
+    "name": "Sudan",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 715
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Suriname",
+    "code": "SR",
+    "name": "Suriname",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 716
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Svalbard og Jan Mayen",
+    "code": "SJ",
+    "name": "Svalbard and Jan Mayen",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 717
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Swaziland",
+    "code": "SZ",
+    "name": "Swaziland",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 718
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Sverige",
+    "code": "SE",
+    "name": "Sweden",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 719
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "Schweiz",
+    "code": "CH",
+    "name": "Switzerland",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 720
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0633\u0648\u0631\u064a\u0627",
+    "code": "SY",
+    "name": "Syrian Arab Republic",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 721
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u81fa\u7063",
+    "code": "TW",
+    "name": "Taiwan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 722
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0422\u043e\u04b7\u0438\u043a\u0438\u0441\u0442\u043e\u043d",
+    "code": "TJ",
+    "name": "Tajikistan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 723
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Tanzania",
+    "code": "TZ",
+    "name": "Tanzania, United Republic of",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 724
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22",
+    "code": "TH",
+    "name": "Thailand",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 725
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Timor-Leste",
+    "code": "TL",
+    "name": "Timor-Leste",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 726
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Togo",
+    "code": "TG",
+    "name": "Togo",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 727
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Tokelau",
+    "code": "TK",
+    "name": "Tokelau",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 728
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Tonga",
+    "code": "TO",
+    "name": "Tonga",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 729
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Trinidad and Tobago",
+    "code": "TT",
+    "name": "Trinidad and Tobago",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 730
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u062a\u0648\u0646\u0633",
+    "code": "TN",
+    "name": "Tunisia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 731
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "T\u00fcrkiye",
+    "code": "TR",
+    "name": "Turkey",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 732
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "T\u00fcrkmenistan",
+    "code": "TM",
+    "name": "Turkmenistan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 733
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Turks and Caicos Islands",
+    "code": "TC",
+    "name": "Turks and Caicos Islands",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 734
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Tuvalu",
+    "code": "TV",
+    "name": "Tuvalu",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 735
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Uganda",
+    "code": "UG",
+    "name": "Uganda",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 736
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "\u0423\u043a\u0440\u0430\u0457\u043d\u0430",
+    "code": "UA",
+    "name": "Ukraine",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 737
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u062f\u0648\u0644\u0629 \u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062a \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0645\u062a\u062d\u062f\u0629",
+    "code": "AE",
+    "name": "United Arab Emirates",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 738
+},
+{
+  "fields": {
+    "currency": "EUR",
+    "trans": "United Kingdom",
+    "code": "GB",
+    "name": "United Kingdom of Great Britain and Northern Ireland",
+    "continent": "Europe"
+  },
+  "model": "core.country",
+  "pk": 739
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "United States",
+    "code": "US",
+    "name": "United States of America",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 740
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Uruguay",
+    "code": "UY",
+    "name": "Uruguay",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 741
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "O\u2018zbekiston",
+    "code": "UZ",
+    "name": "Uzbekistan",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 742
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Vanuatu",
+    "code": "VU",
+    "name": "Vanuatu",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 743
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Venezuela",
+    "code": "VE",
+    "name": "Venezuela (Bolivarian Republic of)",
+    "continent": "Americas"
+  },
+  "model": "core.country",
+  "pk": 744
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Vi\u1ec7t Nam",
+    "code": "VN",
+    "name": "Viet Nam",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 745
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Wallis et Futuna",
+    "code": "WF",
+    "name": "Wallis and Futuna",
+    "continent": "Oceania"
+  },
+  "model": "core.country",
+  "pk": 746
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u0635\u062d\u0631\u0627\u0621 \u0627\u0644\u063a\u0631\u0628\u064a\u0629",
+    "code": "EH",
+    "name": "Western Sahara",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 747
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "\u0627\u0644\u064a\u064e\u0645\u064e\u0646",
+    "code": "YE",
+    "name": "Yemen",
+    "continent": "Asia"
+  },
+  "model": "core.country",
+  "pk": 748
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Zambia",
+    "code": "ZM",
+    "name": "Zambia",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 749
+},
+{
+  "fields": {
+    "currency": "USD",
+    "trans": "Zimbabwe",
+    "code": "ZW",
+    "name": "Zimbabwe",
+    "continent": "Africa"
+  },
+  "model": "core.country",
+  "pk": 750
+},
+{
+  "fields": {
+    "parent_category": null,
+    "code": "GSC",
+    "vendor": 1,
+    "name": "Shared Contacts for G Suite"
+  },
+  "model": "core.productcategory",
+  "pk": 1
+},
+{
+  "fields": {
+    "parent_category": null,
+    "code": "GSUITE",
+    "vendor": 2,
+    "name": "G Suite"
+  },
+  "model": "core.productcategory",
+  "pk": 3
+},
+{
+  "fields": {
+    "parent_category": 3,
+    "code": "GDRIVE",
+    "vendor": 2,
+    "name": "Google Drive"
+  },
+  "model": "core.productcategory",
+  "pk": 4
+},
+{
+  "fields": {
+    "parent_category": 3,
+    "code": "GVAULT",
+    "vendor": 2,
+    "name": "Google Vault"
+  },
+  "model": "core.productcategory",
+  "pk": 5
+},
+{
+  "fields": {
+    "sm_name": "vendor_creation_date",
+    "vendor_name": "creationTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 18
+},
+{
+  "fields": {
+    "sm_name": "domain",
+    "vendor_name": "customerDomain",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 19
+},
+{
+  "fields": {
+    "sm_name": "vendor_customer_id",
+    "vendor_name": "customerId",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 20
+},
+{
+  "fields": {
+    "sm_name": "vendor_commitment_ends",
+    "vendor_name": "plan.commitmentInterval.endTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 21
+},
+{
+  "fields": {
+    "sm_name": "vendor_commitment_starts",
+    "vendor_name": "plan.commitmentInterval.startTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 22
+},
+{
+  "fields": {
+    "sm_name": "vendor_plan",
+    "vendor_name": "plan.planName",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 23
+},
+{
+  "fields": {
+    "sm_name": "vendor_renewal_option",
+    "vendor_name": "renewalSettings.renewalType",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 24
+},
+{
+  "fields": {
+    "sm_name": "billable_licenses",
+    "vendor_name": "seats.numberOfSeats",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 25
+},
+{
+  "fields": {
+    "sm_name": "vendor_max_cap",
+    "vendor_name": "seats.maximumNumberOfSeats",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 26
+},
+{
+  "fields": {
+    "sm_name": "vendor_status",
+    "vendor_name": "status",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 29
+},
+{
+  "fields": {
+    "sm_name": "vendor_subscription",
+    "vendor_name": "subscriptionId",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 30
+},
+{
+  "fields": {
+    "sm_name": "vendor_minimum_transfer",
+    "vendor_name": "transferInfo.minimumTransferableSeats",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 31
+},
+{
+  "fields": {
+    "sm_name": "vendor_transfer_expiry",
+    "vendor_name": "transferInfo.transferabilityExpirationTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 32
+},
+{
+  "fields": {
+    "sm_name": "vendor_trial",
+    "vendor_name": "trialSettings.isInTrial",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 33
+},
+{
+  "fields": {
+    "sm_name": "vendor_trial_ends",
+    "vendor_name": "trialSettings.trialEndTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 34
+},
+{
+  "fields": {
+    "sm_name": "vendor_users",
+    "vendor_name": "seats.licensedNumberOfSeats",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 36
+},
+{
+  "fields": {
+    "sm_name": "vendor_licenses",
+    "vendor_name": "seats.numberOfSeats",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 37
+},
+{
+  "fields": {
+    "sm_name": "expiry_date",
+    "vendor_name": "plan.commitmentInterval.endTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 39
+},
+{
+  "fields": {
+    "sm_name": "start_plan_date",
+    "vendor_name": "plan.commitmentInterval.startTime",
+    "vendor": 2
+  },
+  "model": "core.vendorfield",
+  "pk": 40
+},
+{
+  "fields": {
+    "field": 23,
+    "sm_value": "ANNUAL_MONTHLY",
+    "vendor_value": "ANNUAL"
+  },
+  "model": "core.vendorvalue",
+  "pk": 9
+},
+{
+  "fields": {
+    "field": 23,
+    "sm_value": "ANNUAL_YEARLY",
+    "vendor_value": "ANNUAL_YEARLY_PAY"
+  },
+  "model": "core.vendorvalue",
+  "pk": 10
+},
+{
+  "fields": {
+    "field": 23,
+    "sm_value": "",
+    "vendor_value": "TRIAL"
+  },
+  "model": "core.vendorvalue",
+  "pk": 11
+},
+{
+  "fields": {
+    "field": 23,
+    "sm_value": "",
+    "vendor_value": "FREE"
+  },
+  "model": "core.vendorvalue",
+  "pk": 12
+},
+{
+  "fields": {
+    "field": 29,
+    "sm_value": "PAID",
+    "vendor_value": "ACTIVE"
+  },
+  "model": "core.vendorvalue",
+  "pk": 13
+},
+{
+  "fields": {
+    "field": 29,
+    "sm_value": "PENDING",
+    "vendor_value": "BILLING_ACTIVATION_PENDING"
+  },
+  "model": "core.vendorvalue",
+  "pk": 14
+},
+{
+  "fields": {
+    "field": 29,
+    "sm_value": "EXPIRED_PAID",
+    "vendor_value": "CANCELLED"
+  },
+  "model": "core.vendorvalue",
+  "pk": 15
+},
+{
+  "fields": {
+    "field": 29,
+    "sm_value": "PENDING",
+    "vendor_value": "PENDING"
+  },
+  "model": "core.vendorvalue",
+  "pk": 16
+},
+{
+  "fields": {
+    "field": 29,
+    "sm_value": "EXPIRED_PAID",
+    "vendor_value": "SUSPENDED"
+  },
+  "model": "core.vendorvalue",
+  "pk": 17
+}
+]
