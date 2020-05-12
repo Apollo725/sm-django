@@ -49,7 +49,7 @@ braintree==3.23.0
 paypalrestsdk==1.11.5
 
 WeasyPrint==0.42.3
-Werkzeug==0.12.2
+Werkzeug==0.15.3
 
 # autopep8==1.3.5
 # flake8==3.5.0
